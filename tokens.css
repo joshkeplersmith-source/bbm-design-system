@@ -1,0 +1,143 @@
+/*
+ * BODY BALANCE MEDICAL — Design Tokens
+ * Captain Kepler Creative · Josh Smith · 2026
+ * Source: BB-DESIGN-SYSTEM-SPEC.md
+ * Version: 1.0
+ */
+
+:root {
+
+  /* ── COLORS — PRIMARY (Slate Blue) ── */
+  --bb-P-900: #030507;
+  --bb-P-800: #131c25;
+  --bb-P-700: #2b3a4a;   /* Hero stop — section backgrounds */
+  --bb-P-600: #3e536a;   /* Tile hover on P-700 */
+  --bb-P-500: #506d8b;   /* Eyebrow on light · subheading accent */
+  --bb-P-400: #6a89a9;   /* Gradient light stop resting */
+  --bb-P-300: #91a7bf;   /* Gradient lighter stop selected */
+  --bb-P-200: #b1c4d7;
+  --bb-P-100: #d0dbe7;
+
+  /* ── COLORS — SECONDARY (Rose / Mauve) ── */
+  --bb-S-900: #260d19;
+  --bb-S-800: #49182f;   /* Female gradient dark stop resting */
+  --bb-S-700: #722c4d;   /* Female gradient selected stop */
+  --bb-S-600: #973a66;
+  --bb-S-500: #b94b7f;   /* Female accent on light (L3) */
+  --bb-S-400: #c9739c;
+  --bb-S-300: #da9fbb;   /* Female card title on dark tiles */
+  --bb-S-200: #ecc5d8;
+  --bb-S-100: #f7e8ef;
+
+  /* ── COLORS — TERTIARY (Olive / Sage) ── */
+  --bb-T-900: #232210;
+  --bb-T-800: #42411f;
+  --bb-T-700: #676637;   /* Male accent on light (L4) */
+  --bb-T-600: #888749;   /* Male gradient dark stop resting */
+  --bb-T-500: #a8a65c;   /* Male gradient light stop selected */
+  --bb-T-400: #bcba81;
+  --bb-T-300: #d1d0a8;   /* Male card title on dark tiles */
+  --bb-T-200: #e7e6cb;
+  --bb-T-100: #f5f5ea;
+
+  /* ── COLORS — QUATERNARY (Gold / Amber) ── */
+  /* Rule: Q-300 on dark · Q-700 on light · non-interchangeable */
+  --bb-Q-900: #2d2006;
+  --bb-Q-800: #553c0c;
+  --bb-Q-700: #866118;   /* Accent heading on light (L1) */
+  --bb-Q-600: #b18020;
+  --bb-Q-500: #d99e2b;   /* Caption on dark (D6) */
+  --bb-Q-400: #e2b45b;
+  --bb-Q-300: #ebcc8e;   /* Primary accent on dark (D1) */
+  --bb-Q-200: #f6e2bc;
+  --bb-Q-100: #fbf3e4;
+
+  /* ── COLORS — NEUTRAL (Warm Greige) ── */
+  --bb-N-900: #1c1a17;   /* Brand near-black */
+  --bb-N-800: #35302c;
+  --bb-N-700: #554f4a;
+  --bb-N-600: #706961;   /* Secondary body text on light */
+  --bb-N-500: #8b8279;
+  --bb-N-400: #a59e97;
+  --bb-N-300: #c1bdb8;   /* Supporting text on dark (D5) */
+  --bb-N-200: #dcd9d5;   /* Borders, dividers on light */
+  --bb-N-100: #f1f0ee;   /* Brand near-white · page background */
+
+  /* ── COLORS — NEUTRAL VARIANT (Warm Tan) ── */
+  --bb-NV-900: #1d1c16;
+  --bb-NV-800: #383529;
+  --bb-NV-700: #595546;  /* Section dividers · callout lines */
+  --bb-NV-600: #75715c;
+  --bb-NV-500: #918c73;  /* Secondary rules · callout lines */
+  --bb-NV-400: #aaa692;
+  --bb-NV-300: #c5c2b5;  /* Neutral tile resting on N-100 */
+  --bb-NV-200: #deddd3;  /* Texture SVG fill · NV tile hover */
+  --bb-NV-100: #f2f1ed;  /* Spec boxes · secondary surfaces */
+
+  /* ── TYPOGRAPHY — FAMILIES ── */
+  --bb-font-display: 'EB Garamond', Georgia, serif;      /* Headings + card titles only */
+  --bb-font-accent:  'Playfair Display', Georgia, serif; /* Everything else non-body */
+  --bb-font-body:    'Work Sans', system-ui, sans-serif; /* Body copy only */
+
+  /* ── TYPOGRAPHY — SCALE ── */
+  --bb-type-hero:        4rem;      /* 64px */
+  --bb-type-heading:     3.25rem;   /* 52px */
+  --bb-type-subhead:     2.25rem;   /* 36px */
+  --bb-type-card-title:  2.25rem;   /* 36px */
+  --bb-type-body-lg:     1.5rem;    /* 24px */
+  --bb-type-button:      1.5rem;    /* 24px */
+  --bb-type-body:        1.125rem;  /* 18px */
+  --bb-type-caption:     0.875rem;  /* 14px */
+  --bb-type-eyebrow:     0.56rem;   /* ~9px */
+  --bb-type-eyebrow-ls:  0.32em;    /* letter-spacing */
+
+  /* ── GRADIENTS ── */
+  /* All content gradients at 135deg · Button gradients at 120deg */
+  --bb-grad-neutral-rest:   linear-gradient(135deg, #131c25, #6a89a9);
+  --bb-grad-neutral-active: linear-gradient(135deg, #2b3a4a, #91a7bf);
+  --bb-grad-female-rest:    linear-gradient(135deg, #131c25, #49182f);
+  --bb-grad-female-active:  linear-gradient(135deg, #2b3a4a, #722c4d);
+  --bb-grad-male-rest:      linear-gradient(135deg, #131c25, #888749);
+  --bb-grad-male-active:    linear-gradient(135deg, #2b3a4a, #a8a65c);
+  --bb-grad-button-rest:    linear-gradient(120deg, #131c25, #6a89a9);
+  --bb-grad-button-hover:   linear-gradient(120deg, #2b3a4a, #91a7bf);
+
+  /* ── SHADOWS ── */
+  /* All shadows use N-900 warm opacity — never cold gray */
+  --bb-shadow-sm: 0 2px 8px rgba(28,26,23,.06), 0 1px 2px rgba(28,26,23,.04);
+  --bb-shadow-md: 0 4px 16px rgba(28,26,23,.10), 0 2px 4px rgba(28,26,23,.06);
+  --bb-shadow-lg: 0 8px 32px rgba(28,26,23,.14), 0 4px 8px rgba(28,26,23,.08);
+
+  /* ── SPACING ── */
+  --bb-space-1:  0.25rem;  /*  4px */
+  --bb-space-2:  0.5rem;   /*  8px */
+  --bb-space-3:  0.75rem;  /* 12px */
+  --bb-space-4:  1rem;     /* 16px */
+  --bb-space-6:  1.5rem;   /* 24px */
+  --bb-space-8:  2rem;     /* 32px */
+  --bb-space-12: 3rem;     /* 48px */
+  --bb-space-16: 4rem;     /* 64px */
+  --bb-space-18: 4.5rem;   /* 72px */
+  --bb-space-20: 5rem;     /* 80px */
+  --bb-space-24: 6rem;     /* 96px */
+
+  /* ── GRID ── */
+  --bb-grid-columns:     12;
+  --bb-grid-max-width:   1280px;
+  --bb-grid-gutter-desk: 24px;
+  --bb-grid-gutter-mob:  16px;
+  --bb-grid-margin-desk: 80px;
+  --bb-grid-margin-mob:  16px;
+
+  /* ── BORDER RADIUS ── */
+  --bb-radius-button: 8px;
+
+}
+
+/*
+ * GOOGLE FONTS IMPORTS
+ * Include in <head> of any HTML output using this token set.
+ *
+ * <link rel="preconnect" href="https://fonts.googleapis.com">
+ * <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
+ */
