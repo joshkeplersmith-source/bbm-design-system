@@ -12,13 +12,12 @@ It is maintained by **Josh Smith · Captain Kepler Creative**.
 |---|---|
 | `BB-BRAND-PRO.md` | **Josh's file.** Full brand operating system — includes Illustrator MCP tool access, full asset pipeline, and production workflows. |
 | `BB-BRAND-TEAM.md` | **Team file (Will, Dez, social media manager).** Self-serve, web-first workflow — no local tool dependencies. |
-| `BB-DESIGN-SYSTEM-SPEC.md` | Full technical design system spec. Archival — build input for the brand files. |
 | `tokens.css` | All CSS custom properties. Import into any web or HTML project. |
 | `/logos/` | 16 SVG logo variants — horizontal, vertical, mark, social formats in B/W/G/Bu. |
 | `/textures/` | 7 texture SVGs + logo mark WebP. |
 | `/photography/` | 6 reference photography JPEGs — brand photography style reference only. |
 | `/references/` | `BB-DESIGN-SYSTEM-SPEC-RENDER.html` — visual design system reference document. |
-| `/archive/` | Previous brand file versions. Do not reference in active sessions. |
+| `/archive/` | Previous brand file versions including `BB-BRAND-v1.1-ARCHIVED.md` and `BB-DESIGN-SYSTEM-SPEC.md`. Do not reference in active sessions. |
 
 ---
 
@@ -54,7 +53,7 @@ Example URLs:
 
 All R2 URLs are listed in `BB-BRAND-PRO.md` and `BB-BRAND-TEAM.md` Section 3.
 
-GitHub raw URLs (`raw.githubusercontent.com`) are blocked in some agent environments — use R2 URLs in `BRAND.md` for maximum compatibility.
+GitHub raw URLs (`raw.githubusercontent.com`) are blocked in some agent environments — use R2 URLs in `BB-BRAND-PRO.md` or `BB-BRAND-TEAM.md` for maximum compatibility.
 
 ---
 
