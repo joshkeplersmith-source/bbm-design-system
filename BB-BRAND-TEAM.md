@@ -535,12 +535,19 @@ Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthet
 
 | File | URL |
 |---|---|
-| AdobeStock_293083555.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_293083555.jpg` |
-| AdobeStock_436559124.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_436559124.jpg` |
-| AdobeStock_448721416.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_448721416.jpg` |
-| AdobeStock_478793348.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_478793348.jpg` |
-| AdobeStock_605986661.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_605986661.jpg` |
-| AdobeStock_895842891.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_895842891.jpg` |
+| Gemini_Generated_Image_99log499log499lo.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_99log499log499lo.jpg` |
+| Gemini_Generated_Image_5mahkc5mahkc5mah.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_5mahkc5mahkc5mah.jpg` |
+| Gemini_Generated_Image_ekp6qhekp6qhekp6.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_ekp6qhekp6qhekp6.jpg` |
+| Gemini_Generated_Image_frn772frn772frn7.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_frn772frn772frn7.jpg` |
+| Gemini_Generated_Image_or96hor96hor96ho.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_or96hor96hor96ho.jpg` |
+| Gemini_Generated_Image_qo45irqo45irqo45.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_qo45irqo45irqo45.jpg` |
+| Gemini_Generated_Image_s2z62js2z62js2z6.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_s2z62js2z62js2z6.jpg` |
+| Gemini_Generated_Image_trem1utrem1utrem.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_trem1utrem1utrem.jpg` |
+| Gemini_Generated_Image_8424ze8424ze8424.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_8424ze8424ze8424.jpg` |
+| Gemini_Generated_Image_aoj2k8aoj2k8aoj2.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_aoj2k8aoj2k8aoj2.jpg` |
+| Gemini_Generated_Image_6xsqw26xsqw26xsq.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_6xsqw26xsqw26xsq.jpg` |
+| Gemini_Generated_Image_xulap0xulap0xula.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_xulap0xulap0xula.jpg` |
+| Gemini_Generated_Image_g597fdg597fdg597 (1).jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_g597fdg597fdg597%20(1).jpg` |
 
 ---
 
