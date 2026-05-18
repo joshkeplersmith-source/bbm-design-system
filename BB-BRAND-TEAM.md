@@ -339,11 +339,13 @@ Before placing any logo:
 
 ### 1.12 — Photography Brief
 
-**Primary mode — B&W:** Film-forward. Rich midtones, soft contrast, authentic grain. No airbrushing.
-**Secondary mode — Kodak Portra 400:** Warm, slightly faded. Natural grain, soft highlights.
+All photography — still, print, and video — uses a single visual mode.
 
-**Subjects:** Women 30s–40s unposed · Men 40s–60s natural energy
-**Always avoid:** measuring tape · scale · studio white-box · stock wellness poses · airbrushed skin
+**Primary mode — Kodak Vision3 500T / 16mm film emulation**
+Warm but not orange — cream and sand tones. Subtle highlight halation. Lifted shadows with retained detail, nothing goes fully black. Real skin texture, visible but not harsh. Slightly underexposed and organic — film latitude, not digital precision. Muted saturation. Natural window light only. Nothing airbrushed. Feels documentary, not produced.
+
+**Subjects:** Women 30s–50s unposed · Men 40s–60s natural energy
+**Always avoid:** measuring tape · scale · studio white-box · stock wellness poses · airbrushed skin · bright saturated color · digital sharpness
 
 **Before/After:** L-bracket gold frame · BU-700 badge labels · Playfair Display italic caption · never hard-bordered
 
@@ -361,7 +363,7 @@ Before placing any logo:
 
 **Layout DON'T:** Gradient tiles as full-section backgrounds · More than two gradient tile families without neutral separator · Center-aligned body copy over two lines · Texture + logo mark watermark in same section
 
-**Ad Creative DO:** B&W photography · Full type system · L-bracket before/after with BU-700 badge labels · Disclaimer in Playfair Display italic caption
+**Ad Creative DO:** 500T film photography · Full type system · L-bracket before/after with BU-700 badge labels · Disclaimer in Playfair Display italic caption
 
 **Ad Creative DON'T:** Legacy Poppins all-caps system · Hard-bordered before/after blocks · Imagery contradicting photography brief
 
@@ -542,7 +544,6 @@ Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthet
 | Gemini_Generated_Image_or96hor96hor96ho.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_or96hor96hor96ho.jpg` |
 | Gemini_Generated_Image_qo45irqo45irqo45.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_qo45irqo45irqo45.jpg` |
 | Gemini_Generated_Image_s2z62js2z62js2z6.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_s2z62js2z62js2z6.jpg` |
-| Gemini_Generated_Image_trem1utrem1utrem.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_trem1utrem1utrem.jpg` |
 | Gemini_Generated_Image_8424ze8424ze8424.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_8424ze8424ze8424.jpg` |
 | Gemini_Generated_Image_aoj2k8aoj2k8aoj2.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_aoj2k8aoj2k8aoj2.jpg` |
 | Gemini_Generated_Image_6xsqw26xsqw26xsq.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_6xsqw26xsqw26xsq.jpg` |
@@ -583,33 +584,35 @@ Wait for the upload. Do not substitute a placeholder.
 
 ## SECTION 6 — IMAGE GENERATION
 
-### If You Can Generate Images
+### Photography Prompt Construction
 
-**B&W (primary):** Film aesthetic. Rich midtones, soft contrast, authentic grain. Natural light. Women 30s–40s unposed, skin texture visible. Men 40s–60s natural energy. Grounded, warm, present.
+All image generation uses Kodak Vision3 500T / 16mm film emulation. The core prompt string is:
 
-**Portra 400 (secondary):** Warm, slightly faded. Natural grain, soft highlights. Nothing electric or saturated.
+`Give this photo a Kodak 7219 500T - 16mm - film stock emulation. No text, no film edges.`
 
-**Always avoid:** measuring tape · scale · studio white-box · stock wellness poses · airbrushed skin
+Before handing this prompt to the user or image generator, append the correct aspect ratio based on output type:
 
-### If You Cannot Generate Images
+| Output Type | Aspect Ratio to Append |
+|---|---|
+| Social — feed / reels | `, 9:16 aspect ratio` |
+| Social — square | `, 1:1 aspect ratio` |
+| Web — hero / banner | `, 16:9 aspect ratio` |
+| Web — portrait / card | `, 4:5 aspect ratio` |
+| Print | Ask Josh for the deliverable spec before appending |
 
-Give this prompt to the user to generate or commission:
+**How to use this:** Read the output type from context. Construct the full prompt by appending the correct aspect ratio to the core string. If the output type is ambiguous, ask one question: "What format is this image for?" Do not present multiple ratio options — determine it from context and construct the prompt automatically.
 
-```
-[SUBJECT] in [SETTING], editorial portrait photography, black and white film aesthetic,
-Kodak Tri-X grain, soft natural window light, rich midtones, no blown highlights,
-unposed candid moment, authentic skin texture, no retouching, no studio lighting,
-cinematic composition, warm and grounded mood, medical wellness atmosphere,
-real person not model-perfect, 30s–40s professional woman [or: 40s–60s man],
-environmental context visible but subject primary. Style: film photography, not digital.
-No measuring tape. No workout equipment. No forced smiles. No aspirational stock imagery.
-```
+**Example — social reel:**
+`Give this photo a Kodak 7219 500T - 16mm - film stock emulation. No text, no film edges. 9:16 aspect ratio.`
 
-For Portra 400, add:
-```
-Color photography, Kodak Portra 400 film simulation, warm slightly faded tones,
-natural grain, soft warm shadows, no saturation boost, no Instagram filter treatment.
-```
+**Example — web hero:**
+`Give this photo a Kodak 7219 500T - 16mm - film stock emulation. No text, no film edges. 16:9 aspect ratio.`
+
+### Photography Reference Library
+
+Style references are stored in Cloudflare R2 at `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/`. See Section 3.2 for full file list.
+
+**Note:** All references use Kodak Vision3 500T / 16mm emulation. Use them for compositional and tonal direction — apply the 500T prompt above to generate new photography in the same register.
 
 ---
 
@@ -682,5 +685,5 @@ Flag specifically and wait for input. Never silently produce an off-brand result
 
 *Captain Kepler Creative · Josh Smith · 2026 · Confidential*
 *BB-BRAND-TEAM.md — Body Balance Medical Brand Operating System v1.0 (Team)*
-*Built from: BB-BRAND.md v1.1 + BB-SESSION-ANALYSIP-001 + stress test refinements · 2026-05-13*
+*Built from: BB-BRAND.md v1.1 + BB-SESSION-ANALYSIS-001 + stress test refinements · 2026-05-13*
 *Assets: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev*
