@@ -195,17 +195,18 @@ All tiles receive `shadow-md`.
 
 | Level | Size | Family | Weight | Style | Usage |
 |---|---|---|---|---|---|
-| Hero | 4rem / 64px | EB Garamond | 400 | Upright + italic mix | Page hero headlines |
-| Heading | 3.25rem / 52px | EB Garamond | 400 | Upright + italic mix | Section headings |
-| Subhead | 2.25rem / 36px | Playfair Display | 400 | Italic | Section subheadings |
+| Eyebrow | 0.56rem / 9px | Playfair Display | 400 | Uppercase | Section labels, eyebrow tags |
+| Hero Title | 4rem / 64px | EB Garamond | 400 | Upright | Page hero headlines |
+| Hero Accent | 4rem / 64px | EB Garamond | 400 | Italic | Hero headline italic continuation |
+| Heading | 3.25rem / 52px | EB Garamond | 400 | Upright | Section headings |
+| Heading Accent | 3.25rem / 52px | EB Garamond | 400 | Italic | Section heading italic continuation |
+| Subheading | 2.25rem / 36px | Playfair Display | 400 | Normal | Section subheadings |
 | Card Title | 2.25rem / 36px | EB Garamond | 400 | Upright | Tile and card titles |
-| Body LG | 1.5rem / 24px | Work Sans | 300 | Normal | Intro body, lead paragraphs |
-| Button | 1.5rem / 24px | Playfair Display | 400 | Normal | Button labels |
+| Body Large | 1.5rem / 24px | Work Sans | 300 | Normal | Intro body, lead paragraphs |
 | Body | 1.125rem / 18px | Work Sans | 300 | Normal | Standard body copy |
 | Caption | 0.875rem / 14px | Playfair Display | 400 | Italic | Captions, disclaimers, legal |
-| Eyebrow | 0.56rem / ~9px | Playfair Display | 400 | Uppercase | Section labels, eyebrow tags |
 
-**Eyebrow letter-spacing:** 0.32em
+**Eyebrow:** Playfair Display 400 · uppercase · 0.56rem · 0.32em letter-spacing · GL-500 on dark · BU-500 on light
 
 **The brand's core typographic move:** Pair EB Garamond upright with EB Garamond italic within the same heading. **Order is fixed: upright always leads, italic always follows.** The anchor phrase renders upright; the emotional or qualifying phrase renders italic after it. Example: "Yourself *Again*" — upright on the grounding anchor, italic on the emotive word. Never open a heading with the italic span.
 
