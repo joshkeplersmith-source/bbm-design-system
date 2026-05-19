@@ -296,6 +296,44 @@ All tiles receive `shadow-md`.
 **URL:** `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp`
 **Behavior:** `object-fit: cover; inset: 0; width: 100%; height: 100%` · Opacity 100% · N-100 sections only · once per page max
 
+#### Texture Implementation — CSS Rules
+
+Textures must always be applied as a `background-image` on a
+`::before` pseudo-element. Never use `<img>` tags for textures —
+CSS `transform: rotate()` on an `<img>` rotates pixels inside the
+element's original layout box and will not fill the section.
+
+Correct implementation:
+
+```css
+.section-with-texture {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-with-texture::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200vmax; height: 200vmax;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-image: url('[texture-url]');
+  background-size: cover;
+  background-position: center;
+  opacity: .26;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+.section-with-texture > * {
+  position: relative;
+  z-index: 2;
+}
+```
+
+Size rule: Use `200vmax` for both width and height — never percentages. Percentage-based sizing fails on wide, short sections because a rotated rectangle's effective width becomes its pre-rotation height. `200vmax` creates a square large enough to cover any section at any aspect ratio after rotation. `overflow: hidden` on the parent clips the excess.
+
 ---
 
 ### 1.11 — Logo System
