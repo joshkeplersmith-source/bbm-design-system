@@ -485,7 +485,7 @@ Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthet
 
 **Own:** aligned · hormone balance · inside and out · plan / program · listen / heard / seen · real / grounded · energy / clarity / vitality · restore / return
 
-**Use directly:** "I finally feel like myself again" · "Tired but can't sleep" · "Weight won't move" · "I feel off" · "Nobody connected the dots for me"
+**Use directly:** "I finally feel like myself again" · "Tired but can't sleep" · "Weight won't move" · "I feel off" · "Nobody connected the dots for me" · "Biote hormone pellet therapy"
 
 **Banned — never use:**
 
@@ -505,7 +505,6 @@ Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthet
 | Look your best | Generic |
 | Self-care | Diluted |
 | Aesthetic enhancement | Jargon |
-| Biote | Website and informed patients only |
 
 ---
 
