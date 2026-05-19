@@ -195,7 +195,7 @@ All tiles receive `shadow-md`.
 
 | Level | Size | Family | Weight | Style | Usage |
 |---|---|---|---|---|---|
-| Eyebrow | 0.56rem / 9px | Playfair Display | 400 | Uppercase | Section labels, eyebrow tags |
+| Eyebrow | 0.625rem / 10px | Playfair Display | 400 | Uppercase | Section labels, eyebrow tags |
 | Hero Title | 4rem / 64px | EB Garamond | 400 | Upright | Page hero headlines |
 | Hero Accent | 4rem / 64px | EB Garamond | 400 | Italic | Hero headline italic continuation |
 | Heading | 3.25rem / 52px | EB Garamond | 400 | Upright | Section headings |
@@ -206,7 +206,7 @@ All tiles receive `shadow-md`.
 | Body | 1.125rem / 18px | Work Sans | 300 | Normal | Standard body copy |
 | Caption | 0.875rem / 14px | Playfair Display | 400 | Italic | Captions, disclaimers, legal |
 
-**Eyebrow:** Playfair Display 400 · uppercase · 0.56rem · 0.32em letter-spacing · GL-500 on dark · BU-500 on light
+**Eyebrow:** Playfair Display 400 · uppercase · 0.625rem · 0.32em letter-spacing · GL-500 on dark · BU-500 on light
 
 **The brand's core typographic move:** Pair EB Garamond upright with EB Garamond italic within the same heading. **Order is fixed: upright always leads, italic always follows.** The anchor phrase renders upright; the emotional or qualifying phrase renders italic after it. Example: "Yourself *Again*" — upright on the grounding anchor, italic on the emotive word. Never open a heading with the italic span.
 
@@ -430,7 +430,7 @@ Warm but not orange — cream and sand tones. Subtle highlight halation. Lifted 
   --bb-type-hero: 4rem; --bb-type-heading: 3.25rem; --bb-type-subhead: 2.25rem;
   --bb-type-card-title: 2.25rem; --bb-type-body-lg: 1.5rem; --bb-type-button: 1.5rem;
   --bb-type-body: 1.125rem; --bb-type-caption: 0.875rem;
-  --bb-type-eyebrow: 0.56rem; --bb-type-eyebrow-ls: 0.32em;
+  --bb-type-eyebrow: 0.625rem; --bb-type-eyebrow-ls: 0.32em;
   --bb-grad-neutral-rest: linear-gradient(135deg, #131c25, #6a89a9);
   --bb-grad-neutral-active: linear-gradient(135deg, #2b3a4a, #91a7bf);
   --bb-grad-female-rest: linear-gradient(135deg, #131c25, #49182f);
