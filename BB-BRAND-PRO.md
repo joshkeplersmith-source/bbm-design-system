@@ -572,20 +572,51 @@ Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthet
 
 ### 3.2 — Photography Reference
 
+**Base URL:** `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/`
+
 | File | URL |
 |---|---|
-| Gemini_Generated_Image_99log499log499lo.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_99log499log499lo.jpg` |
-| Gemini_Generated_Image_5mahkc5mahkc5mah.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_5mahkc5mahkc5mah.jpg` |
-| Gemini_Generated_Image_ekp6qhekp6qhekp6.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_ekp6qhekp6qhekp6.jpg` |
-| Gemini_Generated_Image_frn772frn772frn7.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_frn772frn772frn7.jpg` |
-| Gemini_Generated_Image_or96hor96hor96ho.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_or96hor96hor96ho.jpg` |
-| Gemini_Generated_Image_qo45irqo45irqo45.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_qo45irqo45irqo45.jpg` |
-| Gemini_Generated_Image_s2z62js2z62js2z6.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_s2z62js2z62js2z6.jpg` |
-| Gemini_Generated_Image_8424ze8424ze8424.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_8424ze8424ze8424.jpg` |
-| Gemini_Generated_Image_aoj2k8aoj2k8aoj2.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_aoj2k8aoj2k8aoj2.jpg` |
-| Gemini_Generated_Image_6xsqw26xsqw26xsq.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_6xsqw26xsqw26xsq.jpg` |
-| Gemini_Generated_Image_xulap0xulap0xula.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_xulap0xulap0xula.jpg` |
-| Gemini_Generated_Image_g597fdg597fdg597 (1).jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Gemini_Generated_Image_g597fdg597fdg597%20(1).jpg` |
+| bb-couple-smiling-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-horizontal-01.jpg` |
+| bb-couple-smiling-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-vertical-01.jpg` |
+| bb-female-subject-active-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-active-horizontal-01.jpg` |
+| bb-female-subject-active-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-active-vertical-01.jpg` |
+| bb-female-subject-editorial-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-01.jpg` |
+| bb-female-subject-editorial-horizontal-02.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-02.jpg` |
+| bb-female-subject-editorial-horizontal-03.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-03.jpg` |
+| bb-female-subject-editorial-horizontal-04.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-04.jpg` |
+| bb-female-subject-editorial-horizontal-05.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-05.jpg` |
+| bb-female-subject-editorial-horizontal-06.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-06.jpg` |
+| bb-female-subject-editorial-horizontal-07.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-07.jpg` |
+| bb-female-subject-editorial-horizontal-08.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-08.jpg` |
+| bb-female-subject-editorial-horizontal-09.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-09.jpg` |
+| bb-female-subject-editorial-horizontal-10.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-10.jpg` |
+| bb-female-subject-editorial-horizontal-11.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-11.jpg` |
+| bb-female-subject-editorial-horizontal-12.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-12.jpg` |
+| bb-female-subject-editorial-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-01.jpg` |
+| bb-female-subject-editorial-vertical-02.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-02.jpg` |
+| bb-female-subject-editorial-vertical-03.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-03.jpg` |
+| bb-female-subject-editorial-vertical-04.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-04.jpg` |
+| bb-female-subject-editorial-vertical-05.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-05.jpg` |
+| bb-female-subject-editorial-vertical-06.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-06.jpg` |
+| bb-female-subject-editorial-vertical-07.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-07.jpg` |
+| bb-female-subject-editorial-vertical-08.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-08.jpg` |
+| bb-female-subject-editorial-vertical-09.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-09.jpg` |
+| bb-female-subject-editorial-vertical-10.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-10.jpg` |
+| bb-female-subject-editorial-vertical-11.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-11.jpg` |
+| bb-female-subject-editorial-vertical-12.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-12.jpg` |
+| bb-female-subject-mirror-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-mirror-horizontal-01.jpg` |
+| bb-female-subject-mirror-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-mirror-vertical-01.jpg` |
+| bb-female-subject-smiling-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-horizontal-01.jpg` |
+| bb-female-subject-smiling-horizontal-02.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-horizontal-02.jpg` |
+| bb-female-subject-smiling-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-01.jpg` |
+| bb-female-subject-smiling-vertical-02.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-02.jpg` |
+| bb-female-subject-treatment-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-treatment-horizontal-01.jpg` |
+| bb-female-subject-treatment-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-treatment-vertical-01.jpg` |
+| bb-male-subject-smiling-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-male-subject-smiling-horizontal-01.jpg` |
+| bb-male-subject-smiling-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-male-subject-smiling-vertical-01.jpg` |
+| bb-medical-vial-ambient-horizontal-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-horizontal-01.jpg` |
+| bb-medical-vial-ambient-vertical-01.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-01.jpg` |
+| bb-medical-vial-ambient-vertical-02.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-02.jpg` |
 
 ---
 
