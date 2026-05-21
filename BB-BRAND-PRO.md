@@ -655,7 +655,7 @@ Wait for upload. Do not substitute a placeholder.
 
 All image generation uses Kodak Vision3 500T / 16mm film emulation. The core prompt string is:
 
-`Give this photo a Kodak 7219 500T - 16mm - film stock emulation. No text, no film edges.`
+`Give this photo a warm leaning to neutral (avoid anything too sepia toned) Kodak 7219 500T - 16mm - film stock emulation, with some film grain and texture. Preserve the subject framing. No text, no film edges.`
 
 Before handing this prompt to the user or image generator, append the correct aspect ratio based on output type:
 
