@@ -1,6 +1,6 @@
 # BODY BALANCE MEDICAL — Brand Operating System (Team)
 **Captain Kepler Creative · Josh Smith · 2026**
-**File:** `BB-BRAND-TEAM.md` · Version 1.0
+**File:** `BB-BRAND-TEAM.md` · Version 1.2
 **Audience:** Will, Dez, Social Media Manager — internal team building independently
 **Status:** Active — Single source of truth for team use
 
@@ -601,6 +601,31 @@ Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthet
 | Canva templates | Canva | Pre-loaded by Josh | Not applicable | Templates pre-built — use as-is |
 | Social content | Canva | Pre-loaded by Josh | Not applicable | Templates pre-built — use as-is |
 
+#### Print Flyer Content Rules — fixed-format
+
+1. Print flyers are one page. Content must fit within the page
+   boundary. Overflow and pagination are both failures.
+2. Zone heights are intentional design allocations — not adjusted
+   to accommodate copy. If copy runs long, the copy is edited.
+3. Font sizes and line heights are the levers. Reduce copy length
+   or tighten spacing before touching zone dimensions.
+4. Pre-output check: open in Chrome at 100% zoom and confirm every
+   zone sits inside the page boundary before printing.
+
+#### Print Copy Fitting Rule
+
+If the agent receives copy that cannot fit within the page at
+minimum text sizes:
+1. Rewrite the copy to fit — preserving meaning, voice, and all
+   required information
+2. Complete the deliverable using the rewritten copy
+3. Surface the issue after output, showing exactly what was changed
+   and why
+
+The agent never shrinks text below minimum size. The agent never
+overflows the page. The agent never asks permission mid-build —
+it resolves the problem, delivers the file, and reports what it did.
+
 ---
 
 ## SECTION 5 — GRACEFUL DEGRADATION
@@ -665,6 +690,7 @@ Style references are stored in Cloudflare R2 at `https://pub-3d3d32a357bf480291c
 ☐ Output type confirmed — web, email, print, Canva, or social
 ☐ Image source identified — generate, pull from R2 (Section 3.2), or brief the user
 ☐ If print — build as HTML with Google Fonts, browser-print to PDF from Chrome
+☐ Print only — does all copy fit within zone allocations at minimum text sizes? If not, edit copy to fit before building.
 ```
 
 ### Environment Routing — Brand Fidelity First
@@ -700,6 +726,45 @@ N-100 background · BU-700 section accent · EB Garamond heading (upright leads)
 
 ### Flagging Gaps
 Flag specifically and wait for input. Never silently produce an off-brand result.
+
+### Anti-Rationalization Rule
+
+If you find yourself thinking a rule violation will look better,
+that reasoning is incorrect. The rules define what looks better
+for this brand. The designer knows what they want. Do not
+substitute agent aesthetic judgment for the rule system.
+
+### Creative Problem-Solving Fallback
+
+Before diverging from any layout rule, exhaust these in-system
+options first:
+- Gradient tiles (neutral, female, or male) for dimension on a
+  light surface
+- NV-300 or NV-100 surface cards for hierarchy without dark
+  backgrounds
+- L-bracket gold frame for featured or callout content
+- Texture on N-100 for depth without breaking the light base
+- Ghosted Playfair Display text for visual weight on N-100 sections
+- BU-700 for one interior section break only — not the document
+  frame
+
+If depth or dimension is the aesthetic goal, the answer is always
+inside the system.
+
+### Pre-Output Verification (mandatory before presenting any deliverable)
+
+Run this check before presenting any output — not as a correction
+after the fact:
+
+1. What is the page/document base? It must be N-100.
+2. Are textures used anywhere? If yes — is that zone N-100?
+   If not, remove the texture.
+3. Does any dark zone constitute the majority of the document
+   surface? If yes, restructure.
+4. Is every color, font, and layout element traceable to a rule
+   in Section 1?
+5. (Print only) Does any text-bearing zone use a fixed height?
+   Convert to min-height.
 
 ### Photography Handoff Note
 
@@ -754,6 +819,9 @@ move directly to what they want next.
 ---
 
 *Captain Kepler Creative · Josh Smith · 2026 · Confidential*
-*BB-BRAND-TEAM.md — Body Balance Medical Brand Operating System v1.0 (Team)*
+*BB-BRAND-TEAM.md — Body Balance Medical Brand Operating System v1.2 (Team)*
 *Built from: BB-BRAND.md v1.1 + BB-SESSION-ANALYSIS-001 + stress test refinements · 2026-05-13*
 *Assets: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev*
+
+**Changelog**
+v1.2 — 2026-05-20: Anti-rationalization rule, creative fallback block, pre-output verification gate, print content rules — from stress test diagnosis
