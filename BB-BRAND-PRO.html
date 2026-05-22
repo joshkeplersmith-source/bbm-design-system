@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BB Brand PRO — Body Balance Medical · v2.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --BU-900:#030507;--BU-800:#131c25;--BU-700:#2b3a4a;--BU-600:#3e536a;--BU-500:#506d8b;
+  --BU-400:#6a89a9;--BU-300:#91a7bf;--BU-200:#b1c4d7;--BU-100:#d0dbe7;
+  --P-900:#260d19;--P-800:#49182f;--P-700:#722c4d;--P-600:#973a66;--P-500:#b94b7f;
+  --P-400:#c9739c;--P-300:#da9fbb;--P-200:#ecc5d8;--P-100:#f7e8ef;
+  --GR-900:#232210;--GR-800:#42411f;--GR-700:#676637;--GR-600:#888749;--GR-500:#a8a65c;
+  --GR-400:#bcba81;--GR-300:#d1d0a8;--GR-200:#e7e6cb;--GR-100:#f5f5ea;
+  --GL-900:#2d2006;--GL-800:#553c0c;--GL-700:#866118;--GL-600:#b18020;--GL-500:#d99e2b;
+  --GL-400:#e2b45b;--GL-300:#ebcc8e;--GL-200:#f6e2bc;--GL-100:#fbf3e4;
+  --N-900:#1c1a17;--N-800:#35302c;--N-700:#554f4a;--N-600:#706961;--N-500:#8b8279;
+  --N-400:#a59e97;--N-300:#c1bdb8;--N-200:#dcd9d5;--N-100:#f1f0ee;
+  --NV-900:#1d1c16;--NV-800:#383529;--NV-700:#595546;--NV-600:#75715c;--NV-500:#918c73;
+  --NV-400:#aaa692;--NV-300:#c5c2b5;--NV-200:#deddd3;--NV-100:#f2f1ed;
+  --shd-sm:0 2px 8px rgba(28,26,23,.06),0 1px 2px rgba(28,26,23,.04);
+  --shd-md:0 4px 16px rgba(28,26,23,.10),0 2px 4px rgba(28,26,23,.06);
+  --shd-lg:0 8px 32px rgba(28,26,23,.14),0 4px 8px rgba(28,26,23,.08);
+  --FD:'EB Garamond',Georgia,serif;
+  --FA:'Playfair Display',Georgia,serif;
+  --FB:'Work Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--N-100);font-family:var(--FB);color:var(--N-900);font-size:16px;line-height:1.5;}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:var(--BU-800);padding:10px 64px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.06);}
+.nav-brand{font-family:var(--FD);font-size:0.78rem;color:var(--GL-300);margin-right:10px;white-space:nowrap;flex-shrink:0;}
+.nav a{font-family:var(--FA);font-size:0.44rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:rgba(241,240,238,.3);text-decoration:none;padding:3px 7px;border:1px solid rgba(255,255,255,.07);transition:all .18s;white-space:nowrap;}
+.nav a:hover{color:var(--N-100);border-color:rgba(255,255,255,.22);}
+.nav a.nav-agent{color:var(--GL-300);border-color:rgba(235,204,142,.25);}
+.nav a.nav-agent:hover{color:var(--GL-300);border-color:rgba(235,204,142,.6);}
+
+/* AGENT INSTRUCTIONS */
+.agent-instr{background:var(--NV-100);border-top:4px solid var(--GL-700);border-bottom:2px solid var(--NV-300);padding:52px 80px;}
+.agent-instr-eyebrow{font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--GL-700);margin-bottom:8px;}
+.agent-instr-title{font-family:var(--FD);font-size:2.5rem;color:var(--BU-700);margin-bottom:4px;line-height:1.1;}
+.agent-instr-sub{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-600);margin-bottom:40px;border-left:2px solid var(--GL-700);padding-left:14px;}
+.agent-instr-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px;}
+.agent-instr-block{background:var(--N-100);padding:24px 28px;border-radius:6px;border:1px solid var(--NV-300);}
+.agent-instr-block h3{font-family:var(--FA);font-size:0.56rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-500);margin-bottom:14px;}
+.agent-instr-block p,.agent-instr-block li{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:6px;}
+.agent-instr-block li{padding-left:12px;position:relative;list-style:none;}
+.agent-instr-block li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:1px;background:var(--GL-700);}
+.agent-instr-block code{font-family:monospace;font-size:0.7rem;background:var(--NV-200);padding:1px 5px;border-radius:2px;color:var(--N-700);}
+.checklist{background:var(--BU-700);border-radius:8px;padding:28px 32px;margin-top:24px;}
+.checklist h3{font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--GL-300);margin-bottom:14px;}
+.checklist li{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-100);line-height:1.75;list-style:none;padding-left:20px;position:relative;margin-bottom:4px;}
+.checklist li::before{content:'☐';position:absolute;left:0;color:var(--GL-300);}
+
+/* PAGE */
+.page{max-width:1280px;margin:0 auto;padding:72px 80px 120px;}
+.sec{margin-bottom:80px;padding-bottom:80px;border-bottom:1px solid var(--N-200);position:relative;overflow:hidden;}
+.sec:last-child{border-bottom:none;}
+.sec-inner{position:relative;z-index:1;}
+.sec-num{font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--BU-400);margin-bottom:6px;}
+.sec-title{font-family:var(--FD);font-size:2.5rem;font-weight:400;color:var(--BU-700);letter-spacing:-0.01em;line-height:1.05;margin-bottom:10px;}
+.sec-sub{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-500);line-height:1.75;margin-bottom:36px;border-left:2px solid var(--NV-300);padding-left:16px;}
+.subsec{margin-bottom:40px;}
+.subsec-title{font-family:var(--FA);font-size:1.05rem;font-weight:400;color:var(--BU-700);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--N-200);}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;}
+th{font-family:var(--FB);font-weight:600;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);padding:8px 12px;text-align:left;background:var(--NV-100);border-bottom:1px solid var(--N-200);}
+td{font-family:var(--FB);font-size:0.75rem;font-weight:300;padding:9px 12px;border-bottom:1px solid var(--N-200);color:var(--N-700);vertical-align:middle;line-height:1.5;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:rgba(242,241,237,.7);}
+.hex{font-family:monospace;font-size:0.7rem;color:var(--BU-600);}
+.hr{background:rgba(134,97,24,.05);}
+
+/* SWATCHES */
+.sw-row{display:flex;gap:2px;margin-bottom:12px;}
+.sw{flex:1;height:44px;display:flex;flex-direction:column;justify-content:flex-end;padding:4px 6px;}
+.sw-lbl{font-family:var(--FB);font-size:0.42rem;font-weight:500;opacity:.78;}
+.sw-h{outline:2px solid var(--GL-700);outline-offset:-2px;}
+
+/* EDITORIAL CONTEXT DEMOS */
+.ctx-dark{background:var(--BU-700);border-radius:12px;padding:52px 60px;box-shadow:var(--shd-md);margin-bottom:20px;}
+.ctx-light{background:var(--N-100);border-radius:12px;padding:52px 60px;box-shadow:var(--shd-md);border:1px solid var(--N-200);}
+.ctx-ey{font-family:var(--FA);font-size:0.625rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;margin-bottom:24px;}
+.ctx-h{font-family:var(--FD);font-size:3.25rem;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.ctx-hem{font-family:var(--FD);font-size:3.25rem;font-weight:400;font-style:italic;letter-spacing:-0.01em;line-height:1.2;margin-bottom:24px;}
+.ctx-sub{font-family:var(--FA);font-size:1.25rem;font-weight:400;line-height:1.55;margin-bottom:20px;}
+.ctx-body{font-family:var(--FB);font-size:1.05rem;font-weight:300;line-height:1.75;margin-bottom:10px;}
+.ctx-ann{margin-top:36px;padding-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.ann-item{font-family:var(--FB);font-size:0.5rem;font-weight:300;line-height:1.7;}
+.ann-lbl{font-family:var(--FA);font-size:0.5rem;font-weight:600;display:block;margin-bottom:2px;}
+
+/* GRADIENTS */
+.grad-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.grad-cell{min-height:120px;padding:22px 20px;display:flex;flex-direction:column;cursor:default;}
+.g-lbl{font-family:var(--FA);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(241,240,238,.3);margin-bottom:auto;}
+.g-name{font-family:var(--FD);font-size:1.2rem;color:var(--N-100);margin-bottom:3px;}
+.g-desc{font-family:var(--FB);font-size:0.46rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:rgba(241,240,238,.22);}
+
+/* TILES */
+.tile-row{display:flex;gap:2px;}
+.tile{flex:1;padding:22px 18px;cursor:default;box-shadow:var(--shd-md);}
+.t-title{font-family:var(--FD);font-size:1rem;font-weight:400;line-height:1.2;margin-bottom:6px;}
+.t-body{font-family:var(--FB);font-size:0.68rem;font-weight:300;line-height:1.6;}
+
+/* TYPOGRAPHY SCALE */
+.tr-d{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.tr-d:last-child{border-bottom:none;}
+.tr-l{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--N-200);}
+.tr-l:last-child{border-bottom:none;}
+.t-meta{width:185px;flex-shrink:0;font-family:var(--FA);font-size:0.48rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--BU-400);line-height:1.7;}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 40px;background:linear-gradient(120deg,#131c25,#6a89a9);border:none;border-radius:8px;font-family:var(--FA);font-size:1.5rem;font-weight:400;color:var(--N-100);cursor:pointer;transition:background .25s;box-shadow:var(--shd-md);}
+.btn:hover{background:linear-gradient(120deg,#2b3a4a,#91a7bf);}
+
+/* SHADOWS */
+.shad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.shad-card{background:var(--N-100);padding:24px 20px;border:1px solid var(--N-200);}
+
+/* TEXTURES via ::before — N-100 sections only */
+.tex-section{position:relative;overflow:hidden;}
+.tex-section > .sec-inner,.tex-section > div,.tex-section > p{position:relative;z-index:1;}
+.tex-section::before{content:'';position:absolute;top:50%;left:50%;width:200vmax;height:200vmax;transform:translate(-50%,-50%) rotate(90deg);background-size:cover;background-position:center;opacity:.22;pointer-events:none;z-index:0;mix-blend-mode:multiply;}
+.tex-03::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-03.svg');}
+.tex-04::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-04.svg');}
+.tex-05::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-05.svg');}
+.tex-06::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-06.svg');}
+.tex-07::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-07.svg');}
+.tex-08::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-08.svg');}
+.tex-09::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-09.svg');}
+
+/* LOGO MARK WATERMARK */
+.logowm-section{position:relative;overflow:hidden;}
+.logowm-section::before{content:'';position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:cover;background-position:center;opacity:1;pointer-events:none;z-index:0;}
+.logowm-section > .sec-inner{position:relative;z-index:1;}
+
+/* PROVIDERS */
+.provider-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.provider-card{background:var(--N-100);border:1px solid var(--N-200);border-radius:12px;overflow:hidden;box-shadow:var(--shd-md);}
+.provider-photo{width:100%;height:300px;object-fit:cover;object-position:top center;display:block;}
+.provider-body{padding:28px 32px;}
+.provider-role{font-family:var(--FA);font-size:0.5rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;}
+.provider-name{font-family:var(--FD);font-size:2rem;font-weight:400;color:var(--BU-700);margin-bottom:4px;line-height:1.1;}
+.provider-cred{font-family:var(--FA);font-size:0.875rem;font-style:italic;color:var(--GL-700);margin-bottom:16px;}
+.provider-spec-label{font-family:var(--FB);font-size:0.5rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--NV-600);margin-bottom:6px;}
+.provider-spec{font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;}
+.provider-visual{font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--N-500);line-height:1.7;font-style:italic;border-left:2px solid var(--NV-300);padding-left:12px;margin-top:14px;}
+
+/* NOTES / CALLOUTS */
+.note{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-500);line-height:1.75;background:var(--NV-100);padding:14px 18px;border-left:2px solid var(--NV-300);margin-top:12px;}
+.code{font-family:monospace;font-size:0.7rem;background:var(--N-200);padding:1px 6px;border-radius:2px;color:var(--N-700);}
+.prompt-block{font-family:var(--FD);font-size:1rem;font-weight:400;font-style:italic;color:var(--BU-700);line-height:1.75;background:var(--NV-100);padding:24px 28px;border-left:3px solid var(--GL-700);margin-bottom:20px;}
+
+/* DO / DONT */
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.do-col{background:rgba(43,58,74,.03);padding:24px;border-top:3px solid var(--BU-600);}
+.dont-col{background:rgba(134,97,24,.04);padding:24px;border-top:3px solid rgba(176,141,114,.5);}
+.do-col h4,.dont-col h4{font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:14px;}
+.do-col h4{color:var(--BU-600);}
+.dont-col h4{color:var(--GL-700);}
+.do-col li,.dont-col li{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-700);line-height:1.65;margin-bottom:8px;padding-left:14px;position:relative;list-style:none;}
+.do-col li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--BU-500);}
+.dont-col li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:#b18020;}
+
+/* RULES BLOCK */
+.rules-block{background:var(--NV-100);border-radius:8px;padding:28px 32px;margin-bottom:20px;}
+.rules-block h4{font-family:var(--FA);font-size:0.56rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--BU-500);margin-bottom:12px;}
+.rules-block p,.rules-block li{font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:8px;}
+.rules-block li{padding-left:14px;position:relative;list-style:none;}
+.rules-block li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--GL-700);}
+.rules-block strong{font-weight:500;color:var(--N-900);}
+
+/* NAMING TABLE — use/avoid */
+.naming-table td:first-child{font-weight:500;color:var(--BU-700);}
+.naming-table td:last-child{color:var(--N-600);font-style:italic;}
+
+/* FRAMING PRINCIPLES */
+.framing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;}
+.framing-card{background:var(--N-100);border:1px solid var(--N-200);border-radius:8px;padding:24px 20px;box-shadow:var(--shd-sm);}
+.framing-num{font-family:var(--FD);font-size:2.5rem;color:var(--GL-700);opacity:.3;line-height:1;margin-bottom:8px;}
+.framing-title{font-family:var(--FD);font-size:1.1rem;color:var(--BU-700);margin-bottom:8px;}
+.framing-body{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-700);line-height:1.7;}
+
+/* POSITIONING STATEMENT */
+.positioning-block{background:var(--BU-700);border-radius:12px;padding:48px 60px;margin-top:16px;}
+.positioning-block p{font-family:var(--FB);font-size:0.92rem;font-weight:300;color:var(--N-100);line-height:1.85;}
+.positioning-block strong{color:var(--GL-300);font-weight:400;}
+
+/* PHOTO GRID */
+.photo-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.photo-item{display:inline-block;vertical-align:top;}
+.photo-item img{display:block;}
+.photo-item .photo-lbl{font-family:var(--FB);font-size:0.52rem;font-weight:300;color:var(--N-500);margin-top:4px;word-break:break-all;}
+
+/* QUICK REF */
+.qr-table td:first-child{font-family:var(--FB);font-weight:500;color:var(--BU-700);font-size:0.75rem;white-space:nowrap;width:200px;}
+.qr-table td:last-child{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-900);}
+
+/* FOOTER */
+.footer{background:var(--BU-800);padding:24px 80px;display:flex;justify-content:space-between;align-items:center;font-family:var(--FB);font-size:0.65rem;font-weight:300;color:rgba(241,240,238,.35);}
+
+/* MASTHEAD */
+.masthead{margin-bottom:72px;padding-bottom:48px;border-bottom:1px solid var(--N-200);}
+.masthead-meta{font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--BU-400);margin-bottom:12px;}
+.masthead-title{font-family:var(--FD);font-size:3.5rem;font-weight:400;color:var(--BU-700);letter-spacing:-0.01em;line-height:1.0;margin-bottom:4px;}
+.masthead-sub{font-family:var(--FD);font-size:3.5rem;font-weight:400;font-style:italic;color:var(--GL-700);letter-spacing:-0.01em;line-height:1.0;margin-bottom:32px;}
+.masthead-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.masthead-item{border-left:2px solid var(--NV-300);padding-left:14px;}
+.masthead-item-label{font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--N-400);margin-bottom:4px;}
+.masthead-item-value{font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--N-700);}
+
+/* ILL MCP */
+.mcp-step{background:var(--NV-100);border-radius:8px;padding:24px 28px;margin-bottom:12px;border-left:3px solid var(--BU-500);}
+.mcp-step-num{font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px;}
+.mcp-step-title{font-family:var(--FD);font-size:1.1rem;color:var(--BU-700);margin-bottom:8px;}
+.mcp-step-body{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;}
+.mcp-step-body li{padding-left:14px;position:relative;list-style:none;margin-bottom:4px;}
+.mcp-step-body li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--BU-500);}
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="nav">
+  <div class="nav-brand">Body Balance Medical · Brand PRO v2.0</div>
+  <a href="#agent-instructions" class="nav-agent">Agent Instr</a>
+  <a href="#color">Color</a><a href="#pairings">Pairings</a><a href="#gradients">Gradients</a>
+  <a href="#tiles">Tiles</a><a href="#type">Typography</a><a href="#spacing">Spacing</a>
+  <a href="#grid">Grid</a><a href="#shadows">Shadows</a><a href="#buttons">Buttons</a>
+  <a href="#textures">Textures</a><a href="#logo">Logo</a><a href="#providers">Providers</a>
+  <a href="#photography">Photography</a><a href="#voice">Voice</a>
+  <a href="#naming">Naming</a><a href="#framing">Framing</a><a href="#compliance">Compliance</a>
+  <a href="#format">Format</a><a href="#positioning">Positioning</a>
+  <a href="#assets">Assets</a><a href="#workflow">Workflow</a>
+  <a href="#degradation">Degradation</a><a href="#image-gen">Image Gen</a>
+  <a href="#behavior">Behavior</a><a href="#mcp">MCP</a><a href="#reference">Reference</a>
+</nav>
+
+<!-- AGENT INSTRUCTIONS — VISIBLE IN PRO FILE -->
+<section id="agent-instructions" class="agent-instr">
+  <div class="agent-instr-eyebrow">Captain Kepler Creative · Confidential · Pro Edition</div>
+  <div class="agent-instr-title">Agent Operating Instructions</div>
+  <div class="agent-instr-sub">BB-BRAND-PRO.html · Version 2.0 · Josh Smith + Claude Code shared operating contract. Read this section fully before building anything. All rules are active and non-negotiable.</div>
+
+  <div class="agent-instr-grid">
+    <div class="agent-instr-block">
+      <h3>Pre-Build Checklist</h3>
+      <ul>
+        <li>Confirm this file is the current brand source of truth</li>
+        <li>Page/deliverable base is <code>N-100 #f1f0ee</code> — not BU-700, not a gradient</li>
+        <li>Logo zone confirmed — what color is the surface the logo sits on?</li>
+        <li>Output type confirmed — route to correct workflow (Workflow section)</li>
+        <li>Print/poster → Illustrator MCP (MCP section). Not HTML</li>
+        <li>Document/report PDF → HTML + Chrome browser-print</li>
+        <li>Image source identified — generate, R2 reference, or brief Josh</li>
+        <li>R2 access tested — apply graceful degradation if blocked</li>
+        <li>Print only: does all copy fit within zone allocations at minimum text sizes? If not, edit copy to fit before building</li>
+      </ul>
+    </div>
+    <div class="agent-instr-block">
+      <h3>Environment Routing — Brand Fidelity First</h3>
+      <p>Before building any visual output, confirm the environment can render EB Garamond, Playfair Display, and Work Sans. If it cannot, route to HTML with Google Fonts via <code>&lt;link&gt;</code>. Never produce output with degraded fonts.</p>
+      <p>For print collateral, do not use HTML — route to Illustrator MCP (MCP section).</p>
+      <h3 style="margin-top:16px;">Image Requirement</h3>
+      <p>Every visual deliverable must include at least one image. No purely text-forward layouts — ever.</p>
+      <ul>
+        <li>Environment supports image generation → generate using photography brief</li>
+        <li>R2 accessible → suggest a reference from the photo library</li>
+        <li>Neither → pause and brief Josh (subject, mood, shot direction, 500T prompt)</li>
+      </ul>
+    </div>
+    <div class="agent-instr-block">
+      <h3>While Building</h3>
+      <ul>
+        <li>Default to N-100. Never open a standalone deliverable on BU-700 or a gradient unless the brief calls for it</li>
+        <li>Apply the logo decision tree before placing any logo</li>
+        <li>Never use a color outside the six families</li>
+        <li>Never use a font outside the three families</li>
+        <li>Upright EB Garamond always leads — italic always follows, never opens</li>
+        <li>Reference color pairings by code (D1–D6, L1–L6)</li>
+        <li>Apply voice and vocabulary rules to all copy</li>
+        <li>Include textures only when R2 is accessible — never forced</li>
+      </ul>
+      <h3 style="margin-top:16px;">Safe Baseline When Unsure</h3>
+      <p>N-100 background · BU-700 section accent · EB Garamond heading (upright leads) · Work Sans 300 body · GL-300 on dark / GL-700 on light</p>
+    </div>
+    <div class="agent-instr-block">
+      <h3>Anti-Rationalization Rule</h3>
+      <p>If you find yourself thinking a rule violation will look better, that reasoning is incorrect. The rules define what looks better for this brand. The designer knows what they want. Do not substitute agent aesthetic judgment for the rule system.</p>
+      <h3 style="margin-top:16px;">Creative Problem-Solving Fallback</h3>
+      <p>Before diverging from any layout rule, exhaust these in-system options first:</p>
+      <ul>
+        <li>Gradient tiles (neutral, female, male) for dimension on a light surface</li>
+        <li>NV-300 or NV-100 surface cards for hierarchy without dark backgrounds</li>
+        <li>L-bracket gold frame for featured or callout content</li>
+        <li>Texture on N-100 for depth without breaking the light base</li>
+        <li>Ghosted Playfair Display text for visual weight on N-100 sections</li>
+        <li>BU-700 for one interior section break only — not the document frame</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="agent-instr-block" style="margin-bottom:24px;">
+    <h3>Pre-Output Verification Gate — Run Before Presenting Any Deliverable</h3>
+    <ol style="padding-left:18px;">
+      <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:6px;">What is the page/document base? It must be N-100.</li>
+      <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:6px;">Are textures used anywhere? If yes — is that zone N-100? If not, remove the texture.</li>
+      <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:6px;">Does any dark zone constitute the majority of the document surface? If yes, restructure.</li>
+      <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:6px;">Is every color, font, and layout element traceable to a rule in the visual spec?</li>
+      <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">(Print only) Does any text-bearing zone use a fixed height? Convert to min-height.</li>
+    </ol>
+  </div>
+
+  <div class="agent-instr-block" style="margin-bottom:24px;">
+    <h3>Print Copy Fitting Rule</h3>
+    <p>If copy cannot fit within the page at minimum text sizes: (1) Rewrite the copy to fit — preserving meaning, voice, and all required information. (2) Complete the deliverable using the rewritten copy. (3) Surface the issue after output, showing exactly what was changed and why. The agent never shrinks text below minimum size. The agent never overflows the page. The agent never asks permission mid-build — it resolves the problem, delivers the file, and reports what it did.</p>
+    <p style="margin-top:10px;"><strong style="color:var(--BU-700);">Font environment note:</strong> The Claude Code / bash environment cannot reach Google Fonts CDN. Weasyprint falls back to system serif/sans fonts. Always use HTML → Chrome browser-print workflow for any output requiring correct font rendering.</p>
+  </div>
+
+  <div class="agent-instr-block" style="margin-bottom:24px;">
+    <h3>Graceful Degradation</h3>
+    <p><strong style="color:var(--BU-700);">State 1 — R2 Accessible:</strong> Pull all logos and textures from asset library. Build normally.</p>
+    <p style="margin-top:8px;"><strong style="color:var(--BU-700);">State 2 — R2 Not Accessible:</strong> Colors, typography, spacing, voice, and layout rules remain fully available. <strong>Textures:</strong> Omit silently. No mention, no flag. <strong>Logo:</strong> Say: <em>"I can't access the logo files in this environment. Drop the logo you need into this chat and I'll use it. BB-H-Logo-B.svg for light backgrounds, BB-H-Logo-W.svg for dark backgrounds."</em> Wait for upload. Do not substitute a placeholder.</p>
+    <p style="margin-top:8px;"><strong style="color:var(--BU-700);">Infrastructure note:</strong> Neither raw.githubusercontent.com nor *.r2.dev resolve in Claude.ai chat. R2 URLs do resolve in Claude Code sessions and all browser-rendered outputs. Long-term fix: host assets at assets.bodybalancemedical.com.</p>
+  </div>
+
+  <div class="agent-instr-block">
+    <h3>Flagging Gaps</h3>
+    <p>Flag specifically and wait for input. Never silently produce an off-brand result. Never guess at a brand color, logo file, or voice rule.</p>
+    <h3 style="margin-top:16px;">Claude Code Pipeline Notes</h3>
+    <p>GitHub repo: <code>https://github.com/joshkeplersmith-source/bbm-design-system</code> · R2 base: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code> · Working root: <code>~/Captain-Kepler/</code> · This file lives at: <code>client-working-files/body-balance/BB-BRAND-PRO.html</code></p>
+  </div>
+</section>
+
+<div class="page">
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-meta">Captain Kepler Creative · Confidential · Pro Edition</div>
+  <div class="masthead-title">Body Balance Medical</div>
+  <div class="masthead-sub">Brand Operating System · Pro</div>
+  <div class="masthead-grid">
+    <div class="masthead-item"><div class="masthead-item-label">Version</div><div class="masthead-item-value">2.0 — Integrated</div></div>
+    <div class="masthead-item"><div class="masthead-item-label">Date</div><div class="masthead-item-value">May 2026</div></div>
+    <div class="masthead-item"><div class="masthead-item-label">Author</div><div class="masthead-item-value">Josh Smith · Captain Kepler Creative</div></div>
+    <div class="masthead-item"><div class="masthead-item-label">Source Files</div><div class="masthead-item-value">BB-BRAND-PRO.md v1.3 + Voice Messaging PDF</div></div>
+  </div>
+</div>
+
+<!-- 01 COLOR PALETTE -->
+<section class="sec tex-section tex-08" id="color">
+<div class="sec-inner">
+  <div class="sec-num">01 — Color Palette</div>
+  <div class="sec-title">Six Families</div>
+  <div class="sec-sub">Hero stop is 700 across all families. BU-700 is the dominant brand color. N-100 is the page background. Never use pure #000000 or #ffffff — always N-900 and N-100.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">BU — Primary · Slate Blue · Dominant brand color</div>
+    <div class="sw-row">
+      <div class="sw" style="background:#030507"><div class="sw-lbl" style="color:#3e536a">#030507 · 900</div></div>
+      <div class="sw" style="background:#131c25"><div class="sw-lbl" style="color:#506d8b">#131c25 · 800</div></div>
+      <div class="sw sw-h" style="background:#2b3a4a"><div class="sw-lbl" style="color:#91a7bf">#2b3a4a · 700 ★</div></div>
+      <div class="sw" style="background:#3e536a"><div class="sw-lbl" style="color:#b1c4d7">#3e536a · 600</div></div>
+      <div class="sw" style="background:#506d8b"><div class="sw-lbl" style="color:#d0dbe7">#506d8b · 500</div></div>
+      <div class="sw" style="background:#6a89a9"><div class="sw-lbl" style="color:#131c25">#6a89a9 · 400</div></div>
+      <div class="sw" style="background:#91a7bf"><div class="sw-lbl" style="color:#131c25">#91a7bf · 300</div></div>
+      <div class="sw" style="background:#b1c4d7"><div class="sw-lbl" style="color:#2b3a4a">#b1c4d7 · 200</div></div>
+      <div class="sw" style="background:#d0dbe7"><div class="sw-lbl" style="color:#2b3a4a">#d0dbe7 · 100</div></div>
+    </div>
+    <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
+      <tr><td>BU-900</td><td class="hex">#030507</td><td>Deepest dark — nav, footer backgrounds</td></tr>
+      <tr><td>BU-800</td><td class="hex">#131c25</td><td>Gradient dark stop — resting state</td></tr>
+      <tr class="hr"><td><strong>BU-700 ★</strong></td><td class="hex">#2b3a4a</td><td>Hero stop — section backgrounds · gradient selected state</td></tr>
+      <tr><td>BU-600</td><td class="hex">#3e536a</td><td>Tile hover / selected on BU-700 background</td></tr>
+      <tr><td>BU-500</td><td class="hex">#506d8b</td><td>Eyebrow on light · subheading accent</td></tr>
+      <tr><td>BU-400</td><td class="hex">#6a89a9</td><td>Gradient light stop resting · meta labels on dark</td></tr>
+      <tr><td>BU-300</td><td class="hex">#91a7bf</td><td>Gradient lighter stop selected</td></tr>
+      <tr><td>BU-200</td><td class="hex">#b1c4d7</td><td>Light fills on dark surfaces</td></tr>
+      <tr><td>BU-100</td><td class="hex">#d0dbe7</td><td>Lightest tint — background accents</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">P — Secondary · Pink / Rose / Mauve · Female-forward treatments</div>
+    <div class="sw-row">
+      <div class="sw" style="background:#260d19"><div class="sw-lbl" style="color:#722c4d">#260d19 · 900</div></div>
+      <div class="sw" style="background:#49182f"><div class="sw-lbl" style="color:#c9739c">#49182f · 800</div></div>
+      <div class="sw sw-h" style="background:#722c4d"><div class="sw-lbl" style="color:#da9fbb">#722c4d · 700 ★</div></div>
+      <div class="sw" style="background:#973a66"><div class="sw-lbl" style="color:#f7e8ef">#973a66 · 600</div></div>
+      <div class="sw" style="background:#b94b7f"><div class="sw-lbl" style="color:#f7e8ef">#b94b7f · 500</div></div>
+      <div class="sw" style="background:#c9739c"><div class="sw-lbl" style="color:#260d19">#c9739c · 400</div></div>
+      <div class="sw" style="background:#da9fbb"><div class="sw-lbl" style="color:#49182f">#da9fbb · 300</div></div>
+      <div class="sw" style="background:#ecc5d8"><div class="sw-lbl" style="color:#49182f">#ecc5d8 · 200</div></div>
+      <div class="sw" style="background:#f7e8ef"><div class="sw-lbl" style="color:#722c4d">#f7e8ef · 100</div></div>
+    </div>
+    <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
+      <tr><td>P-800</td><td class="hex">#49182f</td><td>Female gradient dark stop — resting</td></tr>
+      <tr class="hr"><td><strong>P-700 ★</strong></td><td class="hex">#722c4d</td><td>Hero — female gradient selected stop</td></tr>
+      <tr><td>P-500</td><td class="hex">#b94b7f</td><td>Female accent on light (L3)</td></tr>
+      <tr><td>P-300</td><td class="hex">#da9fbb</td><td>Female card title on dark gradient tiles</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">GR — Tertiary · Green / Olive / Sage · Male-forward treatments</div>
+    <div class="sw-row">
+      <div class="sw" style="background:#232210"><div class="sw-lbl" style="color:#888749">#232210 · 900</div></div>
+      <div class="sw" style="background:#42411f"><div class="sw-lbl" style="color:#a8a65c">#42411f · 800</div></div>
+      <div class="sw sw-h" style="background:#676637"><div class="sw-lbl" style="color:#d1d0a8">#676637 · 700 ★</div></div>
+      <div class="sw" style="background:#888749"><div class="sw-lbl" style="color:#f5f5ea">#888749 · 600</div></div>
+      <div class="sw" style="background:#a8a65c"><div class="sw-lbl" style="color:#232210">#a8a65c · 500</div></div>
+      <div class="sw" style="background:#bcba81"><div class="sw-lbl" style="color:#232210">#bcba81 · 400</div></div>
+      <div class="sw" style="background:#d1d0a8"><div class="sw-lbl" style="color:#42411f">#d1d0a8 · 300</div></div>
+      <div class="sw" style="background:#e7e6cb"><div class="sw-lbl" style="color:#42411f">#e7e6cb · 200</div></div>
+      <div class="sw" style="background:#f5f5ea"><div class="sw-lbl" style="color:#676637">#f5f5ea · 100</div></div>
+    </div>
+    <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
+      <tr class="hr"><td><strong>GR-700 ★</strong></td><td class="hex">#676637</td><td>Hero — male accent on light (L4)</td></tr>
+      <tr><td>GR-600</td><td class="hex">#888749</td><td>Male gradient dark stop — resting</td></tr>
+      <tr><td>GR-500</td><td class="hex">#a8a65c</td><td>Male gradient light stop — selected</td></tr>
+      <tr><td>GR-300</td><td class="hex">#d1d0a8</td><td>Male card title on dark gradient tiles</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">GL — Quaternary · Gold / Amber · GL-300 on dark · GL-700 on light · Non-interchangeable</div>
+    <div class="sw-row">
+      <div class="sw" style="background:#2d2006"><div class="sw-lbl" style="color:#d99e2b">#2d2006 · 900</div></div>
+      <div class="sw" style="background:#553c0c"><div class="sw-lbl" style="color:#e2b45b">#553c0c · 800</div></div>
+      <div class="sw sw-h" style="background:#866118"><div class="sw-lbl" style="color:#ebcc8e">#866118 · 700 ★</div></div>
+      <div class="sw" style="background:#b18020"><div class="sw-lbl" style="color:#fbf3e4">#b18020 · 600</div></div>
+      <div class="sw" style="background:#d99e2b"><div class="sw-lbl" style="color:#2d2006">#d99e2b · 500</div></div>
+      <div class="sw" style="background:#e2b45b"><div class="sw-lbl" style="color:#2d2006">#e2b45b · 400</div></div>
+      <div class="sw sw-h" style="background:#ebcc8e"><div class="sw-lbl" style="color:#553c0c">#ebcc8e · 300 ★</div></div>
+      <div class="sw" style="background:#f6e2bc"><div class="sw-lbl" style="color:#553c0c">#f6e2bc · 200</div></div>
+      <div class="sw" style="background:#fbf3e4"><div class="sw-lbl" style="color:#866118">#fbf3e4 · 100</div></div>
+    </div>
+    <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
+      <tr class="hr"><td><strong>GL-700 ★</strong></td><td class="hex">#866118</td><td>Accent heading on light (L1) · card title on NV tiles</td></tr>
+      <tr><td>GL-500</td><td class="hex">#d99e2b</td><td>Caption on dark (D6) · eyebrow mid-gold</td></tr>
+      <tr class="hr"><td><strong>GL-300 ★</strong></td><td class="hex">#ebcc8e</td><td>Primary accent on dark (D1) · card title on gradient/BU-700 tiles</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">N — Neutral · Warm Greige · Brand Black N-900 · Brand White N-100</div>
+    <div class="sw-row">
+      <div class="sw" style="background:#1c1a17"><div class="sw-lbl" style="color:#554f4a">#1c1a17 · 900</div></div>
+      <div class="sw" style="background:#35302c"><div class="sw-lbl" style="color:#8b8279">#35302c · 800</div></div>
+      <div class="sw" style="background:#554f4a"><div class="sw-lbl" style="color:#c1bdb8">#554f4a · 700</div></div>
+      <div class="sw" style="background:#706961"><div class="sw-lbl" style="color:#dcd9d5">#706961 · 600</div></div>
+      <div class="sw" style="background:#8b8279"><div class="sw-lbl" style="color:#f1f0ee">#8b8279 · 500</div></div>
+      <div class="sw" style="background:#a59e97"><div class="sw-lbl" style="color:#1c1a17">#a59e97 · 400</div></div>
+      <div class="sw" style="background:#c1bdb8"><div class="sw-lbl" style="color:#35302c">#c1bdb8 · 300</div></div>
+      <div class="sw" style="background:#dcd9d5"><div class="sw-lbl" style="color:#35302c">#dcd9d5 · 200</div></div>
+      <div class="sw sw-h" style="background:#f1f0ee"><div class="sw-lbl" style="color:#1c1a17">#f1f0ee · 100 ★</div></div>
+    </div>
+    <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
+      <tr><td><strong>N-900</strong></td><td class="hex">#1c1a17</td><td>Brand near-black — body text on light</td></tr>
+      <tr><td>N-600</td><td class="hex">#706961</td><td>Secondary body text on light</td></tr>
+      <tr><td>N-300</td><td class="hex">#c1bdb8</td><td>Subheading / supporting text on dark (D5)</td></tr>
+      <tr><td>N-200</td><td class="hex">#dcd9d5</td><td>Borders, dividers, horizontal rules on light</td></tr>
+      <tr class="hr"><td><strong>N-100 ★</strong></td><td class="hex">#f1f0ee</td><td>Page background · body text on dark · brand near-white</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">NV — Neutral Variant · Warm Tan · Layout, hierarchy, design support</div>
+    <div class="sw-row">
+      <div class="sw" style="background:#1d1c16"><div class="sw-lbl" style="color:#595546">#1d1c16 · 900</div></div>
+      <div class="sw" style="background:#383529"><div class="sw-lbl" style="color:#918c73">#383529 · 800</div></div>
+      <div class="sw" style="background:#595546"><div class="sw-lbl" style="color:#c5c2b5">#595546 · 700</div></div>
+      <div class="sw" style="background:#75715c"><div class="sw-lbl" style="color:#deddd3">#75715c · 600</div></div>
+      <div class="sw" style="background:#918c73"><div class="sw-lbl" style="color:#f2f1ed">#918c73 · 500</div></div>
+      <div class="sw" style="background:#aaa692"><div class="sw-lbl" style="color:#1d1c16">#aaa692 · 400</div></div>
+      <div class="sw" style="background:#c5c2b5"><div class="sw-lbl" style="color:#383529">#c5c2b5 · 300</div></div>
+      <div class="sw sw-h" style="background:#deddd3"><div class="sw-lbl" style="color:#383529">#deddd3 · 200 ★</div></div>
+      <div class="sw" style="background:#f2f1ed"><div class="sw-lbl" style="color:#1d1c16">#f2f1ed · 100</div></div>
+    </div>
+    <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
+      <tr><td>NV-700</td><td class="hex">#595546</td><td>Section dividers · callout lines · underlines</td></tr>
+      <tr><td>NV-500</td><td class="hex">#918c73</td><td>Secondary rules · callout lines</td></tr>
+      <tr><td>NV-300</td><td class="hex">#c5c2b5</td><td>Neutral tile background resting on N-100</td></tr>
+      <tr class="hr"><td><strong>NV-200 ★</strong></td><td class="hex">#deddd3</td><td>Texture SVG fill color · NV tile hover state</td></tr>
+      <tr><td>NV-100</td><td class="hex">#f2f1ed</td><td>Spec boxes · code blocks · secondary surfaces</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">CSS Design Tokens — Section 1.14</div>
+    <div class="note" style="font-family:monospace;font-size:0.68rem;color:var(--N-700);line-height:1.8;white-space:pre-wrap;">:root {
+  --bb-BU-900: #030507; --bb-BU-800: #131c25; --bb-BU-700: #2b3a4a;
+  --bb-BU-600: #3e536a; --bb-BU-500: #506d8b; --bb-BU-400: #6a89a9;
+  --bb-BU-300: #91a7bf; --bb-BU-200: #b1c4d7; --bb-BU-100: #d0dbe7;
+  --bb-P-800: #49182f; --bb-P-700: #722c4d; --bb-P-500: #b94b7f; --bb-P-300: #da9fbb;
+  --bb-GR-700: #676637; --bb-GR-600: #888749; --bb-GR-500: #a8a65c; --bb-GR-300: #d1d0a8;
+  --bb-GL-700: #866118; --bb-GL-500: #d99e2b; --bb-GL-300: #ebcc8e;
+  --bb-N-900: #1c1a17; --bb-N-600: #706961; --bb-N-300: #c1bdb8;
+  --bb-N-200: #dcd9d5; --bb-N-100: #f1f0ee;
+  --bb-NV-700: #595546; --bb-NV-500: #918c73; --bb-NV-300: #c5c2b5;
+  --bb-NV-200: #deddd3; --bb-NV-100: #f2f1ed;
+  --bb-font-display: 'EB Garamond', Georgia, serif;
+  --bb-font-accent: 'Playfair Display', Georgia, serif;
+  --bb-font-body: 'Work Sans', system-ui, sans-serif;
+  --bb-grad-neutral-rest: linear-gradient(135deg, #131c25, #6a89a9);
+  --bb-grad-neutral-active: linear-gradient(135deg, #2b3a4a, #91a7bf);
+  --bb-grad-female-rest: linear-gradient(135deg, #131c25, #49182f);
+  --bb-grad-female-active: linear-gradient(135deg, #2b3a4a, #722c4d);
+  --bb-grad-male-rest: linear-gradient(135deg, #131c25, #888749);
+  --bb-grad-male-active: linear-gradient(135deg, #2b3a4a, #a8a65c);
+  --bb-grad-button-rest: linear-gradient(120deg, #131c25, #6a89a9);
+  --bb-grad-button-hover: linear-gradient(120deg, #2b3a4a, #91a7bf);
+  --bb-shadow-sm: 0 2px 8px rgba(28,26,23,.06), 0 1px 2px rgba(28,26,23,.04);
+  --bb-shadow-md: 0 4px 16px rgba(28,26,23,.10), 0 2px 4px rgba(28,26,23,.06);
+  --bb-shadow-lg: 0 8px 32px rgba(28,26,23,.14), 0 4px 8px rgba(28,26,23,.08);
+}</div>
+  </div>
+</div>
+</section>
+
+<!-- 02 COLOR PAIRINGS -->
+<section class="sec" id="pairings">
+<div class="sec-inner">
+  <div class="sec-num">02 — Color Pairings · In Context</div>
+  <div class="sec-title">Dark &amp; Light Systems</div>
+  <div class="sec-sub">D = dark background (BU-700). L = light background (N-100). Shown as editorial sections — exactly as they appear in production.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Dark System · BU-700 Background</div>
+    <div class="ctx-dark">
+      <div class="ctx-ey" style="color:#d99e2b">Hormone Health · Aesthetics · Wellness</div>
+      <div class="ctx-h" style="color:#f1f0ee">Feel like yourself again</div>
+      <div class="ctx-hem" style="color:#ebcc8e">on the inside and out.</div>
+      <div class="ctx-sub" style="color:#f1f0ee">Integrated hormone and aesthetic care that actually listens.</div>
+      <div class="ctx-body" style="color:#f1f0ee">Body Balance Medical closes the gap between how you feel inside and what you see in the mirror — through two dedicated providers whose specialties work together as one complete plan.</div>
+      <div class="ctx-body" style="color:#c1bdb8;margin-bottom:36px">Whether your starting point is your skin, your hormones, your energy, or your weight — every path at Body Balance leads to the same place: feeling like yourself again.</div>
+      <button class="btn">Apply for Assessment</button>
+      <div class="ctx-ann" style="border-top:1px solid rgba(241,240,238,.08)">
+        <div class="ann-item" style="color:rgba(145,167,191,.5)"><span class="ann-lbl" style="color:#d99e2b">Eyebrow</span>GL-500 · Playfair Display 400<br>0.625rem · uppercase</div>
+        <div class="ann-item" style="color:rgba(145,167,191,.5)"><span class="ann-lbl" style="color:#d99e2b">Heading</span>N-100 + GL-300 italic<br>EB Garamond 400 · 3.25rem</div>
+        <div class="ann-item" style="color:rgba(145,167,191,.5)"><span class="ann-lbl" style="color:#d99e2b">Subheading</span>N-100 · Playfair Display 400<br>1.25rem</div>
+        <div class="ann-item" style="color:rgba(145,167,191,.5)"><span class="ann-lbl" style="color:#d99e2b">Body</span>N-100 / N-300 · Work Sans 300<br>1.05rem · lh 1.75</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Light System · N-100 Background</div>
+    <div class="ctx-light">
+      <div class="ctx-ey" style="color:#506d8b">Body Balance Medical · Las Vegas</div>
+      <div class="ctx-h" style="color:#2b3a4a">Integrated care for</div>
+      <div class="ctx-hem" style="color:#866118">the whole you.</div>
+      <div class="ctx-sub" style="color:#2b3a4a">Two expert providers. One complete plan. No more half-answers.</div>
+      <div class="ctx-body" style="color:#1c1a17">Most practices treat either your hormones or your appearance. Body Balance treats both — because Teresa Hernandez, NP and Mia LoPreiato, NP have built a practice where the inside and outside are always part of the same conversation.</div>
+      <div class="ctx-body" style="color:#706961;margin-bottom:36px">You don't need to explain yourself twice, start over with a new provider, or settle for a plan that only addresses half of what you're feeling.</div>
+      <button class="btn">Take the Assessment</button>
+      <div class="ctx-ann" style="border-top:1px solid var(--N-200)">
+        <div class="ann-item" style="color:#8b8279"><span class="ann-lbl" style="color:#506d8b">Eyebrow</span>BU-500 · Playfair Display 400<br>0.625rem · uppercase</div>
+        <div class="ann-item" style="color:#8b8279"><span class="ann-lbl" style="color:#506d8b">Heading</span>BU-700 + GL-700 italic<br>EB Garamond 400 · 3.25rem</div>
+        <div class="ann-item" style="color:#8b8279"><span class="ann-lbl" style="color:#506d8b">Subheading</span>BU-700 · Playfair Display 400<br>1.25rem</div>
+        <div class="ann-item" style="color:#8b8279"><span class="ann-lbl" style="color:#506d8b">Body</span>N-900 / N-600 · Work Sans 300<br>1.05rem · lh 1.75</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Pairing Reference</div>
+    <table><thead><tr><th>Code</th><th>Background</th><th>Text</th><th>Usage</th></tr></thead><tbody>
+      <tr><td>D1</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">GL-300 #ebcc8e</td><td>Heading italic accent — primary brand heading</td></tr>
+      <tr><td>D2</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">P-300 #da9fbb</td><td>Female-forward heading on dark</td></tr>
+      <tr><td>D3</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">GR-300 #d1d0a8</td><td>Male-forward heading on dark</td></tr>
+      <tr><td>D4</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">N-100 #f1f0ee</td><td>Utility heading and body on dark</td></tr>
+      <tr><td>D5</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">N-300 #c1bdb8</td><td>Subheading / supporting on dark</td></tr>
+      <tr><td>D6</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">GL-500 #d99e2b</td><td>Caption register on dark</td></tr>
+      <tr><td>L1</td><td class="hex">N-100 #f1f0ee</td><td class="hex">GL-700 #866118</td><td>Accent heading on light</td></tr>
+      <tr><td>L2</td><td class="hex">N-100 #f1f0ee</td><td class="hex">BU-700 #2b3a4a</td><td>Primary heading on light</td></tr>
+      <tr><td>L3</td><td class="hex">N-100 #f1f0ee</td><td class="hex">P-500 #b94b7f</td><td>Female accent on light</td></tr>
+      <tr><td>L4</td><td class="hex">N-100 #f1f0ee</td><td class="hex">GR-700 #676637</td><td>Male accent on light</td></tr>
+      <tr><td>L5</td><td class="hex">N-100 #f1f0ee</td><td class="hex">BU-500 #506d8b</td><td>Subheading / caption on light</td></tr>
+      <tr><td>L6</td><td class="hex">N-100 #f1f0ee</td><td class="hex">N-900 #1c1a17</td><td>Body text on light</td></tr>
+    </tbody></table>
+  </div>
+</div>
+</section>
+
+<!-- 03 GRADIENTS -->
+<section class="sec" id="gradients">
+<div class="sec-inner">
+  <div class="sec-num">03 — Gradient System</div>
+  <div class="sec-title">Three Gradients · Two States Each</div>
+  <div class="sec-sub">Resting = darker stop pair. Selected / hover = lighter stop pair. 135° diagonal. Hover each to preview state transition.</div>
+  <div class="grad-row" style="margin-bottom:20px">
+    <div class="grad-cell" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'"><div class="g-lbl">Neutral · hover for selected</div><div class="g-name">BU-800 → BU-400</div><div class="g-desc">Selected: BU-700 → BU-300 · Card title: GL-300</div></div>
+    <div class="grad-cell" style="background:linear-gradient(135deg,#131c25,#49182f)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#722c4d)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#49182f)'"><div class="g-lbl">Female · hover for selected</div><div class="g-name">BU-800 → P-800</div><div class="g-desc">Selected: BU-700 → P-700 · Card title: P-300</div></div>
+    <div class="grad-cell" style="background:linear-gradient(135deg,#131c25,#888749)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#a8a65c)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#888749)'"><div class="g-lbl">Male · hover for selected</div><div class="g-name">BU-800 → GR-600</div><div class="g-desc">Selected: BU-700 → GR-500 · Card title: GR-300</div></div>
+  </div>
+  <table><thead><tr><th>Gradient</th><th>Resting</th><th>Selected / Hover</th><th>Card Title</th></tr></thead><tbody>
+    <tr><td>Neutral</td><td class="hex">linear-gradient(135deg, #131c25, #6a89a9)</td><td class="hex">linear-gradient(135deg, #2b3a4a, #91a7bf)</td><td class="hex">GL-300 #ebcc8e</td></tr>
+    <tr><td>Female</td><td class="hex">linear-gradient(135deg, #131c25, #49182f)</td><td class="hex">linear-gradient(135deg, #2b3a4a, #722c4d)</td><td class="hex">P-300 #da9fbb</td></tr>
+    <tr><td>Male</td><td class="hex">linear-gradient(135deg, #131c25, #888749)</td><td class="hex">linear-gradient(135deg, #2b3a4a, #a8a65c)</td><td class="hex">GR-300 #d1d0a8</td></tr>
+  </tbody></table>
+  <div class="note">Tile body text on all gradients: N-100 #f1f0ee · Work Sans 300. Button gradient runs at 120° (not 135°) — see Button system.</div>
+</div>
+</section>
+
+<!-- 04 TILES -->
+<section class="sec" id="tiles">
+<div class="sec-inner">
+  <div class="sec-num">04 — Tile System</div>
+  <div class="sec-title">Dark &amp; Light Contexts · Hover for selected state</div>
+  <div class="sec-sub">All tiles receive shadow-md. Dark context: gradient tiles only — 3 types. Light context: 5 tile types including NV-300 neutral and solid BU-700.</div>
+  <div class="subsec">
+    <div class="subsec-title">Dark Context · BU-700 Background · Gradient tiles only</div>
+    <div style="background:var(--BU-700);padding:40px;border-radius:8px;margin-bottom:16px;">
+      <div class="tile-row">
+        <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'"><div class="t-title" style="color:#ebcc8e">Neutral Gradient</div><div class="t-body" style="color:#f1f0ee">GL-300 gold title · N-100 body</div></div>
+        <div class="tile" style="background:linear-gradient(135deg,#131c25,#49182f)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#722c4d)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#49182f)'"><div class="t-title" style="color:#da9fbb">Female Gradient</div><div class="t-body" style="color:#f1f0ee">P-300 rose title · N-100 body</div></div>
+        <div class="tile" style="background:linear-gradient(135deg,#131c25,#888749)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#a8a65c)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#888749)'"><div class="t-title" style="color:#d1d0a8">Male Gradient</div><div class="t-body" style="color:#f1f0ee">GR-300 sage title · N-100 body</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">Light Context · N-100 Background · 5 tile types</div>
+    <div class="tile-row">
+      <div class="tile" style="background:#c5c2b5" onmouseover="this.style.background='#deddd3'" onmouseout="this.style.background='#c5c2b5'"><div class="t-title" style="color:#866118">NV-300 Neutral</div><div class="t-body" style="color:#1c1a17">GL-700 title · N-900 body</div></div>
+      <div class="tile" style="background:#2b3a4a" onmouseover="this.style.background='#3e536a'" onmouseout="this.style.background='#2b3a4a'"><div class="t-title" style="color:#ebcc8e">Solid BU-700</div><div class="t-body" style="color:#f1f0ee">GL-300 title · N-100 body</div></div>
+      <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'"><div class="t-title" style="color:#ebcc8e">Neutral Gradient</div><div class="t-body" style="color:#f1f0ee">Same as dark context</div></div>
+      <div class="tile" style="background:linear-gradient(135deg,#131c25,#49182f)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#722c4d)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#49182f)'"><div class="t-title" style="color:#da9fbb">Female Gradient</div><div class="t-body" style="color:#f1f0ee">Same as dark context</div></div>
+      <div class="tile" style="background:linear-gradient(135deg,#131c25,#888749)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#a8a65c)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#888749)'"><div class="t-title" style="color:#d1d0a8">Male Gradient</div><div class="t-body" style="color:#f1f0ee">Same as dark context</div></div>
+    </div>
+  </div>
+  <table><thead><tr><th>Context</th><th>Tile</th><th>Resting</th><th>Selected</th><th>Title Color</th><th>Body Color</th></tr></thead><tbody>
+    <tr><td>Dark</td><td>Neutral Gradient</td><td class="hex">BU-800→BU-400</td><td class="hex">BU-700→BU-300</td><td class="hex">GL-300 #ebcc8e</td><td class="hex">N-100 #f1f0ee</td></tr>
+    <tr><td>Dark</td><td>Female Gradient</td><td class="hex">BU-800→P-800</td><td class="hex">BU-700→P-700</td><td class="hex">P-300 #da9fbb</td><td class="hex">N-100 #f1f0ee</td></tr>
+    <tr><td>Dark</td><td>Male Gradient</td><td class="hex">BU-800→GR-600</td><td class="hex">BU-700→GR-500</td><td class="hex">GR-300 #d1d0a8</td><td class="hex">N-100 #f1f0ee</td></tr>
+    <tr><td>Light</td><td>NV-300 Neutral</td><td class="hex">NV-300 #c5c2b5</td><td class="hex">NV-200 #deddd3</td><td class="hex">GL-700 #866118</td><td class="hex">N-900 #1c1a17</td></tr>
+    <tr><td>Light</td><td>Solid BU-700</td><td class="hex">BU-700 #2b3a4a</td><td class="hex">BU-600 #3e536a</td><td class="hex">GL-300 #ebcc8e</td><td class="hex">N-100 #f1f0ee</td></tr>
+  </tbody></table>
+</div>
+</section>
+
+<!-- 05 TYPOGRAPHY -->
+<section class="sec" id="type">
+<div class="sec-inner">
+  <div class="sec-num">05 — Typography Scale</div>
+  <div class="sec-title">Three Families · Ten Levels</div>
+  <div class="sec-sub">Base: 16px = 1rem. EB Garamond = headings and card titles only. Playfair Display = subheadings, captions, button labels, UI labels, ghosted background accent text. Work Sans 300 = all body copy. Upright EB Garamond ALWAYS leads in any heading — italic ALWAYS follows, never opens.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Font Families</div>
+    <table><thead><tr><th>Role</th><th>Family</th><th>Weights</th><th>Google Fonts Import String</th></tr></thead><tbody>
+      <tr><td>Display / Headings</td><td>EB Garamond</td><td>400, 400 italic</td><td class="hex">EB+Garamond:ital,wght@0,400;1,400</td></tr>
+      <tr><td>Accent / UI / Ghost text</td><td>Playfair Display</td><td>400, 400 italic</td><td class="hex">Playfair+Display:ital,wght@0,400;1,400</td></tr>
+      <tr><td>Body copy</td><td>Work Sans</td><td>300, 400, 500, 600</td><td class="hex">Work+Sans:wght@300;400;500;600</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Scale · Dark Background</div>
+    <div class="ctx-dark">
+      <div class="tr-d"><div class="t-meta">Eyebrow · GL-500<br>Playfair Display 400<br>0.625rem · uppercase · 0.32em</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:0.625rem;font-weight:400;text-transform:uppercase;letter-spacing:0.32em;color:#d99e2b">Hormone Health · Aesthetics · Wellness</div></div>
+      <div class="tr-d"><div class="t-meta">Hero Title · D4<br>EB Garamond 400<br>4rem / 64px · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:4rem;color:#f1f0ee;letter-spacing:-0.05em;line-height:1.3">Feel like yourself again.</div></div>
+      <div class="tr-d"><div class="t-meta">Hero Accent · D1<br>EB Garamond 400 italic<br>4rem / 64px</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:4rem;font-style:italic;color:#ebcc8e;line-height:1.3">Coming back to yourself.</div></div>
+      <div class="tr-d"><div class="t-meta">Heading · D4<br>EB Garamond 400<br>3.25rem / 52px · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;color:#f1f0ee;letter-spacing:-0.05em;line-height:1.3">Integrated care that listens.</div></div>
+      <div class="tr-d"><div class="t-meta">Heading Accent · D1<br>EB Garamond 400 italic<br>3.25rem / 52px</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;font-style:italic;color:#ebcc8e;line-height:1.3">The gap, closed.</div></div>
+      <div class="tr-d"><div class="t-meta">Subheading · D5<br>Playfair Display 400<br>2.25rem / 36px</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:2.25rem;color:#c1bdb8;line-height:1.3">Hormone health meets aesthetics.</div></div>
+      <div class="tr-d"><div class="t-meta">Card Title · tiles<br>EB Garamond 400<br>2.25rem · Q/S/GR-300</div><div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#ebcc8e;line-height:1.2">Weight Loss · GL-300</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#da9fbb;line-height:1.2">PRF Skin · P-300</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#d1d0a8;line-height:1.2">Testosterone · GR-300</div></div></div>
+      <div class="tr-d"><div class="t-meta">Body Large · D4<br>Work Sans 300<br>1.5rem / 24px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.5rem;font-weight:300;color:#f1f0ee;line-height:1.25">Nobody has given her a plan that treats both as the same problem.</div></div>
+      <div class="tr-d"><div class="t-meta">Button / Label · N-100<br>Playfair Display 400<br>1.5rem / 24px</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:#f1f0ee">Apply for Assessment</div></div>
+      <div class="tr-d"><div class="t-meta">Body · D4<br>Work Sans 300<br>1.125rem / 18px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.5;max-width:500px">Body Balance integrates hormone health and aesthetic treatments into a single holistic plan — helping patients align how they feel inside with what they see in the mirror.</div></div>
+      <div class="tr-d"><div class="t-meta">Caption · D6<br>Playfair Display 400<br>0.875rem / 14px</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;color:#d99e2b">Mia LoPreiato, NP · Teresa Hernandez, NP · Las Vegas, NV · Biote-certified · LegitScript certified</div></div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Scale · Light Background</div>
+    <div class="ctx-light">
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Eyebrow · BU-500<br>Playfair Display 400<br>0.625rem · uppercase · 0.32em</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:0.625rem;text-transform:uppercase;letter-spacing:0.32em;color:#506d8b">Body Balance Medical · Las Vegas</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Hero Title · L2<br>EB Garamond 400<br>4rem / 64px · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:4rem;color:#2b3a4a;letter-spacing:-0.05em;line-height:1.3">Feel like yourself again.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Hero Accent · L1<br>EB Garamond 400 italic<br>4rem / 64px</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:4rem;font-style:italic;color:#866118;line-height:1.3">Coming back to yourself.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Heading · L2<br>EB Garamond 400<br>3.25rem · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;color:#2b3a4a;letter-spacing:-0.05em;line-height:1.3">Two providers. One plan.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Heading Accent · L1<br>EB Garamond 400 italic<br>3.25rem</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;font-style:italic;color:#866118;line-height:1.3">Restored from within.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Subheading · L5<br>Playfair Display 400<br>2.25rem</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:2.25rem;color:#506d8b;line-height:1.3">Hormone care and aesthetics, integrated.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Card Title (NV tile)<br>EB Garamond 400<br>2.25rem · GL-700</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#866118;line-height:1.2">Medical Weight Loss Candidacy</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Body Large · L6<br>Work Sans 300<br>1.5rem / 24px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.5rem;font-weight:300;color:#1c1a17;line-height:1.25">Your skin, your energy, your body — one connected plan.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Body · L6<br>Work Sans 300<br>1.125rem / 18px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.125rem;font-weight:300;color:#1c1a17;line-height:1.5;max-width:500px">Teresa handles aesthetics. Mia handles hormone health. Together they produce the alignment the brand promises.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Caption · L5<br>Playfair Display 400<br>0.875rem</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;color:#506d8b">7975 W Sahara Ave #101 · Las Vegas, NV · (702) 843-0590</div></div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Ghosted Background Text · Playfair Display italic · N-100 sections only · once per page max</div>
+    <div style="position:relative;overflow:hidden;border:1px solid var(--N-200);background:var(--N-100);min-height:130px;">
+      <div style="position:absolute;top:-20px;left:-8px;font-family:'Playfair Display',Georgia,serif;font-size:9rem;font-weight:400;font-style:italic;color:var(--NV-200);line-height:1;user-select:none;pointer-events:none;white-space:nowrap">Restored</div>
+      <div style="position:relative;z-index:2;padding:72px 32px 28px;">
+        <div style="font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--N-500);line-height:1.7">Playfair Display italic · large scale · NV-200 fill (#deddd3) · position:absolute behind content · z-index below section content<br>N-100 sections only. Words: "Natural," "Restored," "Vitality," "Balance," "Renewed"</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Complete Scale Reference</div>
+    <table><thead><tr><th>Level</th><th>Family</th><th>Wt</th><th>Style</th><th>rem</th><th>px</th><th>L-Space</th><th>Dark</th><th>Light</th></tr></thead><tbody>
+      <tr><td>Eyebrow</td><td>Playfair Display</td><td>400</td><td>Uppercase</td><td>0.625rem</td><td>10px</td><td>0.32em</td><td>GL-500</td><td>BU-500</td></tr>
+      <tr><td>Hero Title</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>4rem</td><td>64px</td><td>−0.05em</td><td>D4</td><td>L2</td></tr>
+      <tr><td>Hero Accent</td><td>EB Garamond</td><td>400</td><td>Italic</td><td>4rem</td><td>64px</td><td>—</td><td>D1</td><td>L1</td></tr>
+      <tr><td>Heading</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>3.25rem</td><td>52px</td><td>−0.05em</td><td>D4</td><td>L2</td></tr>
+      <tr><td>Heading Accent</td><td>EB Garamond</td><td>400</td><td>Italic</td><td>3.25rem</td><td>52px</td><td>—</td><td>D1</td><td>L1</td></tr>
+      <tr><td>Subheading</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>2.25rem</td><td>36px</td><td>0</td><td>D5</td><td>L5</td></tr>
+      <tr><td>Card Title</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>2.25rem</td><td>36px</td><td>—</td><td>Q/P/GR-300</td><td>GL-700</td></tr>
+      <tr><td>Body Large</td><td>Work Sans</td><td>300</td><td>Normal</td><td>1.5rem</td><td>24px</td><td>0</td><td>D4</td><td>L6</td></tr>
+      <tr><td>Button / Label</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>1.5rem</td><td>24px</td><td>—</td><td>N-100</td><td>N-100</td></tr>
+      <tr><td>Body</td><td>Work Sans</td><td>300</td><td>Normal</td><td>1.125rem</td><td>18px</td><td>0</td><td>D4</td><td>L6</td></tr>
+      <tr><td>Caption</td><td>Playfair Display</td><td>400</td><td>Italic</td><td>0.875rem</td><td>14px</td><td>0</td><td>D6</td><td>L5</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Typography Rules</div>
+    <div class="do-dont">
+      <div class="do-col"><h4>DO</h4><ul>
+        <li>Upright EB Garamond always leads in headings — italic always follows, never opens</li>
+        <li>Use Playfair Display for subheadings, captions, buttons, UI labels, eyebrows, ghosted text</li>
+        <li>Use Work Sans 300 for all body copy; Work Sans 600 for bold emphasis sparingly</li>
+        <li>Ghosted Playfair Display italic at 8–12% opacity on N-100 sections only, once per page</li>
+      </ul></div>
+      <div class="dont-col"><h4>DON'T</h4><ul>
+        <li>Open a heading with the italic span</li>
+        <li>Use EB Garamond outside headings and card titles</li>
+        <li>Use Work Sans for headings, subheadings, or UI labels</li>
+        <li>Use uppercase on EB Garamond</li>
+        <li>Mix heading fonts on a single surface</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 06 SPACING -->
+<section class="sec tex-section tex-04" id="spacing">
+<div class="sec-inner">
+  <div class="sec-num">06 — Spacing Scale</div>
+  <div class="sec-title">REM-Based · 16px Base</div>
+  <div class="sec-sub">Use rem for all vertical rhythm and layout. Use px only for component-internal gaps.</div>
+  <table><thead><tr><th>Token</th><th>rem</th><th>px</th><th>Visual</th><th>Usage</th></tr></thead><tbody>
+    <tr><td>space-1</td><td>0.25rem</td><td>4px</td><td><div style="height:4px;width:4px;background:var(--BU-400);"></div></td><td>Fine gaps · icon internal padding</td></tr>
+    <tr><td>space-2</td><td>0.5rem</td><td>8px</td><td><div style="height:8px;width:8px;background:var(--BU-400);"></div></td><td>Inline element gaps · tight component spacing</td></tr>
+    <tr><td>space-3</td><td>0.75rem</td><td>12px</td><td><div style="height:12px;width:12px;background:var(--BU-400);"></div></td><td>Compact padding · badge padding</td></tr>
+    <tr><td>space-4</td><td>1rem</td><td>16px</td><td><div style="height:16px;width:16px;background:var(--BU-400);"></div></td><td>Default unit · mobile gutters · mobile page margin</td></tr>
+    <tr><td>space-6</td><td>1.5rem</td><td>24px</td><td><div style="height:24px;width:24px;background:var(--BU-400);"></div></td><td>Column gutters · card inner gaps</td></tr>
+    <tr><td>space-8</td><td>2rem</td><td>32px</td><td><div style="height:32px;width:32px;background:var(--BU-400);"></div></td><td>Section sub-spacing · component rhythm</td></tr>
+    <tr><td>space-12</td><td>3rem</td><td>48px</td><td><div style="height:48px;width:48px;background:var(--BU-400);"></div></td><td>Section padding tight</td></tr>
+    <tr><td>space-16</td><td>4rem</td><td>64px</td><td><div style="height:64px;width:64px;background:var(--BU-400);"></div></td><td>Section padding standard</td></tr>
+    <tr><td>space-20</td><td>5rem</td><td>80px</td><td><div style="height:80px;width:80px;background:var(--BU-400);"></div></td><td>Section horizontal padding · desktop page margin</td></tr>
+    <tr><td>space-24</td><td>6rem</td><td>96px</td><td><div style="height:96px;width:32px;background:var(--BU-400);"></div></td><td>Hero padding · masthead vertical rhythm</td></tr>
+  </tbody></table>
+</div>
+</section>
+
+<!-- 07 GRID -->
+<section class="sec" id="grid">
+<div class="sec-inner">
+  <div class="sec-num">07 — Grid System</div>
+  <div class="sec-title">12-Column · 1280px Max Width</div>
+  <div class="sec-sub">Applied in Elementor, Webflow, and hand-coded HTML. Page horizontal padding is space-20 (80px) desktop, space-4 (16px) mobile.</div>
+  <table><thead><tr><th>Property</th><th>Value</th><th>Token</th></tr></thead><tbody>
+    <tr><td>Columns</td><td>12</td><td>—</td></tr>
+    <tr><td>Max width</td><td>1280px</td><td>—</td></tr>
+    <tr><td>Gutter — desktop</td><td>24px</td><td>space-6</td></tr>
+    <tr><td>Gutter — mobile</td><td>16px</td><td>space-4</td></tr>
+    <tr><td>Page margin — desktop</td><td>80px</td><td>space-20</td></tr>
+    <tr><td>Page margin — mobile</td><td>16px</td><td>space-4</td></tr>
+  </tbody></table>
+</div>
+</section>
+
+<!-- 08 SHADOWS -->
+<section class="sec tex-section tex-07" id="shadows">
+<div class="sec-inner">
+  <div class="sec-num">08 — Shadow System</div>
+  <div class="sec-title">Three Levels · Warm Shadows</div>
+  <div class="sec-sub">All shadows use N-900 at low opacity — warm, never cold. Shadow-md is the default for all tiles and cards. Hover to preview escalation.</div>
+  <div class="shad-grid">
+    <div class="shad-card" style="box-shadow:0 2px 8px rgba(28,26,23,.06),0 1px 2px rgba(28,26,23,.04)" onmouseover="this.style.boxShadow='0 4px 16px rgba(28,26,23,.10),0 2px 4px rgba(28,26,23,.06)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(28,26,23,.06),0 1px 2px rgba(28,26,23,.04)'">
+      <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px">sm — Hover states</div>
+      <div style="font-family:var(--FD);font-size:1rem;color:var(--BU-700);margin-bottom:10px">Gentle lift</div>
+      <div style="font-family:monospace;font-size:0.6rem;color:var(--N-600);line-height:1.75;margin-bottom:8px">0 2px 8px rgba(28,26,23,.06)<br>0 1px 2px rgba(28,26,23,.04)</div>
+    </div>
+    <div class="shad-card" style="box-shadow:0 4px 16px rgba(28,26,23,.10),0 2px 4px rgba(28,26,23,.06)" onmouseover="this.style.boxShadow='0 8px 32px rgba(28,26,23,.14),0 4px 8px rgba(28,26,23,.08)'" onmouseout="this.style.boxShadow='0 4px 16px rgba(28,26,23,.10),0 2px 4px rgba(28,26,23,.06)'">
+      <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--GL-700);margin-bottom:8px">md — Tiles &amp; cards ← STANDARD</div>
+      <div style="font-family:var(--FD);font-size:1rem;color:var(--BU-700);margin-bottom:10px">Clear presence</div>
+      <div style="font-family:monospace;font-size:0.6rem;color:var(--N-600);line-height:1.75;margin-bottom:8px">0 4px 16px rgba(28,26,23,.10)<br>0 2px 4px rgba(28,26,23,.06)</div>
+    </div>
+    <div class="shad-card" style="box-shadow:0 8px 32px rgba(28,26,23,.14),0 4px 8px rgba(28,26,23,.08)" onmouseover="this.style.boxShadow='0 16px 48px rgba(28,26,23,.18),0 6px 12px rgba(28,26,23,.10)'" onmouseout="this.style.boxShadow='0 8px 32px rgba(28,26,23,.14),0 4px 8px rgba(28,26,23,.08)'">
+      <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px">lg — Modals &amp; floating</div>
+      <div style="font-family:var(--FD);font-size:1rem;color:var(--BU-700);margin-bottom:10px">Lifted layer</div>
+      <div style="font-family:monospace;font-size:0.6rem;color:var(--N-600);line-height:1.75;margin-bottom:8px">0 8px 32px rgba(28,26,23,.14)<br>0 4px 8px rgba(28,26,23,.08)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 09 BUTTONS -->
+<section class="sec" id="buttons">
+<div class="sec-inner">
+  <div class="sec-num">09 — Button System</div>
+  <div class="sec-title">Single Style · Primary Gradient</div>
+  <div class="sec-sub">One button style applied system-wide. Works on both dark and light backgrounds. Hover to preview state transition. CTA copy uses approved naming conventions — see Naming section.</div>
+  <div style="background:var(--BU-700);padding:36px;border-radius:4px;margin-bottom:4px">
+    <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-400);margin-bottom:16px">On BU-700 background</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap"><button class="btn">Apply for Assessment</button><button class="btn">Take the Assessment</button></div>
+  </div>
+  <div style="background:var(--N-100);padding:36px;border:1px solid var(--N-200);border-radius:4px;margin-bottom:20px">
+    <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-500);margin-bottom:16px">On N-100 background</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap"><button class="btn">Apply for Assessment</button><button class="btn">Take the Assessment</button></div>
+  </div>
+  <table><thead><tr><th>Property</th><th>Resting</th><th>Hover</th></tr></thead><tbody>
+    <tr><td>Background</td><td class="hex">linear-gradient(120deg, #131c25, #6a89a9)</td><td class="hex">linear-gradient(120deg, #2b3a4a, #91a7bf)</td></tr>
+    <tr><td>Text</td><td class="hex">#f1f0ee — N-100</td><td class="hex">#f1f0ee — N-100</td></tr>
+    <tr><td>Font</td><td colspan="2">Playfair Display 400 · 1.5rem / 24px</td></tr>
+    <tr><td>Padding</td><td colspan="2">16px 40px</td></tr>
+    <tr><td>Border-radius</td><td colspan="2">8px</td></tr>
+    <tr><td>Shadow</td><td colspan="2">shadow-md</td></tr>
+    <tr><td>Gradient angle</td><td colspan="2">120° (button) vs 135° (tiles/gradients) — different by design</td></tr>
+  </tbody></table>
+  <div class="note">Never use "Book Now," "Get Started," or "Free Consultation" as primary CTA copy. Use "Apply for Assessment" or "Take the Assessment." See Naming Conventions section.</div>
+</div>
+</section>
+
+<!-- 10 TEXTURES -->
+<section class="sec" id="textures">
+<div class="sec-inner">
+  <div class="sec-num">10 — Texture System</div>
+  <div class="sec-title">Section Backgrounds · ::before Pseudo-element</div>
+  <div class="sec-sub">7 texture SVGs deployed via CSS ::before pseudo-element. NV-200 fill (#deddd3). 200vmax × 200vmax square, centered, rotated 90°. N-100 sections only — never on BU-700. One texture per section maximum. Never stack with logo mark watermark.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Correct CSS Implementation</div>
+    <div class="note" style="font-family:monospace;font-size:0.68rem;color:var(--N-700);line-height:1.8;white-space:pre-wrap;">.section-with-texture {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-with-texture::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200vmax; height: 200vmax;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-image: url('[R2-texture-url]');
+  background-size: cover;
+  background-position: center;
+  opacity: .22;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+.section-with-texture > * {
+  position: relative;
+  z-index: 1;
+}</div>
+    <div class="note">Size rule: Use 200vmax for both width and height — never percentages. overflow:hidden on the parent clips the excess. Never use an &lt;img&gt; tag for textures.</div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Texture Inventory</div>
+    <table><thead><tr><th>File</th><th>R2 URL</th><th>Character</th><th>Opacity range</th></tr></thead><tbody>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-03.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-03.svg</td><td>Flowing ribbon wave</td><td>14–18%</td></tr>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-04.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-04.svg</td><td>Scattered organic blobs</td><td>16–20%</td></tr>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-05.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-05.svg</td><td>Complex botanical</td><td>14–18%</td></tr>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-06.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-06.svg</td><td>Organic cluster forms</td><td>16–20%</td></tr>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-07.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-07.svg</td><td>Full-page flowing path</td><td>12–16%</td></tr>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-08.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-08.svg</td><td>Horizontal wave</td><td>18–24%</td></tr>
+      <tr><td class="hex">BB-Brand-Refresh-Textures-09.svg</td><td class="hex">…/textures/BB-Brand-Refresh-Textures-09.svg</td><td>Large spiral + organics</td><td>14–18%</td></tr>
+      <tr><td class="hex">BB-Logo-Mark-Texture.webp</td><td class="hex">…/textures/BB-Logo-Mark-Texture.webp</td><td>Logo mark watermark</td><td>100% (built-in)</td></tr>
+    </tbody></table>
+    <div class="note">Base URL for all R2 texture assets: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code></div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Texture Rules</div>
+    <div class="do-dont">
+      <div class="do-col"><h4>DO</h4><ul>
+        <li>Deploy via CSS ::before pseudo-element — never &lt;img&gt;</li>
+        <li>Use 200vmax × 200vmax with overflow:hidden on parent</li>
+        <li>N-100 sections only</li>
+        <li>One texture per section maximum</li>
+        <li>Vary textures across sections for rhythm</li>
+      </ul></div>
+      <div class="dont-col"><h4>DON'T</h4><ul>
+        <li>Apply textures on BU-700 backgrounds</li>
+        <li>Apply texture to two adjacent sections</li>
+        <li>Stack texture + logo mark watermark in same section</li>
+        <li>Use percentage-based sizing for the ::before element</li>
+        <li>Use &lt;img&gt; tags — CSS transform on img doesn't fill correctly</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 11 LOGO SYSTEM -->
+<section class="sec logowm-section" id="logo">
+<div class="sec-inner">
+  <div class="sec-num">11 — Logo System</div>
+  <div class="sec-title">16 Variants · Four Families</div>
+  <div class="sec-sub">All logo files are SVG. Four color suffix codes apply across all families. Never alter, recolor, or apply effects outside these approved variants. Use R2 URLs — not raw.githubusercontent.com (blocked in some environments).</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Logo Placement Decision Tree</div>
+    <div class="rules-block">
+      <ol style="padding-left:20px;">
+        <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:8px;">What color is the zone the logo sits in?
+          <ul style="margin-top:4px;padding-left:14px;">
+            <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.65;list-style:disc;margin-bottom:4px;">N-100 or any light background → <strong>B variant</strong> (near-black)</li>
+            <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.65;list-style:disc;margin-bottom:4px;">Light background, brand-forward context → <strong>Bu variant</strong> (blue BU-700) — preferred</li>
+            <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.65;list-style:disc;margin-bottom:4px;">BU-700, any gradient, or dark background → <strong>W variant</strong> (near-white)</li>
+            <li style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.65;list-style:disc;">Gold accent hero moment → <strong>G variant</strong></li>
+          </ul>
+        </li>
+        <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:8px;">Never place B or Bu on a dark or gradient background.</li>
+        <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:8px;">Never place W on a light background.</li>
+        <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;">In multi-zone layouts, match the variant to the specific zone — not the overall page.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Dark Context · BU-700 Background</div>
+    <div style="background:var(--BU-700);border-radius:8px;padding:32px;margin-bottom:4px;">
+      <div style="display:flex;gap:2px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-G.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-G.svg</div><div style="font-family:var(--FB);font-size:0.42rem;font-weight:300;color:rgba(241,240,238,.38);line-height:1.5;margin-top:2px;">Dark bg · hero / accent</div></div>
+        </div>
+        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-W.svg</div><div style="font-family:var(--FB);font-size:0.42rem;font-weight:300;color:rgba(241,240,238,.38);line-height:1.5;margin-top:2px;">Dark background primary</div></div>
+        </div>
+        <div style="flex:1;min-width:80px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-W.svg" style="height:60px;max-width:80px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">V-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-V-Logo-W.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-G.svg" style="height:64px;width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">Mark · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-Logo-Mark-G.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-W.svg" style="height:64px;width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">Mark · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-Logo-Mark-W.svg</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Light Context · N-100 Background</div>
+    <div style="background:var(--NV-100);border:1px solid var(--N-200);border-radius:8px;padding:32px;margin-bottom:4px;">
+      <div style="display:flex;gap:2px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-Bu.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Blue (preferred)</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-Bu.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-B.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-B.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:80px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-Bu.svg" style="height:60px;max-width:80px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">V-Logo · Blue</div><div class="hex" style="font-size:0.44rem;display:block;">BB-V-Logo-Bu.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-Bu.svg" style="height:64px;width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">Mark · Blue</div><div class="hex" style="font-size:0.44rem;display:block;">BB-Logo-Mark-Bu.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-B.svg" style="height:64px;width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">Mark · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-Logo-Mark-B.svg</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Complete Logo File Library</div>
+    <table><thead><tr><th>File</th><th>Color</th><th>Use On</th><th>R2 URL</th></tr></thead><tbody>
+      <tr><td>BB-H-Logo-B.svg</td><td>Near-black N-900</td><td>Light backgrounds</td><td class="hex">…/logos/BB-H-Logo-B.svg</td></tr>
+      <tr><td>BB-H-Logo-W.svg</td><td>Near-white N-100</td><td>Dark backgrounds</td><td class="hex">…/logos/BB-H-Logo-W.svg</td></tr>
+      <tr><td>BB-H-Logo-G.svg</td><td>Gold GL-300</td><td>Dark · accent moments</td><td class="hex">…/logos/BB-H-Logo-G.svg</td></tr>
+      <tr><td>BB-H-Logo-Bu.svg</td><td>Blue BU-700</td><td>Light · brand-forward (preferred)</td><td class="hex">…/logos/BB-H-Logo-Bu.svg</td></tr>
+      <tr><td>BB-V-Logo-B/W/G/Bu.svg</td><td>All four variants</td><td>Constrained-width contexts</td><td class="hex">…/logos/BB-V-Logo-[suffix].svg</td></tr>
+      <tr><td>BB-Logo-Mark-B/W/G/Bu.svg</td><td>All four variants</td><td>Social avatars · tight spaces · favicon</td><td class="hex">…/logos/BB-Logo-Mark-[suffix].svg</td></tr>
+      <tr><td>BB-Social-Logo-B/W.svg</td><td>B and W only</td><td>Social profile lockup</td><td class="hex">…/logos/BB-Social-Logo-[suffix].svg</td></tr>
+      <tr><td>BB-Social-Mark-B/W.svg</td><td>B and W only</td><td>Social icon · square format</td><td class="hex">…/logos/BB-Social-Mark-[suffix].svg</td></tr>
+    </tbody></table>
+    <div class="note">Full base URL: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code> · Minimum sizes: H-Logo 120px · V-Logo 80px · Mark 32px · Clearspace = cap height of "b" mark on all sides</div>
+  </div>
+</div>
+</section>
+
+<!-- 12 PROVIDERS -->
+<section class="sec tex-section tex-05" id="providers">
+<div class="sec-inner">
+  <div class="sec-num">12 — Providers</div>
+  <div class="sec-title">Mia LoPreiato, NP &amp; Teresa Hernandez, NP</div>
+  <div class="sec-sub">Named providers are content. Every piece of content should reinforce that BBM has real, named, credentialed people — not algorithms. Both are Biote-certified Nurse Practitioners. Both are the structural moat against telehealth.</div>
+
+  <div class="provider-grid">
+    <div class="provider-card">
+      <img class="provider-photo" src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg" alt="Mia LoPreiato, NP — Biote-certified hormone specialist" onerror="this.style.background='#c5c2b5';this.style.height='300px';this.removeAttribute('src');">
+      <div class="provider-body">
+        <div class="provider-role">Hormone Health &amp; Longevity Medicine</div>
+        <div class="provider-name">Mia LoPreiato, NP</div>
+        <div class="provider-cred">Biote-certified · Nurse Practitioner</div>
+        <div class="provider-spec-label">Specialty</div>
+        <div class="provider-spec">TRT · BHRT · Hormone Optimization · Metabolic Wellness · Peptides · Longevity Medicine</div>
+        <div class="provider-visual">Woman, late 40s to early 50s, fair skin, short textured dark hair with natural silver highlights styled with volume. Bold burgundy cat-eye glasses. Red lipstick. Confident and warm. Stethoscope in clinical context. (Runway reference)</div>
+      </div>
+    </div>
+    <div class="provider-card">
+      <img class="provider-photo" src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg" alt="Teresa Hernandez, NP — Biote-certified primary cosmetic injector" onerror="this.style.background='#c5c2b5';this.style.height='300px';this.removeAttribute('src');">
+      <div class="provider-body">
+        <div class="provider-role">Aesthetics</div>
+        <div class="provider-name">Teresa Hernandez, NP</div>
+        <div class="provider-cred">Biote-certified · Nurse Practitioner</div>
+        <div class="provider-spec-label">Specialty</div>
+        <div class="provider-spec">PRF Skin Rejuvenation · PRF Hair Loss · SkinMedica · Cosmetic Injections · Neurotoxins (Letybo, Botox) · Aesthetics Membership</div>
+        <div class="provider-visual">Woman, early-to-mid 30s, olive skin, long very straight dark brown hair worn loose past her chest, dark eyes, defined brows, warm smile. Sage green v-neck scrubs. Delicate gold chain necklace. Small floral tattoo on upper left arm. Warm and approachable. (Runway reference)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:24px;"><strong>⚠ Filename flag:</strong> Teresa's R2 filename contains a space ("primary cosmetic-injector"). The encoded URL above (primary%20cosmetic-injector.jpeg) resolves correctly in browsers but should be renamed to <code>Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</code> when convenient. Do not halt any build over this — use the encoded URL until renamed.</div>
+
+  <div class="subsec" style="margin-top:40px;">
+    <div class="subsec-title">Provider Usage Rules</div>
+    <table class="naming-table"><thead><tr><th>Use This</th><th>Not This</th></tr></thead><tbody>
+      <tr><td>Mia LoPreiato, NP</td><td>Mia · "Our provider" · "Our hormone specialist"</td></tr>
+      <tr><td>Teresa Hernandez, NP</td><td>Teresa · "Our injector" · "Our aesthetics provider"</td></tr>
+      <tr><td>Both by full name in positioning and compliance copy</td><td>First-name only in formal credentials sections</td></tr>
+      <tr><td>First-name shorthand (Mia, Teresa) in conversational voice copy</td><td>Generic "our team" in any context where providers are named</td></tr>
+      <tr><td>Biote-certified — use explicitly where relevant</td><td>"Certified" alone — always name the certification</td></tr>
+    </tbody></table>
+    <div class="note">Mia and Teresa by name in copy vs "our team" — always choose named. Photos and video over stock. The structural moat against telehealth is that BBM has real, named, credentialed people.</div>
+  </div>
+</div>
+</section>
+
+<!-- 13 PHOTOGRAPHY -->
+<section class="sec" id="photography">
+<div style="position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:cover;background-position:center;opacity:1;pointer-events:none;z-index:0;"></div>
+<div class="sec-inner">
+  <div class="sec-num">13 — Photography Brief</div>
+  <div class="sec-title">One Mode · One Visual World</div>
+  <div class="sec-sub">All BBM photography — still, print, and video — uses a single visual standard: Kodak Vision3 500T / 16mm film emulation. Warm, organic, documentary. Never produced.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Primary Mode — Kodak Vision3 500T / 16mm</div>
+    <table><thead><tr><th>Attribute</th><th>Specification</th></tr></thead><tbody>
+      <tr><td>Film stock</td><td>Kodak Vision3 500T (7219) — 16mm emulation. Warm but not orange. Cream and sand tones.</td></tr>
+      <tr><td>Subjects</td><td>Women 30s–50s unposed and real. Men 40s–60s natural energy. Skin texture visible and unhidden.</td></tr>
+      <tr><td>Lighting</td><td>Natural window light only. Soft highlight halation. Nothing airbrushed or studio-lit.</td></tr>
+      <tr><td>Editing</td><td>Lifted shadows — nothing goes fully black. Slightly underexposed and organic. Film latitude, not digital precision.</td></tr>
+      <tr><td>Mood</td><td>Documentary, not produced. Lived-in. Real. Unhurried.</td></tr>
+      <tr><td>Color</td><td>Muted saturation. Warm neutrals — cream, sand, soft earth. No bright saturated color.</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Image Generation Prompt — 500T Core String</div>
+    <div class="prompt-block">"Give this photo a warm leaning to neutral (avoid anything too sepia toned) Kodak 7219 500T - 16mm - film stock emulation, with some film grain and texture. Preserve the subject framing. No text, no film edges."</div>
+    <table><thead><tr><th>Output Type</th><th>Aspect Ratio to Append</th></tr></thead><tbody>
+      <tr><td>Social — feed / reels</td><td class="hex">, 9:16 aspect ratio</td></tr>
+      <tr><td>Social — square</td><td class="hex">, 1:1 aspect ratio</td></tr>
+      <tr><td>Web — hero / banner</td><td class="hex">, 16:9 aspect ratio</td></tr>
+      <tr><td>Web — portrait / card</td><td class="hex">, 4:5 aspect ratio</td></tr>
+      <tr><td>Print</td><td>Ask Josh for the deliverable spec before appending</td></tr>
+    </tbody></table>
+    <div class="note">Read the output type from context. Construct the full prompt by appending the correct aspect ratio automatically. If ambiguous, ask one question: "What format is this image for?" Do not present multiple ratio options.</div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Before / After Treatment</div>
+    <div class="rules-block">
+      <p>L-bracket gold frame · BU-700 badge labels · Playfair Display italic caption · never hard-bordered · patient consent required · Aesthetics before/afters with proper disclosure are compliant.</p>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Photography Reference Library — Vertical</div>
+    <div style="font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-500);margin-bottom:12px;">Female Subject — Editorial Vertical (12 images)</div>
+    <div class="photo-grid">
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-02.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-02</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-03.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-03</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-04.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-04</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-05.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-05</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-06.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-06</div></div>
+    </div>
+    <div style="font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-500);margin:20px 0 12px;">Female Subject — Editorial Horizontal (12 images)</div>
+    <div class="photo-grid">
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-01.jpg" style="width:260px;height:auto;"><div class="photo-lbl">editorial-horizontal-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-02.jpg" style="width:260px;height:auto;"><div class="photo-lbl">editorial-horizontal-02</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-03.jpg" style="width:260px;height:auto;"><div class="photo-lbl">editorial-horizontal-03</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-04.jpg" style="width:260px;height:auto;"><div class="photo-lbl">editorial-horizontal-04</div></div>
+    </div>
+    <div style="font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-500);margin:20px 0 12px;">Additional Subject Categories</div>
+    <div class="photo-grid">
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">smiling-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-mirror-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">mirror-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-active-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">active-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-treatment-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">treatment-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-male-subject-smiling-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">male-smiling-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">couple-smiling-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">vial-ambient-vertical-01</div></div>
+      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-02.jpg" style="width:180px;height:auto;"><div class="photo-lbl">vial-ambient-vertical-02</div></div>
+    </div>
+    <div class="note">Full reference library has 40+ images. All URLs follow the pattern: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-[subject]-[orientation]-[nn].jpg</code>. See Asset Library section for complete file list.</div>
+  </div>
+</div>
+</section>
+
+<!-- 14 BRAND VOICE & POSITIONING -->
+<section class="sec tex-section tex-09" id="voice">
+<div class="sec-inner">
+  <div class="sec-num">14 — Brand Voice &amp; Positioning</div>
+  <div class="sec-title">Personal. Confident. Restrained.</div>
+  <div class="sec-sub">Every piece of content must trace back to the essence statement. Voice is client-specific — never generic, never interchangeable with another practice.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Essence Statement</div>
+    <div class="prompt-block">Body Balance helps you feel like yourself again by closing the disconnect between how you feel inside and how you look outside — through integrated hormone health and aesthetic care that actually listens.</div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Target Audience</div>
+    <table><thead><tr><th>Segment</th><th>Profile</th><th>Pain Point</th></tr></thead><tbody>
+      <tr><td><strong>Primary</strong></td><td>Woman, early-to-mid 40s, professional, high-achieving</td><td>Gap between how she wants to feel and how she actually feels. Trust is the real barrier — not price.</td></tr>
+      <tr><td><strong>Secondary</strong></td><td>Men 40s–60s — TRT, peptides, metabolic wellness</td><td>Energy decline, metabolic changes. Do not alienate at the brand level.</td></tr>
+      <tr><td><strong>Not for</strong></td><td>Budget-driven one-off shoppers · pure aesthetics no relationship · clinical-coldness seekers</td><td>—</td></tr>
+    </tbody></table>
+    <div class="note">BBM sells to the affluent 9% who shop on passion, expertise, and trusted relationships — not the bottom 90% who shop on price. If a piece of content would feel at home in a Groupon ad, it is wrong.</div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Voice by Channel</div>
+    <table><thead><tr><th>Channel</th><th>Register</th></tr></thead><tbody>
+      <tr><td>Paid Ads</td><td>Symptom and feeling language. "Tired but can't sleep" over "hormone optimization."</td></tr>
+      <tr><td>Email / Nurture</td><td>Slightly more clinical as trust builds. Explain the why.</td></tr>
+      <tr><td>Organic Social</td><td>Educational primary. Real patient language. Myth-busting.</td></tr>
+      <tr><td>Website</td><td>Homepage/hero in feeling language. Service/provider pages can go clinical.</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Messaging Pillars</div>
+    <ol style="padding-left:20px;">
+      <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:10px;"><strong style="color:var(--N-900);">The disconnect is real — and it's connected.</strong> Body Balance treats both sides because they're part of the same picture.</li>
+      <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:10px;"><strong style="color:var(--N-900);">Two providers, one plan.</strong> Teresa and Mia's specialties mirror each other by design.</li>
+      <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:10px;"><strong style="color:var(--N-900);">We listen differently.</strong> Body Balance connects the dots and builds a plan around the whole person.</li>
+      <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;"><strong style="color:var(--N-900);">Restoration, not transformation.</strong> Return to the version of yourself you recognize.</li>
+    </ol>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Vocabulary</div>
+    <table><thead><tr><th>Own These Words</th><th>Use Directly</th><th>Banned — Never Use</th></tr></thead><tbody>
+      <tr>
+        <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">aligned · hormone balance · inside and out · plan / program · listen / heard / seen · real / grounded · energy / clarity · vitality · restore / return · optimization · candidacy · evaluation · protocol · member · medically supervised · concierge · certified · compounded · bioidentical · longevity</div></td>
+        <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">"I finally feel like myself again" · "Tired but can't sleep" · "Weight won't move" · "I feel off" · "Nobody connected the dots for me" · "Biote hormone pellet therapy" · "Apply for Assessment" · "Take the Assessment"</div></td>
+        <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">Luxury · Glow / glowing · Confidence · Better you / best self · Transform / transformation · Queen / babe / girl boss · Deserve · Empower / empowerment · Anti-aging · Natural results · Personalized plan · Look your best · Self-care · Aesthetic enhancement · cheap · affordable · discount · deal · free (primary CTAs) · cure · guaranteed · instant · miracle · effortless · quick fix</div></td>
+      </tr>
+    </tbody></table>
+    <div class="note">Remove "free" entirely from primary CTAs. "Free consultation" attracts price shoppers and devalues the appointment. Use "Apply for Assessment" or "Take the Assessment" instead.</div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Brand Personality</div>
+    <table><thead><tr><th>Attribute</th><th>What It Means</th><th>What It Is Not</th></tr></thead><tbody>
+      <tr><td><strong>Grounded</strong></td><td>Rooted in clinical reality, never hype-forward</td><td>Cold, distant, academic</td></tr>
+      <tr><td><strong>Warm without soft</strong></td><td>Genuinely caring, confident backbone</td><td>Saccharine, soft-selling</td></tr>
+      <tr><td><strong>Clearly intelligent</strong></td><td>Educates without condescending</td><td>Dense, jargon-heavy</td></tr>
+      <tr><td><strong>Restorative</strong></td><td>Return and alignment, not transformation</td><td>Fixing what's broken, anti-aging</td></tr>
+      <tr><td><strong>Honest</strong></td><td>Says what it means</td><td>Salesy, inflated, outcome-guaranteed</td></tr>
+    </tbody></table>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 15: NAMING CONVENTIONS ═══ -->
+<section id="naming" class="section tex-section tex-06" style="position:relative;overflow:hidden;background:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label">Section 15</div>
+    <h2 class="section-title">Naming Conventions</h2>
+    <p class="section-sub">Non-negotiable. These are enforced at the output gate — never rationalize exceptions.</p>
+    <div class="note" style="margin-bottom:28px;background:#fff3cd;border-left-color:#d99e2b;">These naming rules are binding on all copy — ads, email, web, social, print. If a piece of content contradicts this table, it is wrong and must be revised before output.</div>
+
+    <div class="subsec">
+      <div class="subsec-title">Service & CTA Naming</div>
+      <table>
+        <thead><tr><th style="width:40%;">Use This</th><th style="width:40%;">Not This</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Apply for Assessment</strong></td><td>Book Now · Free Consultation · Schedule a Visit</td><td>"Apply" signals candidacy and value. "Free" attracts price shoppers.</td></tr>
+          <tr><td><strong>Take the Assessment</strong></td><td>Sign Up · Get Started · Learn More</td><td>Positions BBM as selective, not transactional.</td></tr>
+          <tr><td><strong>Hormone Optimization</strong></td><td>Hormone Replacement Therapy · HRT</td><td>HRT carries negative medical connotation. Optimization is aspirational.</td></tr>
+          <tr><td><strong>Biote Hormone Pellet Therapy</strong></td><td>Pellets · Bioidentical Pellets</td><td>Always name the Biote certification — it's a credibility signal.</td></tr>
+          <tr><td><strong>Compounded Semaglutide / Tirzepatide</strong></td><td>Ozempic · Wegovy · Mounjaro · Zepbound</td><td>Brand-name GLP-1 drugs carry legal and prescribing-context risks. Use compound generic names only.</td></tr>
+          <tr><td><strong>Medical Weight Loss</strong></td><td>Weight Loss Shots · Fat Loss Program · Slim Down</td><td>Medical framing positions this correctly as supervised care, not a consumer program.</td></tr>
+          <tr><td><strong>Testosterone Replacement Therapy (TRT)</strong></td><td>T-shots · Low-T program · Testosterone Boost</td><td>Clinical name maintains authority. FDA removed cardiovascular black box warning Feb 2025 (TRAVERSE trial) — this can now be stated directly.</td></tr>
+          <tr><td><strong>Body Balance Medical</strong></td><td>Body Balance · BBM Medspa · Body Balance Spa</td><td>Always full brand name on first reference. "Medical" differentiates from day spas.</td></tr>
+          <tr><td><strong>Mia LoPreiato, NP</strong></td><td>Mia · Provider Mia · Nurse Mia</td><td>Full credential on first reference. "NP" is a clinical trust signal.</td></tr>
+          <tr><td><strong>Teresa Hernandez, NP</strong></td><td>Teresa · Injector Teresa · Nurse Teresa</td><td>Same rule. Never drop credential on first reference.</td></tr>
+          <tr><td><strong>Biote-Certified</strong></td><td>Trained · Qualified · Certified (generic)</td><td>Biote certification is specific — always name it when referencing hormone therapy credentials.</td></tr>
+          <tr><td><strong>LegitScript Certified</strong></td><td>Licensed · Verified · Approved</td><td>LegitScript is a signal for online pharmacy trust. Name it specifically.</td></tr>
+          <tr><td><strong>Cherry Financing · CareCredit</strong></td><td>Payment Plans · Financing Available</td><td>Name the provider — vague "financing available" reads as desperation. Named providers read as infrastructure.</td></tr>
+          <tr><td><strong>Boulevard</strong></td><td>Our booking system · Online scheduling</td><td>Name the platform when referencing the booking flow.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Enforcement Rule</div>
+      <p style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;">Any output that uses a prohibited term in the "Not This" column must be flagged and corrected before delivery. This is not a style preference — it is a brand-protection rule. Violations in paid media create legal exposure. Violations in organic content degrade brand positioning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 16: FRAMING PRINCIPLES ═══ -->
+<section id="framing" class="section" style="background:var(--BU-700);color:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--BU-300);">Section 16</div>
+    <h2 class="section-title" style="color:var(--N-100);">Framing Principles</h2>
+    <p class="section-sub" style="color:var(--BU-200);">Six principles that govern how every piece of BBM content is framed. These are architecture rules — they apply before the first word is written.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:28px;">
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 01</div>
+        <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Lead with the feeling, not the treatment.</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Open with how the patient feels before treatment, not with the name of the service. "Tired but can't sleep" leads. "Hormone pellet therapy" follows. Never reverse this order in an ad or email subject line.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 02</div>
+        <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Restoration, not transformation.</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">BBM returns people to themselves — not a new, better, transformed version. "Feel like yourself again" is always correct. "Become your best self" is always wrong. The frame is return, not upgrade.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 03</div>
+        <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Medical authority, human delivery.</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">The content is clinically grounded — always. The delivery is warm, not academic. Write like a trusted clinician talking to a patient they know, not like a pharma insert or a lifestyle blog.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 04</div>
+        <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Candidacy, not urgency.</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">BBM does not pressure. CTAs invite qualification — "See if you're a candidate" — not manufactured urgency — "Limited spots!" or "Act now!" Scarcity messaging is banned unless it is literally true and has been confirmed by Mia or Teresa.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 05</div>
+        <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Educate before you sell.</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Organic content is educational first. Myth-busting, explainers, and patient questions are the primary mode. The conversion happens at trust, not at pitch. Organic posts should almost never read as ads.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 06</div>
+        <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">The two providers are the brand.</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Mia and Teresa's complementary expertise is the core differentiator. Content should consistently reflect that this is a two-NP practice with overlapping specialties by design — not a solo provider with a colleague. Surface both names and credentials whenever the format allows.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════ SECTION 17: SERVICE LINE COMPLIANCE ═══ -->
+<section id="compliance" class="section tex-section tex-05" style="position:relative;overflow:hidden;background:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label">Section 17</div>
+    <h2 class="section-title">Service Line Compliance</h2>
+    <p class="section-sub">Regulatory exposure varies by service. GLP-1 is the highest-risk line. Hormone therapy has evolving FDA context. Aesthetics is lower-risk but still regulated. Apply rules to every output before delivery.</p>
+    <div class="note" style="margin-bottom:28px;background:#fff3cd;border-left-color:#d99e2b;"><strong>Non-negotiable rule:</strong> Never rationalize exceptions. If a piece of content might violate a rule below, flag it and ask before submitting. Wrong is not a style judgment — it is a legal-exposure call.</div>
+
+    <div class="subsec">
+      <div class="subsec-title">GLP-1 / Medical Weight Loss — Strictest Rules</div>
+      <table>
+        <thead><tr><th style="width:50%;">Required</th><th>Banned</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="vertical-align:top;">
+              <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+                <li>Generic names only: <em>Compounded Semaglutide</em> · <em>Compounded Tirzepatide</em></li>
+                <li>"Medically supervised" in any ad claiming weight loss results</li>
+                <li>Avoid specific weight-loss outcome claims (lbs lost, % body weight)</li>
+                <li>Include "results vary" or "individual results may vary" when testimonials reference outcomes</li>
+                <li>LegitScript Certified as credibility anchor in paid media</li>
+              </ul>
+            </td>
+            <td style="vertical-align:top;">
+              <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+                <li>Ozempic · Wegovy · Mounjaro · Zepbound (brand names)</li>
+                <li>"Lose X lbs in Y weeks" guaranteed outcomes</li>
+                <li>"Miracle" · "instant" · "effortless" · "quick fix"</li>
+                <li>Before/after photos without "results vary" disclaimer</li>
+                <li>Implying BBM manufactures or compounds in-house (it is prescribed and sourced compounded)</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Hormone Optimization — Evolving FDA Context</div>
+      <table>
+        <thead><tr><th style="width:50%;">Required</th><th>Banned</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="vertical-align:top;">
+              <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+                <li>"Biote Hormone Pellet Therapy" — always full name with Biote branding</li>
+                <li>"Biote-Certified" as credential for Mia and Teresa</li>
+                <li>TRT: may now state FDA removed cardiovascular black box warning (Feb 2025, TRAVERSE trial)</li>
+                <li>"Medically supervised" for all hormone protocols</li>
+                <li>Position hormone services under "Hormone Optimization" — not HRT</li>
+              </ul>
+            </td>
+            <td style="vertical-align:top;">
+              <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+                <li>HRT / Hormone Replacement Therapy (legacy medical term, avoid)</li>
+                <li>Claiming hormone therapy cures or reverses specific diseases</li>
+                <li>Implying pellets are FDA-approved drugs (they are compounded — different regulatory category)</li>
+                <li>Anti-aging framing in hormone context</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Aesthetics — Lower Exposure, Still Regulated</div>
+      <table>
+        <thead><tr><th style="width:50%;">Required</th><th>Banned</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="vertical-align:top;">
+              <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+                <li>Teresa Hernandez, NP as primary aesthetic credential</li>
+                <li>"Natural-looking results" is acceptable — but not guaranteed</li>
+                <li>Before/after with "results vary" when used</li>
+              </ul>
+            </td>
+            <td style="vertical-align:top;">
+              <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+                <li>Claiming specific outcome permanence ("lasts X months" as guarantee)</li>
+                <li>Anti-aging as primary frame (use "restore" / "refresh" instead)</li>
+                <li>Glow · Confidence · Transform (vocabulary banned across all services)</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">All Services — Universal Rules</div>
+      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;">
+        <li>Never claim to diagnose or cure any medical condition</li>
+        <li>Never use patient testimonials that claim to cure or treat a specific disease by name</li>
+        <li>Never promise guaranteed outcomes — "results may vary" applies everywhere</li>
+        <li>CareCredit and Cherry Financing must be presented as "financing options available through [provider]" — not as a discount or accessibility pitch</li>
+        <li>All copy must be consistent with what BBM's providers have reviewed and approved in their current service list</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 18: FORMAT DEFAULTS ═══ -->
+<section id="format-defaults" class="section" style="background:var(--NV-100);">
+  <div class="section-inner">
+    <div class="section-label">Section 18</div>
+    <h2 class="section-title">Format Defaults</h2>
+    <p class="section-sub">Format rules are not suggestions. Apply these before any output is considered complete.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px;">
+      <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+        <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Email</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+          <li>Subject line: 40 chars max (mobile preview cutoff)</li>
+          <li>Preview text: 85–100 chars — never blank</li>
+          <li>Single CTA per email — never two competing CTAs</li>
+          <li>CTA label must match Naming Conventions table</li>
+          <li>Em-dash rule: space–em-dash–space ( — ) not hyphen</li>
+          <li>No Oxford comma unless required for clarity</li>
+          <li>Sentence-case subject lines only — not Title Case</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+        <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Meta / Paid Ads</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+          <li>Primary text: 125 chars before truncation on mobile</li>
+          <li>Headline: 40 chars max</li>
+          <li>Description: 30 chars max</li>
+          <li>Lead with symptom/feeling in primary text — never service name</li>
+          <li>Single CTA only — Meta allows one CTA button</li>
+          <li>LegitScript badge mention in GLP-1 / weight loss ads</li>
+          <li>No exclamation marks in headlines</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+        <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">FAQ Copy</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+          <li>Question: patient voice ("Does it hurt?" not "Is the procedure painful?")</li>
+          <li>Answer: clinician voice — warm, direct, no hedging filler</li>
+          <li>Max 3 sentences per FAQ answer — if longer, break into bullets</li>
+          <li>Never guarantee outcomes in FAQ answers</li>
+          <li>End with CTA only when contextually appropriate — not every FAQ</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+        <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--shd-sm);margin-bottom:10px;">Punctuation</div>
+        <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Punctuation & Typography</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+          <li>Em-dash: always with spaces — like this — never like-this</li>
+          <li>Ellipsis: three dots with spaces ( . . . ) in body; tight (…) in headlines only</li>
+          <li>Apostrophes: curly, never straight ('not ')</li>
+          <li>Quotation marks: curly doubles (" ") in body; avoid in headlines</li>
+          <li>Numbers: spell out one–nine; numerals for 10+; always numerals for measurements, ages, doses</li>
+          <li>Percent: 80% not 80 percent (numerals + symbol)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════ SECTION 19: BRAND POSITIONING STATEMENT ═══ -->
+<section id="positioning" class="section tex-section tex-07" style="position:relative;overflow:hidden;background:var(--BU-800);color:var(--N-100);">
+  <div class="section-inner" style="position:relative;z-index:1;">
+    <div class="section-label" style="color:var(--BU-300);">Section 19</div>
+    <h2 class="section-title" style="color:var(--N-100);">Brand Positioning Statement</h2>
+    <p class="section-sub" style="color:var(--BU-200);">The four-pillar foundation. Not a tagline — an architectural brief. Every content decision traces back here.</p>
+
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:32px 36px;margin:28px 0;">
+      <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;">Body Balance Medical <em>exists for</em> women and men in mid-life</p>
+      <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:2rem;"><em>who feel</em> off — fatigued, hormonally imbalanced, aesthetically disconnected</p>
+      <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:4rem;"><em>and want</em> a medical practice that treats inside and outside as one picture</p>
+      <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0;padding-left:6rem;"><em>not a</em> spa that adds labs, or a lab that offers aesthetics as an afterthought.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:32px;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 01</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Integration</div>
+        <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Hormone optimization and aesthetics treated as one connected system — not siloed services. Inside and outside are both Body Balance.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 02</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Medical Credibility</div>
+        <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Two Biote-Certified NPs. LegitScript Certified. Clinical protocols. Evidence-based. Not a med-spa staffed by aestheticians.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 03</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Restoration</div>
+        <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">The frame is always return, never transformation. BBM helps patients feel like themselves again — not a new person.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 04</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Selective Access</div>
+        <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Assessment-based entry. Candidacy language. Not a walk-in clinic, not a consumer discount service. The right patient, treated properly, with a plan.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;padding:20px 24px;border-left:3px solid var(--GL-500);background:rgba(217,158,43,.08);border-radius:0 8px 8px 0;">
+      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:6px;">Tagline — Current</div>
+      <div style="font-family:var(--FD);font-size:1.6rem;color:var(--N-100);font-style:italic;">Inside and Out.</div>
+      <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);margin-top:8px;line-height:1.75;">Two words. The entire positioning in one phrase. Use as a closing element — never as an opener or standalone headline. Never modify it. It is not "From the Inside Out" or "Inside Out" or "Inside & Out."</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 20: ASSET LIBRARY ═══ -->
+<section id="assets" class="section" style="background:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label">Section 20</div>
+    <h2 class="section-title">Asset Library</h2>
+    <p class="section-sub">All production assets are hosted on Cloudflare R2. Use only these URLs — never raw.githubusercontent.com or local paths in production files.</p>
+    <div class="note" style="margin-bottom:24px;"><strong>R2 Base:</strong> <code style="font-size:0.8rem;background:var(--N-200);padding:2px 6px;border-radius:4px;">https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code></div>
+
+    <div class="subsec">
+      <div class="subsec-title">Textures (SVG)</div>
+      <table>
+        <thead><tr><th>Token</th><th>File</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td><code>tex-03</code></td><td>BB-Brand-Refresh-Textures-03.svg</td><td>Light section overlay (multiply, 22%)</td></tr>
+          <tr><td><code>tex-04</code></td><td>BB-Brand-Refresh-Textures-04.svg</td><td>Light section overlay</td></tr>
+          <tr><td><code>tex-05</code></td><td>BB-Brand-Refresh-Textures-05.svg</td><td>Light section overlay</td></tr>
+          <tr><td><code>tex-06</code></td><td>BB-Brand-Refresh-Textures-06.svg</td><td>Light section overlay</td></tr>
+          <tr><td><code>tex-07</code></td><td>BB-Brand-Refresh-Textures-07.svg</td><td>Dark section overlay (multiply, 22%)</td></tr>
+          <tr><td><code>tex-08</code></td><td>BB-Brand-Refresh-Textures-08.svg</td><td>Dark section overlay</td></tr>
+          <tr><td><code>tex-09</code></td><td>BB-Brand-Refresh-Textures-09.svg</td><td>Dark section overlay</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Logos (SVG)</div>
+      <table>
+        <thead><tr><th>Name</th><th>R2 Path</th></tr></thead>
+        <tbody>
+          <tr><td>Logo — Primary (full color, light bg)</td><td><code>logos/BB-Logo-Primary.svg</code></td></tr>
+          <tr><td>Logo — Reversed (light, dark bg)</td><td><code>logos/BB-Logo-Reversed.svg</code></td></tr>
+          <tr><td>Logo — Mark only</td><td><code>logos/BB-Logo-Mark.svg</code></td></tr>
+          <tr><td>Logo — Wordmark only</td><td><code>logos/BB-Logo-Wordmark.svg</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Provider Photography (R2)</div>
+      <table>
+        <thead><tr><th>Provider</th><th>Full R2 URL</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Mia LoPreiato, NP</td><td><code>photography/Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg</code></td><td>Clean filename, production-ready</td></tr>
+          <tr><td>Teresa Hernandez, NP</td><td><code>photography/Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg</code></td><td>⚠️ Space in filename (encoded as %20) — rename to <code>Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</code> on next R2 upload</td></tr>
+        </tbody>
+      </table>
+      <div class="note" style="background:#fff3cd;border-left-color:#d99e2b;">Teresa's R2 filename contains a space character encoded as <code>%20</code>. This is a known technical debt item. Rename file on R2 when next touching photography assets.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════ SECTION 21: OUTPUT TYPES & WORKFLOW ROUTING ═══ -->
+<section id="output-types" class="section" style="background:var(--BU-700);color:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--BU-300);">Section 21</div>
+    <h2 class="section-title" style="color:var(--N-100);">Output Types &amp; Workflow Routing</h2>
+    <p class="section-sub" style="color:var(--BU-200);">Every production asset routes through one of these workflows. Route selection is determined at brief stage — not at execution.</p>
+
+    <table style="color:var(--N-100);">
+      <thead><tr>
+        <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Output Type</th>
+        <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Tool / Workflow</th>
+        <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Owner</th>
+        <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Notes</th>
+      </tr></thead>
+      <tbody>
+        <tr style="background:rgba(255,255,255,.04);">
+          <td style="color:var(--N-200);">Static print ad (full-brand)</td>
+          <td style="color:var(--N-200);">Illustrator MCP → AI pipeline</td>
+          <td style="color:var(--GL-300);">Josh + Claude Code</td>
+          <td style="color:var(--BU-200);">See Section 25 for MCP spec</td>
+        </tr>
+        <tr>
+          <td style="color:var(--N-200);">Static digital ad (Meta, Google)</td>
+          <td style="color:var(--N-200);">Figma → export</td>
+          <td style="color:var(--GL-300);">Josh + Claude Code</td>
+          <td style="color:var(--BU-200);">Standard 1:1, 4:5, 9:16 formats</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,.04);">
+          <td style="color:var(--N-200);">Email template</td>
+          <td style="color:var(--N-200);">Figma + Emailify → Klaviyo</td>
+          <td style="color:var(--GL-300);">Josh + Claude Code</td>
+          <td style="color:var(--BU-200);">HTML export via Emailify plugin</td>
+        </tr>
+        <tr>
+          <td style="color:var(--N-200);">Landing page / web section</td>
+          <td style="color:var(--N-200);">Webflow</td>
+          <td style="color:var(--GL-300);">Josh</td>
+          <td style="color:var(--BU-200);">Direct Webflow build — no MCP</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,.04);">
+          <td style="color:var(--N-200);">Video ad (social / paid)</td>
+          <td style="color:var(--N-200);">Premiere Pro + FFmpeg variants</td>
+          <td style="color:var(--GL-300);">Josh (Iron Brothers)</td>
+          <td style="color:var(--BU-200);">200+ variant pipeline via FFmpeg</td>
+        </tr>
+        <tr>
+          <td style="color:var(--N-200);">Social organic post (static)</td>
+          <td style="color:var(--N-200);">Figma → PNG export</td>
+          <td style="color:var(--GL-300);">Josh / Team</td>
+          <td style="color:var(--BU-200);">1:1 default; 9:16 for Reels cover</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,.04);">
+          <td style="color:var(--N-200);">Copy only (email, SMS, caption)</td>
+          <td style="color:var(--N-200);">Claude → direct delivery</td>
+          <td style="color:var(--GL-300);">Claude Code / Claude.ai</td>
+          <td style="color:var(--BU-200);">Must pass naming + compliance gate before submission</td>
+        </tr>
+        <tr>
+          <td style="color:var(--N-200);">Print collateral (brochure, card)</td>
+          <td style="color:var(--N-200);">Illustrator MCP → AI pipeline → print PDF</td>
+          <td style="color:var(--GL-300);">Josh + Claude Code</td>
+          <td style="color:var(--BU-200);">300 DPI CMYK export; see Section 25</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:24px;padding:20px 24px;background:rgba(217,158,43,.12);border:1px solid rgba(217,158,43,.25);border-radius:10px;">
+      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">⚙️ Illustrator MCP — Pro Workflow</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Static print and digital production assets use the Illustrator MCP pipeline (Section 25). This workflow is available in Claude Code only — not in Claude.ai. Never attempt to replicate Illustrator MCP operations via manual file export; the pipeline handles token substitution, variant generation, and export spec automatically.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 22: GRACEFUL DEGRADATION ═══ -->
+<section id="degradation" class="section tex-section tex-04" style="position:relative;overflow:hidden;background:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label">Section 22</div>
+    <h2 class="section-title">Graceful Degradation</h2>
+    <p class="section-sub">When full brand fidelity cannot be achieved, degrade predictably — not randomly. Always invoke the nearest compliant state.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;">
+      <div style="background:#fff;border:2px solid var(--BU-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px;">State 1 — Partial Brand</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--BU-700);margin-bottom:12px;">Preferred fallback</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+          <li>EB Garamond for headings — substitute Georgia if not loading</li>
+          <li>Work Sans 300 for body — substitute system-ui sans</li>
+          <li>Full color tokens maintained</li>
+          <li>Textures dropped if SVG fails to load — background color holds</li>
+          <li>Provider photos hidden behind <code>onerror</code> fallback to placeholder if R2 unreachable</li>
+          <li>Logo: reversed wordmark on dark; primary on light — never placeholder text "Body Balance"</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:2px solid var(--N-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--N-600);margin-bottom:8px;">State 2 — Minimal Brand</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-700);margin-bottom:12px;">Last-resort only</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
+          <li>System fonts throughout (Georgia for headings, system-ui for body)</li>
+          <li>BU-700 (#2b3a4a) and N-100 (#f1f0ee) color pair maintained — these are the non-negotiable minimums</li>
+          <li>All textures, shadows, and gradients dropped</li>
+          <li>Naming conventions and compliance rules still fully enforced — degradation is visual only</li>
+          <li>Never use brand-incorrect colors (no generic blue, no white/black-only)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px;">Degradation is <em>always visual</em> — never a degradation of voice, naming, or compliance rules. A plain-text email in system fonts must still pass every naming and compliance check.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════ SECTION 23: IMAGE GENERATION ═══ -->
+<section id="image-gen" class="section" style="background:var(--NV-100);">
+  <div class="section-inner">
+    <div class="section-label">Section 23</div>
+    <h2 class="section-title">Image Generation</h2>
+    <p class="section-sub">AI-generated imagery is a supplemental tool — not a primary production method. Apply brand constraints rigorously.</p>
+
+    <div class="subsec">
+      <div class="subsec-title">When to Use AI-Generated Images</div>
+      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;">
+        <li>Concept thumbnails and mood reference only — not final deliverables</li>
+        <li>Texture and abstract background fill when photographic stock is unavailable</li>
+        <li>Never substitute for Mia or Teresa photography — providers must always be real photos</li>
+        <li>Never generate patient faces or bodies for testimonial-adjacent content</li>
+      </ul>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Adobe Firefly Prompt Framework</div>
+      <table>
+        <thead><tr><th>Parameter</th><th>Required Value</th></tr></thead>
+        <tbody>
+          <tr><td>Lighting</td><td>Soft, directional, natural — no harsh shadows, no studio pop</td></tr>
+          <tr><td>Color palette</td><td>Restrict to BU-700 (#2b3a4a), N-100 (#f1f0ee), N-200 (#dcd9d5) — warm neutrals only</td></tr>
+          <tr><td>Style</td><td>Lifestyle editorial, clinical warmth — not glamour, not pharmaceutical gray</td></tr>
+          <tr><td>Composition</td><td>Breathing room / negative space — never cluttered. BBM brand photography rule applies.</td></tr>
+          <tr><td>Subject (general)</td><td>Women 35–60, men 40–60 in naturalistic settings — no model-perfection aesthetic</td></tr>
+          <tr><td>Banned styles</td><td>Hyperrealism, fantasy, dramatic contrast, neon, dark moody/horror aesthetic, "glow" treatments</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsec">
+      <div class="subsec-title">Output Quality Gate</div>
+      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;">
+        <li>Every AI image reviewed by Josh before production use — no autonomous placement</li>
+        <li>No AI faces in paid media (Meta/Google reject or flag AI-generated faces in many ad categories)</li>
+        <li>Minimal text in generated images — text is always added in post via Illustrator or Figma</li>
+        <li>Flag any AI output that could be read as a before/after or testimonial image</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 24: AGENT BEHAVIOR RULES ═══ -->
+<section id="agent-behavior" class="section" style="background:var(--BU-900);color:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--BU-400);">Section 24</div>
+    <h2 class="section-title" style="color:var(--N-100);">Agent Behavior Rules</h2>
+    <p class="section-sub" style="color:var(--BU-300);">These rules govern all AI-assisted content production for Body Balance Medical. Non-negotiable. The agent does not rationalize exceptions.</p>
+
+    <div style="display:grid;gap:14px;margin-top:24px;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:20px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:6px;">Pre-Build Checklist</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Before producing any content: confirm the output type and channel. Confirm which service line is being addressed. Load the applicable compliance rules (Section 17). Load the naming convention table (Section 15). Load the format defaults for the channel (Section 18).</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:20px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:6px;">Anti-Rationalization Rule</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">If a brand rule conflicts with what seems creatively effective — the brand rule wins. The agent does not rationalize exceptions ("this time it makes sense to use Ozempic" / "this case is different" / "the client probably won't notice"). Flag the conflict. Ask Josh. Do not self-authorize a deviation.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:20px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:6px;">Flagging Gaps</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">If a brief is missing information required to produce compliant output — stop and ask. Do not fill in gaps with assumptions. Do not produce content that requires a claim you cannot verify from this document. Partial output flagged is better than complete output wrong.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:20px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:6px;">Pre-Output Verification Gate</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Before submitting any output: (1) Check all brand-name drugs — only compounded generics. (2) Check all CTAs — "Apply for Assessment" / "Take the Assessment" only. (3) Check banned vocabulary list — no Glow, Confidence, Transform, Luxury, etc. (4) Check framing — restoration or return, not transformation. (5) Verify typography rule — EB Garamond upright leads, italic follows. If any check fails, fix before submission — do not ask permission to fix obvious violations.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:20px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:6px;">Creative Problem-Solving Fallback</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">If a brief cannot be executed within brand rules, produce the best compliant version possible and note the constraint in a handoff note. Never produce out-of-spec content and hope Josh won't notice. The handoff note should say: "Brief requested [X]. Brand rules prohibit [Y]. Compliant version does [Z]. Awaiting direction on gap."</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:20px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:6px;">Environment Routing</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Claude.ai (chat): copy, strategy, briefs, brand decisions. Claude Code: HTML production, Illustrator MCP pipeline, file writes, multi-file campaigns. Illustrator MCP (via Claude Code only): static print/digital asset generation. Never attempt Illustrator MCP operations from Claude.ai — they will fail silently.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SECTION 25: ILLUSTRATOR MCP — PRO ONLY ═══ -->
+<section id="illustrator-mcp" class="section" style="background:linear-gradient(135deg,var(--BU-800) 0%,var(--BU-700) 100%);color:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--GL-300);">Section 25 · Pro Only</div>
+    <h2 class="section-title" style="color:var(--N-100);">Illustrator MCP Workflow</h2>
+    <p class="section-sub" style="color:var(--BU-200);">Available in Claude Code only. Governs static print and digital asset production via the Illustrator MCP pipeline.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:24px;">
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Step 01</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Template Load</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Load the approved BB master template for the output format. All templates live at <code style="background:rgba(255,255,255,.1);padding:2px 5px;border-radius:3px;">~/Captain-Kepler/client-working-files/body-balance/</code>. Confirm template matches output format before proceeding (print bleed vs. digital pixel).</div>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Step 02</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Token Substitution</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Replace all placeholder tokens with campaign-specific values: headline copy, subheadline, CTA, service name, any price or offer (if approved). All substituted copy must have already passed the naming + compliance gate before being placed in the template.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+        <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Step 03</div>
+        <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:10px;">Export &amp; Variant Generation</div>
+        <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Export per format spec: print at 300 DPI CMYK with 0.125" bleed; digital at 2x resolution sRGB PNG. For multi-variant campaigns (A/B headline test, format stack), generate all variants in the same session before closing Illustrator — reopening adds error risk.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;padding:20px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;">
+      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:10px;">MCP Pipeline Rules</div>
+      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;padding-left:18px;margin:0;">
+        <li>Never run MCP operations from Claude.ai — Claude Code only</li>
+        <li>Confirm Illustrator is open and the correct template is active before issuing MCP commands</li>
+        <li>All font usage via Illustrator must match the BB type spec (EB Garamond, Playfair Display, Work Sans 300)</li>
+        <li>Color values must be set from the BB token table — never eyedrop or visually match</li>
+        <li>After export, verify file names match the BB naming convention before delivering to client</li>
+        <li>Commit any new templates or source files to <code style="background:rgba(255,255,255,.1);padding:2px 5px;border-radius:3px;">bbm-design-system</code> repo before closing the session</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════ QUICK REFERENCE ═══ -->
+<section id="quick-ref" class="section" style="background:var(--N-100);">
+  <div class="section-inner">
+    <div class="section-label">Quick Reference</div>
+    <h2 class="section-title">At-a-Glance Cheat Sheet</h2>
+    <p class="section-sub">The 20 things that matter most — in 90 seconds.</p>
+
+    <table>
+      <thead><tr><th style="width:30%;">Item</th><th>Rule</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Primary CTA</strong></td><td>"Apply for Assessment" or "Take the Assessment" — never "Book Now," never "Free Consultation"</td></tr>
+        <tr><td><strong>GLP-1 drug names</strong></td><td>Compounded Semaglutide / Compounded Tirzepatide — never Ozempic / Wegovy / Mounjaro / Zepbound</td></tr>
+        <tr><td><strong>Hormone service name</strong></td><td>Hormone Optimization — never HRT or Hormone Replacement Therapy</td></tr>
+        <tr><td><strong>Pellet therapy full name</strong></td><td>Biote Hormone Pellet Therapy — always include "Biote"</td></tr>
+        <tr><td><strong>TRT update</strong></td><td>FDA removed cardiovascular black box warning Feb 2025 (TRAVERSE trial) — can be stated directly</td></tr>
+        <tr><td><strong>Provider credential — first ref</strong></td><td>Mia LoPreiato, NP · Teresa Hernandez, NP — never drop NP on first reference</td></tr>
+        <tr><td><strong>Certification</strong></td><td>Biote-Certified (both providers) · LegitScript Certified (GLP-1 / weight loss ads)</td></tr>
+        <tr><td><strong>Financing</strong></td><td>Cherry Financing · CareCredit — name the provider, never "financing available"</td></tr>
+        <tr><td><strong>Booking platform</strong></td><td>Boulevard — name it when referencing booking flow</td></tr>
+        <tr><td><strong>Framing</strong></td><td>Restoration / Return — never Transformation / Upgrade / Better Self</td></tr>
+        <tr><td><strong>Banned vocabulary</strong></td><td>Luxury · Glow · Confidence · Transform · Anti-aging · Empower · Queen · Babe · Self-care · Free (primary CTA)</td></tr>
+        <tr><td><strong>Typography rule</strong></td><td>EB Garamond upright leads — italic follows. Never open with italic.</td></tr>
+        <tr><td><strong>Font loading</strong></td><td>Google Fonts: EB Garamond, Playfair Display, Work Sans — <code>&lt;link&gt;</code> in <code>&lt;head&gt;</code></td></tr>
+        <tr><td><strong>Textures</strong></td><td><code>::before</code> pseudo-element at 200vmax — never <code>&lt;img&gt;</code> tags</td></tr>
+        <tr><td><strong>Asset URLs</strong></td><td>R2 only: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code></td></tr>
+        <tr><td><strong>Color pair minimums</strong></td><td>BU-700 (#2b3a4a) + N-100 (#f1f0ee) — always maintained even in State 2 degradation</td></tr>
+        <tr><td><strong>Em-dash format</strong></td><td>Space — em-dash — space. Never hyphen. Never em-dash without spaces.</td></tr>
+        <tr><td><strong>Email subject line</strong></td><td>40 chars max, sentence-case, no Title Case</td></tr>
+        <tr><td><strong>Meta primary text</strong></td><td>125 chars before mobile truncation — symptom/feeling leads, not service name</td></tr>
+        <tr><td><strong>Illustrator MCP</strong></td><td>Claude Code only — never from Claude.ai</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══ -->
+<footer style="background:var(--BU-900);color:var(--BU-400);padding:32px 40px;text-align:center;">
+  <div style="font-family:var(--FD);font-size:1.2rem;color:var(--N-200);margin-bottom:6px;">Body Balance Medical · Brand OS</div>
+  <div style="font-family:var(--FB);font-size:0.75rem;font-weight:300;letter-spacing:.06em;color:var(--BU-400);margin-bottom:4px;">Pro Edition · v1.3 · 2026 · Captain Kepler Creative</div>
+  <div style="font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--BU-600);margin-top:10px;">This document is confidential. For use by Josh Smith and Claude Code pipeline only. Do not distribute.</div>
+</footer>
+
+</div><!-- /.page-wrap -->
+</body>
+</html>
