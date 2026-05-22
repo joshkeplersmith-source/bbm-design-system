@@ -6,7 +6,7 @@
 <title>BB Brand TEAM — Body Balance Medical · v1.2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -60,9 +60,10 @@ tr:hover td{background:rgba(242,241,237,.7);}
 
 /* SWATCHES */
 .sw-row{display:flex;gap:2px;margin-bottom:12px;}
-.sw{flex:1;height:44px;display:flex;flex-direction:column;justify-content:flex-end;padding:4px 6px;}
+.sw{flex:1;height:56px;display:flex;flex-direction:column;justify-content:flex-end;padding:4px 6px;}
 .sw-lbl{font-family:var(--FB);font-size:0.42rem;font-weight:500;opacity:.78;}
-.sw-h{outline:2px solid var(--GL-700);outline-offset:-2px;}
+.sw-h{position:relative;}
+.sw-h::after{content:'★ HERO';position:absolute;top:4px;right:4px;font-family:var(--FB);font-size:0.38rem;font-weight:600;letter-spacing:0.14em;color:rgba(255,255,255,.9);background:rgba(0,0,0,.35);padding:2px 5px;border-radius:2px;text-transform:uppercase;pointer-events:none;}
 
 /* EDITORIAL CONTEXT DEMOS */
 .ctx-dark{background:var(--BU-700);border-radius:12px;padding:52px 60px;box-shadow:var(--shd-md);margin-bottom:20px;}
@@ -86,8 +87,8 @@ tr:hover td{background:rgba(242,241,237,.7);}
 /* TILES */
 .tile-row{display:flex;gap:2px;}
 .tile{flex:1;padding:22px 18px;cursor:default;box-shadow:var(--shd-md);}
-.t-title{font-family:var(--FD);font-size:1rem;font-weight:400;line-height:1.2;margin-bottom:6px;}
-.t-body{font-family:var(--FB);font-size:0.68rem;font-weight:300;line-height:1.6;}
+.t-title{font-family:var(--FD);font-size:2.25rem;font-weight:400;line-height:1.2;margin-bottom:6px;}
+.t-body{font-family:var(--FB);font-size:1.125rem;font-weight:300;line-height:1.6;}
 
 /* TYPOGRAPHY SCALE */
 .tr-d{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);}
@@ -107,7 +108,7 @@ tr:hover td{background:rgba(242,241,237,.7);}
 /* TEXTURES via ::before — N-100 sections only */
 .tex-section{position:relative;overflow:hidden;}
 .tex-section > .sec-inner,.tex-section > div,.tex-section > p{position:relative;z-index:1;}
-.tex-section::before{content:'';position:absolute;top:50%;left:50%;width:200vmax;height:200vmax;transform:translate(-50%,-50%) rotate(90deg);background-size:cover;background-position:center;opacity:.22;pointer-events:none;z-index:0;mix-blend-mode:multiply;}
+.tex-section::before{content:'';position:absolute;top:50%;left:50%;width:200vmax;height:200vmax;transform:translate(-50%,-50%) rotate(90deg);background-size:cover;background-position:center;opacity:.26;pointer-events:none;z-index:0;mix-blend-mode:multiply;}
 .tex-03::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-03.svg');}
 .tex-04::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-04.svg');}
 .tex-05::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-05.svg');}
@@ -227,7 +228,7 @@ State 2 — R2 Not Accessible: Colors, typography, spacing, voice, and layout ru
 PHOTOGRAPHY HANDOFF (TEAM WORKFLOW):
 When content requires provider photography:
 - Mia LoPreiato: Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg on R2
-- Teresa Hernandez: Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg on R2 (⚠️ space encoded; rename when next uploading)
+- Teresa Hernandez: Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg on R2
 - If R2 unavailable: flag to Josh — never use unlicensed stock as a substitute for Mia or Teresa
 If a layout requires a provider photo and none is accessible: produce the layout with a clearly labeled placeholder box and note the image needed. Do not silently omit the photo requirement.
 
@@ -253,6 +254,31 @@ PRE-OUTPUT VERIFICATION GATE — run before submitting any deliverable:
 4. Every color, font, and layout element is traceable to a rule in this spec
 5. All naming conventions pass — no banned terms
 6. All compliance rules pass — no prohibited drug brand names, no outcome guarantees
+
+CREATIVE PROBLEM-SOLVING FALLBACK:
+Before diverging from any layout rule, exhaust these in-system options:
+- Gradient tiles (neutral, female, or male) for dimension on a light surface
+- NV-300 or NV-100 surface cards for hierarchy without dark backgrounds
+- L-bracket gold frame for featured or callout content
+- Texture on N-100 for depth without breaking the light base
+- Ghosted Playfair Display text for visual weight on N-100 sections
+- BU-700 for one interior section break only — not the document frame
+If depth or dimension is the aesthetic goal, the answer is always inside the system.
+
+PHOTOGRAPHY HANDOFF NOTE:
+At the end of every visual deliverable, include this note verbatim in tone:
+"I've added placeholder photography from the brand library to get the layout right.
+You can swap any image for your own photos — just drop them into this chat and tell me
+which section to replace. If you'd like to generate a new image instead, tell me what
+you're picturing and I'll either give you a prompt you can use in an image tool, or
+generate it directly if I'm able to."
+Never mention R2, reference URLs, Cloudflare, file names, or any backend detail.
+
+PRINT OUTPUT WORKFLOW:
+Build document as HTML using this brand spec → open in Google Chrome →
+File → Print → Destination: Save as PDF. Set margins to None or Minimum.
+Uncheck "Headers and footers." For non-letter formats, set custom paper size.
+For production-grade print (direct mail, clinical brochures, large format) — route to Josh.
 
 R2 base: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev
 GitHub repo: https://github.com/joshkeplersmith-source/bbm-design-system
@@ -389,7 +415,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="subsec">
     <div class="subsec-title">N — Neutral · Warm Greige · Brand Black N-900 · Brand White N-100</div>
     <div class="sw-row">
-      <div class="sw" style="background:#1c1a17"><div class="sw-lbl" style="color:#554f4a">#1c1a17 · 900</div></div>
+      <div class="sw sw-h" style="background:#1c1a17"><div class="sw-lbl" style="color:#554f4a">#1c1a17 · 900</div></div>
       <div class="sw" style="background:#35302c"><div class="sw-lbl" style="color:#8b8279">#35302c · 800</div></div>
       <div class="sw" style="background:#554f4a"><div class="sw-lbl" style="color:#c1bdb8">#554f4a · 700</div></div>
       <div class="sw" style="background:#706961"><div class="sw-lbl" style="color:#dcd9d5">#706961 · 600</div></div>
@@ -628,12 +654,15 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <table><thead><tr><th>Token</th><th>rem</th><th>px</th><th>Usage</th></tr></thead><tbody>
     <tr><td>space-1</td><td>0.25rem</td><td>4px</td><td>Fine gaps · icon internal padding</td></tr>
     <tr><td>space-2</td><td>0.5rem</td><td>8px</td><td>Inline element gaps · tight component spacing</td></tr>
+    <tr><td>space-3</td><td>0.75rem</td><td>12px</td><td>Tight gaps · icon padding · micro spacing</td></tr>
     <tr><td>space-4</td><td>1rem</td><td>16px</td><td>Default unit · mobile gutters · mobile page margin</td></tr>
     <tr><td>space-6</td><td>1.5rem</td><td>24px</td><td>Column gutters · card inner gaps</td></tr>
     <tr><td>space-8</td><td>2rem</td><td>32px</td><td>Section sub-spacing · component rhythm</td></tr>
     <tr><td>space-12</td><td>3rem</td><td>48px</td><td>Section padding tight</td></tr>
     <tr><td>space-16</td><td>4rem</td><td>64px</td><td>Section padding standard</td></tr>
+    <tr><td>space-18</td><td>4.5rem</td><td>72px</td><td>Section padding tall · hero vertical padding</td></tr>
     <tr><td>space-20</td><td>5rem</td><td>80px</td><td>Section horizontal padding · desktop page margin</td></tr>
+    <tr><td>space-24</td><td>6rem</td><td>96px</td><td>Maximum section padding · page-top breathing room</td></tr>
   </tbody></table>
 </div>
 </section>
@@ -706,8 +735,10 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-title">Section Backgrounds · ::before Pseudo-element</div>
   <div class="sec-sub">7 texture SVGs via CSS ::before pseudo-element. 200vmax × 200vmax square, centered, rotated 90°. N-100 sections only. Never on BU-700. One texture per section maximum.</div>
   <div class="subsec">
-    <div class="subsec-title">Correct CSS Implementation</div>
-    <div class="note" style="font-family:monospace;font-size:0.68rem;color:var(--N-700);line-height:1.8;white-space:pre-wrap;">.section-with-texture {
+    <details style="border:1px solid var(--N-200);border-radius:6px;padding:12px 16px;">
+      <summary style="font-family:var(--FA);font-size:0.56rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--BU-500);cursor:pointer;user-select:none;">CSS Implementation — Developer Reference</summary>
+      <div style="margin-top:12px;">
+        <div class="note" style="font-family:monospace;font-size:0.68rem;color:var(--N-700);line-height:1.8;white-space:pre-wrap;">.section-with-texture {
   position: relative;
   overflow: hidden;
 }
@@ -726,18 +757,20 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   mix-blend-mode: multiply;
 }
 .section-with-texture > * { position: relative; z-index: 1; }</div>
-    <div class="note">Always use 200vmax — never percentages. overflow:hidden on parent clips excess. Never use an &lt;img&gt; tag for textures.</div>
+        <div class="note">Always use 200vmax — never percentages. overflow:hidden on parent clips excess. Never use an &lt;img&gt; tag for textures.</div>
+      </div>
+    </details>
   </div>
   <div class="subsec">
     <div class="subsec-title">Texture Inventory — R2 Base: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</div>
     <table><thead><tr><th>File</th><th>Character</th><th>Opacity</th></tr></thead><tbody>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-03.svg</td><td>Flowing ribbon wave</td><td>14–18%</td></tr>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-04.svg</td><td>Scattered organic blobs</td><td>16–20%</td></tr>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-05.svg</td><td>Complex botanical</td><td>14–18%</td></tr>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-06.svg</td><td>Organic cluster forms</td><td>16–20%</td></tr>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-07.svg</td><td>Full-page flowing path</td><td>12–16%</td></tr>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-08.svg</td><td>Horizontal wave</td><td>18–24%</td></tr>
-      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-09.svg</td><td>Large spiral + organics</td><td>14–18%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-03.svg</td><td>Flowing ribbon wave</td><td>26–30%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-04.svg</td><td>Scattered organic blobs</td><td>28–32%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-05.svg</td><td>Complex botanical</td><td>26–30%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-06.svg</td><td>Organic cluster forms</td><td>28–32%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-07.svg</td><td>Full-page flowing path</td><td>26–28%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-08.svg</td><td>Horizontal wave</td><td>30–40%</td></tr>
+      <tr><td class="hex">textures/BB-Brand-Refresh-Textures-09.svg</td><td>Large spiral + organics</td><td>26–30%</td></tr>
       <tr><td class="hex">textures/BB-Logo-Mark-Texture.webp</td><td>Logo mark watermark</td><td>100% (built-in)</td></tr>
     </tbody></table>
   </div>
@@ -776,6 +809,14 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-W.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-G.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">V-Logo · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-V-Logo-G.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-W.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">V-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-V-Logo-W.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
           <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-G.svg" style="height:64px;width:64px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">Mark · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-Logo-Mark-G.svg</div></div>
         </div>
@@ -799,6 +840,14 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-B.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-Bu.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">V-Logo · Blue (preferred)</div><div class="hex" style="font-size:0.44rem;display:block;">BB-V-Logo-Bu.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-B.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">V-Logo · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-V-Logo-B.svg</div></div>
+        </div>
+        <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
           <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-Bu.svg" style="height:64px;width:64px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">Mark · Blue</div><div class="hex" style="font-size:0.44rem;display:block;">BB-Logo-Mark-Bu.svg</div></div>
         </div>
@@ -808,6 +857,38 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
         </div>
       </div>
     </div>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">Social Contexts · Platform Profiles Only</div>
+    <div style="background:var(--NV-100);border:1px solid var(--N-200);border-radius:8px;padding:24px;">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:4px;padding:12px 20px;display:flex;align-items:center;justify-content:center;">
+            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Logo-B.svg" style="height:24px;object-fit:contain;">
+          </div>
+          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Logo · Black</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="background:var(--BU-700);border-radius:4px;padding:12px 20px;display:flex;align-items:center;justify-content:center;">
+            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Logo-W.svg" style="height:24px;object-fit:contain;">
+          </div>
+          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Logo · White</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:4px;padding:12px;display:flex;align-items:center;justify-content:center;">
+            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-B.svg" style="height:40px;width:40px;object-fit:contain;">
+          </div>
+          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Mark · Black</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="background:var(--BU-700);border-radius:4px;padding:12px;display:flex;align-items:center;justify-content:center;">
+            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-W.svg" style="height:40px;width:40px;object-fit:contain;">
+          </div>
+          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Mark · White</div>
+        </div>
+      </div>
+    </div>
+    <div class="note">Social variants are for platform profile images and social media use only. Never use Social variants in print, web layouts, or email.</div>
   </div>
   <div class="subsec">
     <div class="subsec-title">Logo File Library</div>
@@ -843,7 +924,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       </div>
     </div>
     <div class="provider-card">
-      <img class="provider-photo" src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg" alt="Teresa Hernandez, NP — Biote-certified primary cosmetic injector" onerror="this.style.background='#c5c2b5';this.style.height='300px';this.removeAttribute('src');">
+      <img class="provider-photo" src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg" alt="Teresa Hernandez, NP — Biote-certified primary cosmetic injector">
       <div class="provider-body">
         <div class="provider-role">Aesthetics</div>
         <div class="provider-name">Teresa Hernandez, NP</div>
@@ -854,7 +935,6 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       </div>
     </div>
   </div>
-  <div class="note" style="margin-top:24px;background:#fff3cd;border-left-color:#d99e2b;"><strong>⚠ Filename flag:</strong> Teresa's R2 filename contains a space ("primary cosmetic-injector"). The encoded URL above (primary%20cosmetic-injector.jpeg) resolves correctly in browsers but should be renamed to <code>Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</code> when convenient.</div>
   <div class="subsec" style="margin-top:40px;">
     <div class="subsec-title">Provider Usage Rules</div>
     <table><thead><tr><th>Use This</th><th>Not This</th></tr></thead><tbody>
@@ -898,18 +978,19 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   </div>
   <div class="subsec">
     <div class="subsec-title">Photography Reference Library</div>
-    <div class="photo-grid">
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-01</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-02.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-02</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-03.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-03</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-04.jpg" style="width:180px;height:auto;"><div class="photo-lbl">editorial-vertical-04</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-01.jpg" style="width:260px;height:auto;"><div class="photo-lbl">editorial-horizontal-01</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-02.jpg" style="width:260px;height:auto;"><div class="photo-lbl">editorial-horizontal-02</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">smiling-vertical-01</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-male-subject-smiling-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">male-smiling-vertical-01</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">couple-smiling-vertical-01</div></div>
-      <div class="photo-item"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-01.jpg" style="width:180px;height:auto;"><div class="photo-lbl">vial-ambient-vertical-01</div></div>
+    <div style="display:flex;justify-content:center;gap:12px;margin-bottom:12px;flex-wrap:nowrap;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-01.jpg" style="width:160px;height:auto;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-03.jpg" style="width:160px;height:auto;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-01.jpg" style="width:160px;height:auto;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-vertical-01.jpg" style="width:160px;height:auto;">
     </div>
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;font-style:italic;color:var(--N-500);text-align:center;margin-bottom:20px;">Vertical reference library</p>
+    <div style="display:flex;justify-content:center;gap:12px;margin-bottom:12px;flex-wrap:nowrap;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-01.jpg" style="width:240px;height:auto;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-03.jpg" style="width:240px;height:auto;">
+      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-horizontal-01.jpg" style="width:240px;height:auto;">
+    </div>
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;font-style:italic;color:var(--N-500);text-align:center;margin-bottom:12px;">Horizontal reference library</p>
     <div class="note">Full URL pattern: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-[subject]-[orientation]-[nn].jpg</code> · 40+ images in full library</div>
   </div>
 </div>
@@ -932,41 +1013,25 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       </tr>
       <tr>
         <td><strong>Teresa Hernandez, NP</strong></td>
-        <td class="hex">Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg</td>
-        <td class="hex">https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg</td>
+        <td class="hex">Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</td>
+        <td class="hex">https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</td>
       </tr>
     </tbody></table>
-    <div class="note" style="background:#fff3cd;border-left-color:#d99e2b;margin-top:10px;"><strong>⚠ Teresa filename note:</strong> The filename contains a space character encoded as <code>%20</code>. The URL above works in browsers. When this file is next re-uploaded to R2, rename it to <code>Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</code> (hyphen, not space). Flag this to Josh when uploading new provider photos.</div>
   </div>
 
   <div class="subsec">
-    <div class="subsec-title">Photography Replacement Catch</div>
+    <div class="subsec-title">Provider Photo Priority Rules</div>
     <div class="rules-block">
-      <h4>Before placing any non-provider lifestyle or model photo — STOP AND CHECK:</h4>
+      <h4>When content includes photography:</h4>
       <ul>
-        <li>Does this content slot call for a provider photo? If yes, use Mia or Teresa from R2. Never substitute a stock model for a real provider.</li>
-        <li>Is R2 unavailable? Produce the layout with a clearly labeled placeholder box. Note the image needed. Flag to Josh — do not go live without the correct photo.</li>
-        <li>Does the brief genuinely require non-provider lifestyle imagery (e.g., anonymous patient stock)? Use only photography generated via the 500T brief (Section 13) — never generic stock photography with unrelated subjects.</li>
-        <li>Does the layout use an older Mia or Teresa photo that doesn't match their current look? Flag to Josh before using. Never use outdated provider photos in paid media without confirmation.</li>
+        <li><strong>Provider photos take priority.</strong> Content that could feature Mia or Teresa should always use their R2 photography — not stock models or anonymous lifestyle imagery.</li>
+        <li><strong>When R2 is unavailable,</strong> the layout should be produced with a clearly labeled placeholder box indicating the image needed. Flag to Josh before going live — no placeholder should appear in published content.</li>
+        <li><strong>Non-provider lifestyle imagery</strong> (anonymous patient context) is acceptable only when the brief genuinely requires it. All lifestyle photography must follow the 500T film brief (Section 13) — never generic unrelated stock.</li>
+        <li><strong>Provider photo currency.</strong> Mia and Teresa photography should reflect their current appearance. Outdated provider photos are not used in paid media without confirmation from Josh.</li>
       </ul>
     </div>
   </div>
 
-  <div class="subsec">
-    <div class="subsec-title">Print Output Workflow (Team)</div>
-    <div class="rules-block">
-      <h4>For print documents, flyers, and reports:</h4>
-      <ul>
-        <li>Build the document as an HTML file using this brand spec</li>
-        <li>Open the HTML file in <strong>Google Chrome</strong></li>
-        <li>File → Print → Destination: Save as PDF</li>
-        <li>Set margins to None or Minimum. Uncheck "Headers and footers."</li>
-        <li>Paper size: Letter (8.5" × 11") for standard collateral · set custom size for other formats</li>
-        <li>This is the approved print workflow for team-produced documents. For production print collateral (direct mail, clinical brochures, large format) — route to Josh.</li>
-      </ul>
-    </div>
-    <div class="note">The Illustrator MCP production pipeline is not part of the team workflow. All team print output uses HTML → Chrome browser-print.</div>
-  </div>
 </div>
 </section>
 
@@ -1013,7 +1078,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <tr>
         <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">aligned · hormone balance · inside and out · plan / program · listen / heard / seen · real / grounded · energy / clarity · vitality · restore / return · optimization · candidacy · evaluation · protocol · member · medically supervised · concierge · certified · compounded · bioidentical · longevity</div></td>
         <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">"I finally feel like myself again" · "Tired but can't sleep" · "Weight won't move" · "I feel off" · "Nobody connected the dots for me" · "Biote hormone pellet therapy" · "Apply for Assessment" · "Take the Assessment"</div></td>
-        <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">Luxury · Glow / glowing · Confidence · Better you / best self · Transform / transformation · Queen / babe / girl boss · Deserve · Empower · Anti-aging · Natural results · Personalized plan · Look your best · Self-care · cheap · affordable · discount · deal · free (primary CTAs) · cure · guaranteed · instant · miracle · effortless · quick fix</div></td>
+        <td style="vertical-align:top;"><div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-700);line-height:1.75;">Luxury · Glow / glowing · Confidence · Better you / best self · Transform / transformation · Queen / babe / girl boss · Deserve · Empower · Anti-aging · Natural results · Personalized plan · Look your best · Self-care · Aesthetic enhancement · cheap · affordable · discount · deal · free (primary CTAs) · cure · guaranteed · instant · miracle · effortless · quick fix</div></td>
       </tr>
     </tbody></table>
     <div class="note">Remove "free" entirely from primary CTAs. "Free consultation" attracts price shoppers and devalues the appointment. Use "Apply for Assessment" or "Take the Assessment" instead.</div>
@@ -1145,7 +1210,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-title">Channel Format Rules</div>
   <div class="sec-sub">Apply these before any output is considered complete.</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px;">
-    <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+    <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
       <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Email</div>
       <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
         <li>Subject line: 40 chars max (mobile preview cutoff)</li>
@@ -1156,7 +1221,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
         <li>Sentence-case subject lines only — not Title Case</li>
       </ul>
     </div>
-    <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+    <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
       <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Meta / Paid Ads</div>
       <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
         <li>Primary text: 125 chars before truncation on mobile</li>
@@ -1167,7 +1232,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
         <li>No exclamation marks in headlines</li>
       </ul>
     </div>
-    <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+    <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
       <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">FAQ Copy</div>
       <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
         <li>Question: patient voice ("Does it hurt?")</li>
@@ -1176,7 +1241,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
         <li>Never guarantee outcomes in FAQ answers</li>
       </ul>
     </div>
-    <div style="background:#fff;border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+    <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
       <div style="font-family:var(--FA);font-size:0.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Punctuation</div>
       <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
         <li>Em-dash: space — em-dash — space. Never hyphen.</li>
@@ -1249,7 +1314,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <div class="subsec-title">Provider Photography (R2)</div>
     <table><thead><tr><th>Provider</th><th>R2 Path</th><th>Notes</th></tr></thead><tbody>
       <tr><td>Mia LoPreiato, NP</td><td class="hex">photography/Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg</td><td>Production-ready</td></tr>
-      <tr><td>Teresa Hernandez, NP</td><td class="hex">photography/Teresa-Hernandez-NP-Biote-certified-primary%20cosmetic-injector.jpeg</td><td>⚠️ Space in filename — rename on next upload</td></tr>
+      <tr><td>Teresa Hernandez, NP</td><td class="hex">photography/Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</td><td>Production-ready</td></tr>
     </tbody></table>
   </div>
   <div class="subsec">
@@ -1277,19 +1342,15 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Format / Notes</th>
     </tr></thead>
     <tbody>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-200);">Social post (static)</td><td style="color:var(--N-200);">Figma → PNG export</td><td style="color:var(--BU-200);">1:1 default · 9:16 for Reels cover</td></tr>
-      <tr><td style="color:var(--N-200);">Email content</td><td style="color:var(--N-200);">Figma + Emailify → Klaviyo</td><td style="color:var(--BU-200);">HTML export via Emailify plugin</td></tr>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-200);">Copy (email, SMS, caption)</td><td style="color:var(--N-200);">Claude → direct delivery</td><td style="color:var(--BU-200);">Must pass naming + compliance gate before submission</td></tr>
-      <tr><td style="color:var(--N-200);">Print document (brief, report)</td><td style="color:var(--N-200);">HTML → Chrome browser-print → PDF</td><td style="color:var(--BU-200);">File → Print → Save as PDF · set margins to None</td></tr>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-200);">Landing page / web</td><td style="color:var(--N-200);">Webflow</td><td style="color:var(--BU-200);">Direct Webflow build</td></tr>
-      <tr><td style="color:var(--N-200);">Production print collateral (direct mail, brochure)</td><td style="color:var(--N-200);">Route to Josh</td><td style="color:var(--BU-200);">Production-grade print is not part of the team workflow</td></tr>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-200);">Video ad</td><td style="color:var(--N-200);">Route to Josh (Iron Brothers Films)</td><td style="color:var(--BU-200);">Premiere Pro + FFmpeg pipeline</td></tr>
+      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Social post (static)</td><td style="color:var(--N-100);">Figma → PNG export</td><td style="color:var(--BU-200);">1:1 default · 9:16 for Reels cover</td></tr>
+      <tr><td style="color:var(--N-100);">Email content</td><td style="color:var(--N-100);">Figma + Emailify → Klaviyo</td><td style="color:var(--BU-200);">HTML export via Emailify plugin</td></tr>
+      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Copy (email, SMS, caption)</td><td style="color:var(--N-100);">Claude → direct delivery</td><td style="color:var(--BU-200);">Must pass naming + compliance gate before submission</td></tr>
+      <tr><td style="color:var(--N-100);">Print document (brief, report)</td><td style="color:var(--N-100);">HTML → Chrome browser-print → PDF</td><td style="color:var(--BU-200);">File → Print → Save as PDF · set margins to None</td></tr>
+      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Landing page / web</td><td style="color:var(--N-100);">Webflow</td><td style="color:var(--BU-200);">Direct Webflow build</td></tr>
+      <tr><td style="color:var(--N-100);">Production print collateral (direct mail, brochure)</td><td style="color:var(--N-100);">Route to Josh</td><td style="color:var(--BU-200);">Production-grade print is not part of the team workflow</td></tr>
+      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Video ad</td><td style="color:var(--N-100);">Route to Josh (Iron Brothers Films)</td><td style="color:var(--BU-200);">Premiere Pro + FFmpeg pipeline</td></tr>
     </tbody>
   </table>
-  <div style="margin-top:24px;padding:20px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;">
-    <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Print Workflow Detail</div>
-    <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Build document as HTML using this brand spec → open in Google Chrome → File → Print → Destination: Save as PDF. Set margins to None or Minimum. Uncheck "Headers and footers." For non-letter formats, set custom paper size. For any production-grade print (direct mail, clinical brochures, large format) — route to Josh.</div>
-  </div>
 </div>
 </section>
 
@@ -1300,7 +1361,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-title">Two States · Degrade Predictably</div>
   <div class="sec-sub">When full brand fidelity cannot be achieved, degrade predictably — not randomly. Always invoke the nearest compliant state.</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;">
-    <div style="background:#fff;border:2px solid var(--BU-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+    <div style="background:var(--N-100);border:2px solid var(--BU-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
       <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px;">State 1 — Partial Brand</div>
       <div style="font-family:var(--FD);font-size:1.1rem;color:var(--BU-700);margin-bottom:12px;">Preferred fallback</div>
       <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
@@ -1311,7 +1372,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
         <li>Provider photos: <code>onerror</code> fallback to neutral placeholder if R2 unreachable</li>
       </ul>
     </div>
-    <div style="background:#fff;border:2px solid var(--N-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
+    <div style="background:var(--N-100);border:2px solid var(--N-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
       <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--N-600);margin-bottom:8px;">State 2 — Minimal Brand</div>
       <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-700);margin-bottom:12px;">Last-resort only</div>
       <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
