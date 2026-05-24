@@ -33,77 +33,77 @@ html{scroll-behavior:smooth;}
 body{background:var(--N-100);font-family:var(--FB);color:var(--N-900);font-size:16px;line-height:1.5;}
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:200;background:var(--BU-800);padding:10px 64px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.06);}
-.nav-brand{font-family:var(--FD);font-size:0.78rem;color:var(--GL-300);margin-right:10px;white-space:nowrap;flex-shrink:0;}
-.nav a{font-family:var(--FA);font-size:0.44rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:rgba(241,240,238,.3);text-decoration:none;padding:3px 7px;border:1px solid rgba(255,255,255,.07);transition:all .18s;white-space:nowrap;}
-.nav a:hover{color:var(--N-100);border-color:rgba(255,255,255,.22);}
+.nav{position:sticky;top:0;z-index:200;background:var(--BU-800);padding:8px 64px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;border-bottom:1px solid rgba(241,240,238,.06);}
+.nav-brand{font-family:var(--FD);font-size:0.78rem;color:var(--GL-300);margin-right:8px;white-space:nowrap;flex-shrink:0;}
+.nav a{font-family:var(--FA);font-size:0.44rem;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:rgba(241,240,238,.3);text-decoration:none;padding:4px 8px;border:1px solid rgba(241,240,238,.07);transition:all .18s;white-space:nowrap;}
+.nav a:hover{color:var(--N-100);border-color:rgba(241,240,238,.22);}
 
 /* PAGE */
-.page{max-width:1280px;margin:0 auto;padding:72px 80px 120px;}
-.sec{margin-bottom:80px;padding-bottom:80px;border-bottom:1px solid var(--N-200);position:relative;overflow:hidden;}
+.page{max-width:1280px;margin:0 auto;padding:72px 80px 96px;}
+.sec{margin-bottom:80px;padding:48px;border-bottom:1px solid var(--N-200);position:relative;overflow:hidden;}
 .sec:last-child{border-bottom:none;}
 .sec-inner{position:relative;z-index:1;}
-.sec-num{font-family:var(--FA);font-size:0.52rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--BU-400);margin-bottom:6px;}
-.sec-title{font-family:var(--FD);font-size:2.5rem;font-weight:400;color:var(--BU-700);letter-spacing:-0.01em;line-height:1.05;margin-bottom:10px;}
-.sec-sub{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-500);line-height:1.75;margin-bottom:36px;border-left:2px solid var(--NV-300);padding-left:16px;}
-.subsec{margin-bottom:40px;}
-.subsec-title{font-family:var(--FA);font-size:1.05rem;font-weight:400;color:var(--BU-700);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--N-200);}
+.sec-num{font-family:var(--FA);font-size:0.52rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;color:var(--BU-400);margin-bottom:0.5rem;}
+.sec-title{font-family:var(--FD);font-size:2.5rem;font-weight:400;color:var(--BU-700);letter-spacing:-0.01em;line-height:1.05;margin-bottom:12px;}
+.sec-sub{font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-500);line-height:1.75;margin-bottom:32px;border-left:2px solid var(--NV-300);padding-left:16px;}
+.subsec{margin-bottom:48px;}
+.subsec-title{font-family:var(--FA);font-size:1.05rem;font-weight:400;color:var(--BU-700);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--N-200);}
 
 /* TABLES */
 table{width:100%;border-collapse:collapse;}
 th{font-family:var(--FB);font-weight:600;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);padding:8px 12px;text-align:left;background:var(--NV-100);border-bottom:1px solid var(--N-200);}
-td{font-family:var(--FB);font-size:0.75rem;font-weight:300;padding:9px 12px;border-bottom:1px solid var(--N-200);color:var(--N-700);vertical-align:middle;line-height:1.5;}
+td{font-family:var(--FB);font-size:0.75rem;font-weight:300;padding:8px 12px;border-bottom:1px solid var(--N-200);color:var(--N-700);vertical-align:middle;line-height:1.5;}
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:rgba(242,241,237,.7);}
 .hex{font-family:monospace;font-size:0.7rem;color:var(--BU-600);}
 .hr{background:rgba(134,97,24,.05);}
 
 /* SWATCHES */
-.sw-row{display:flex;gap:2px;margin-bottom:12px;}
-.sw{flex:1;height:56px;display:flex;flex-direction:column;justify-content:flex-end;padding:4px 6px;}
-.sw-lbl{font-family:var(--FB);font-size:0.42rem;font-weight:500;opacity:.78;}
+.sw-row{display:flex;gap:4px;margin-bottom:12px;}
+.sw{flex:1;height:56px;display:flex;flex-direction:column;justify-content:flex-end;padding:4px 8px;}
+.sw-lbl{font-family:var(--FB);font-size:0.42rem;font-weight:300;opacity:.78;}
 .sw-h{position:relative;}
-.sw-h::after{content:'★ HERO';position:absolute;top:4px;right:4px;font-family:var(--FB);font-size:0.38rem;font-weight:600;letter-spacing:0.14em;color:rgba(255,255,255,.9);background:rgba(0,0,0,.35);padding:2px 5px;border-radius:2px;text-transform:uppercase;pointer-events:none;}
+.sw-h::after{content:'★ HERO';position:absolute;top:4px;right:4px;font-family:var(--FB);font-size:0.38rem;font-weight:600;letter-spacing:0.14em;color:var(--N-100);background:rgba(28,26,23,.35);padding:2px 5px;border-radius:2px;text-transform:uppercase;pointer-events:none;}
 
 /* EDITORIAL CONTEXT DEMOS */
-.ctx-dark{background:var(--BU-700);border-radius:12px;padding:52px 60px;box-shadow:var(--shd-md);margin-bottom:20px;}
-.ctx-light{background:var(--N-100);border-radius:12px;padding:52px 60px;box-shadow:var(--shd-md);border:1px solid var(--N-200);}
-.ctx-ey{font-family:var(--FA);font-size:0.625rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;margin-bottom:24px;}
+.ctx-dark{background:var(--BU-700);border-radius:12px;padding:48px 64px;box-shadow:var(--shd-md);margin-bottom:24px;}
+.ctx-light{background:var(--N-100);border-radius:12px;padding:48px 64px;box-shadow:var(--shd-md);border:1px solid var(--N-200);}
+.ctx-ey{font-family:var(--FA);font-size:0.625rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;margin-bottom:24px;}
 .ctx-h{font-family:var(--FD);font-size:3.25rem;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
 .ctx-hem{font-family:var(--FD);font-size:3.25rem;font-weight:400;font-style:italic;letter-spacing:-0.01em;line-height:1.2;margin-bottom:24px;}
-.ctx-sub{font-family:var(--FA);font-size:1.25rem;font-weight:400;line-height:1.55;margin-bottom:20px;}
-.ctx-body{font-family:var(--FB);font-size:1.05rem;font-weight:300;line-height:1.75;margin-bottom:10px;}
-.ctx-ann{margin-top:36px;padding-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.ctx-sub{font-family:var(--FA);font-size:1.25rem;font-weight:400;line-height:1.55;margin-bottom:24px;}
+.ctx-body{font-family:var(--FB);font-size:1.05rem;font-weight:300;line-height:1.75;margin-bottom:8px;}
+.ctx-ann{margin-top:32px;padding-top:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 .ann-item{font-family:var(--FB);font-size:0.5rem;font-weight:300;line-height:1.7;}
-.ann-lbl{font-family:var(--FA);font-size:0.5rem;font-weight:600;display:block;margin-bottom:2px;}
+.ann-lbl{font-family:var(--FA);font-size:0.5rem;font-weight:400;display:block;margin-bottom:2px;}
 
 /* GRADIENTS */
 .grad-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.grad-cell{min-height:120px;padding:22px 20px;display:flex;flex-direction:column;cursor:default;}
-.g-lbl{font-family:var(--FA);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(241,240,238,.3);margin-bottom:auto;}
-.g-name{font-family:var(--FD);font-size:1.2rem;color:var(--N-100);margin-bottom:3px;}
+.grad-cell{min-height:120px;padding:24px 24px;display:flex;flex-direction:column;cursor:default;}
+.g-lbl{font-family:var(--FA);font-size:0.48rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(241,240,238,.3);margin-bottom:auto;}
+.g-name{font-family:var(--FD);font-size:1.2rem;color:var(--N-100);margin-bottom:4px;}
 .g-desc{font-family:var(--FB);font-size:0.46rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:rgba(241,240,238,.22);}
 
 /* TILES */
-.tile-row{display:flex;gap:2px;}
-.tile{flex:1;padding:22px 18px;cursor:default;box-shadow:var(--shd-md);}
-.t-title{font-family:var(--FD);font-size:2.25rem;font-weight:400;line-height:1.2;margin-bottom:6px;}
+.tile-row{display:flex;gap:4px;}
+.tile{flex:1;padding:24px 24px;cursor:default;box-shadow:var(--shd-md);}
+.t-title{font-family:var(--FD);font-size:2.25rem;font-weight:400;line-height:1.2;margin-bottom:8px;}
 .t-body{font-family:var(--FB);font-size:1.125rem;font-weight:300;line-height:1.6;}
 
 /* TYPOGRAPHY SCALE */
-.tr-d{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.tr-d{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid rgba(241,240,238,.07);}
 .tr-d:last-child{border-bottom:none;}
 .tr-l{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--N-200);}
 .tr-l:last-child{border-bottom:none;}
-.t-meta{width:185px;flex-shrink:0;font-family:var(--FA);font-size:0.48rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--BU-400);line-height:1.7;}
+.t-meta{width:185px;flex-shrink:0;font-family:var(--FA);font-size:0.48rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--BU-400);line-height:1.7;}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 40px;background:linear-gradient(120deg,#131c25,#6a89a9);border:none;border-radius:8px;font-family:var(--FA);font-size:1.5rem;font-weight:400;color:var(--N-100);cursor:pointer;transition:background .25s;box-shadow:var(--shd-md);}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 48px;background:linear-gradient(120deg,#131c25,#6a89a9);border:none;border-radius:8px;font-family:var(--FA);font-size:1.5rem;font-weight:400;color:var(--N-100);cursor:pointer;transition:background .25s;box-shadow:var(--shd-md);}
 .btn:hover{background:linear-gradient(120deg,#2b3a4a,#91a7bf);}
 
 /* SHADOWS */
-.shad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.shad-card{background:var(--N-100);padding:24px 20px;border:1px solid var(--N-200);}
+.shad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.shad-card{background:var(--N-100);padding:32px;border:1px solid var(--N-200);}
 
 /* TEXTURES via ::before — N-100 sections only */
 .tex-section{position:relative;overflow:hidden;}
@@ -117,49 +117,46 @@ tr:hover td{background:rgba(242,241,237,.7);}
 .tex-08::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-08.svg');}
 .tex-09::before{background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-09.svg');}
 
-/* LOGO MARK WATERMARK */
-.logowm-section{position:relative;overflow:hidden;}
-.logowm-section::before{content:'';position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:cover;background-position:center;opacity:1;pointer-events:none;z-index:0;}
-.logowm-section > .sec-inner{position:relative;z-index:1;}
-
 /* PROVIDERS */
 .provider-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
 .provider-card{background:var(--N-100);border:1px solid var(--N-200);border-radius:12px;overflow:hidden;box-shadow:var(--shd-md);}
-.provider-photo{width:100%;height:300px;object-fit:cover;object-position:top center;display:block;}
-.provider-body{padding:28px 32px;}
-.provider-role{font-family:var(--FA);font-size:0.5rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;}
+.provider-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 15%;display:block;}
+.provider-body{padding:32px;}
+.provider-role{font-family:var(--FA);font-size:0.5rem;font-weight:400;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px;}
 .provider-name{font-family:var(--FD);font-size:2rem;font-weight:400;color:var(--BU-700);margin-bottom:4px;line-height:1.1;}
 .provider-cred{font-family:var(--FA);font-size:0.875rem;font-style:italic;color:var(--GL-700);margin-bottom:16px;}
-.provider-spec-label{font-family:var(--FB);font-size:0.5rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--NV-600);margin-bottom:6px;}
+.provider-spec-label{font-family:var(--FB);font-size:0.5rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--NV-600);margin-bottom:8px;}
 .provider-spec{font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;}
-.provider-visual{font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--N-500);line-height:1.7;font-style:italic;border-left:2px solid var(--NV-300);padding-left:12px;margin-top:14px;}
+.provider-visual{font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--N-500);line-height:1.7;font-style:italic;border-left:2px solid var(--NV-300);padding-left:12px;margin-top:16px;}
 
 /* NOTES / CALLOUTS */
-.note{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-500);line-height:1.75;background:var(--NV-100);padding:14px 18px;border-left:2px solid var(--NV-300);margin-top:12px;}
-.code{font-family:monospace;font-size:0.7rem;background:var(--N-200);padding:1px 6px;border-radius:2px;color:var(--N-700);}
-.prompt-block{font-family:var(--FD);font-size:1rem;font-weight:400;font-style:italic;color:var(--BU-700);line-height:1.75;background:var(--NV-100);padding:24px 28px;border-left:3px solid var(--GL-700);margin-bottom:20px;}
+.note{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-500);line-height:1.75;background:var(--NV-100);padding:24px;border-left:2px solid var(--NV-300);margin-top:12px;}
+.code{font-family:monospace;font-size:0.7rem;background:var(--N-200);padding:1px 8px;border-radius:2px;color:var(--N-700);}
+.prompt-block{font-family:var(--FD);font-size:1rem;font-weight:400;font-style:italic;color:var(--BU-700);line-height:1.75;background:var(--NV-100);padding:32px;border-left:3px solid var(--GL-700);margin-bottom:24px;}
 
 /* DO / DONT */
 .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-.do-col{background:rgba(43,58,74,.03);padding:24px;border-top:3px solid var(--BU-600);}
-.dont-col{background:rgba(134,97,24,.04);padding:24px;border-top:3px solid rgba(176,141,114,.5);}
-.do-col h4,.dont-col h4{font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:14px;}
-.do-col h4{color:var(--BU-600);}
-.dont-col h4{color:var(--GL-700);}
-.do-col li,.dont-col li{font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-700);line-height:1.65;margin-bottom:8px;padding-left:14px;position:relative;list-style:none;}
-.do-col li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--BU-500);}
-.dont-col li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:#b18020;}
+.do-col{background:var(--NV-300);padding:32px;border-top:3px solid var(--BU-500);}
+.dont-col{background:var(--BU-700);padding:32px;border-top:3px solid var(--GL-500);}
+.do-col h4,.dont-col h4{font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:16px;}
+.do-col h4{color:var(--BU-700);}
+.dont-col h4{color:var(--GL-300);}
+.do-col li,.dont-col li{font-family:var(--FB);font-size:0.75rem;font-weight:300;line-height:1.65;margin-bottom:8px;padding-left:16px;position:relative;list-style:none;}
+.do-col li{color:var(--N-900);}
+.dont-col li{color:var(--N-100);}
+.do-col li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--BU-500);}
+.dont-col li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--GL-300);}
 
 /* RULES BLOCK */
-.rules-block{background:var(--NV-100);border-radius:8px;padding:28px 32px;margin-bottom:20px;}
-.rules-block h4{font-family:var(--FA);font-size:0.56rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--BU-500);margin-bottom:12px;}
+.rules-block{background:var(--NV-100);border-radius:8px;padding:32px;margin-bottom:24px;}
+.rules-block h4{font-family:var(--FA);font-size:0.56rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--BU-500);margin-bottom:12px;}
 .rules-block p,.rules-block li{font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:8px;}
-.rules-block li{padding-left:14px;position:relative;list-style:none;}
-.rules-block li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--GL-700);}
+.rules-block li{padding-left:16px;position:relative;list-style:none;}
+.rules-block li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--GL-700);}
 .rules-block strong{font-weight:500;color:var(--N-900);}
 
 /* PHOTO GRID */
-.photo-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.photo-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
 .photo-item{display:inline-block;vertical-align:top;}
 .photo-item img{display:block;}
 .photo-item .photo-lbl{font-family:var(--FB);font-size:0.52rem;font-weight:300;color:var(--N-500);margin-top:4px;word-break:break-all;}
@@ -170,7 +167,7 @@ tr:hover td{background:rgba(242,241,237,.7);}
 .masthead-title{font-family:var(--FD);font-size:3.5rem;font-weight:400;color:var(--BU-700);letter-spacing:-0.01em;line-height:1.0;margin-bottom:4px;}
 .masthead-sub{font-family:var(--FD);font-size:3.5rem;font-weight:400;font-style:italic;color:var(--GL-700);letter-spacing:-0.01em;line-height:1.0;margin-bottom:32px;}
 .masthead-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.masthead-item{border-left:2px solid var(--NV-300);padding-left:14px;}
+.masthead-item{border-left:2px solid var(--NV-300);padding-left:16px;}
 .masthead-item-label{font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--N-400);margin-bottom:4px;}
 .masthead-item-value{font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--N-700);}
 </style>
@@ -221,22 +218,12 @@ N-100 background · BU-700 section accent · EB Garamond heading (upright leads)
 ANTI-RATIONALIZATION RULE:
 If you find yourself thinking a rule violation will look better, that reasoning is incorrect. The rules define what looks better for this brand. Never substitute agent aesthetic judgment for the rule system.
 
-GRACEFUL DEGRADATION:
-State 1 — R2 Accessible: Pull all logos and textures from asset library. Build normally.
-State 2 — R2 Not Accessible: Colors, typography, spacing, voice, and layout rules remain fully available. Textures: Omit silently. Logo: Ask team to supply the file. Do not substitute a placeholder.
-
 PHOTOGRAPHY HANDOFF (TEAM WORKFLOW):
 When content requires provider photography:
 - Mia LoPreiato: Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg on R2
 - Teresa Hernandez: Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg on R2
 - If R2 unavailable: flag to Josh — never use unlicensed stock as a substitute for Mia or Teresa
 If a layout requires a provider photo and none is accessible: produce the layout with a clearly labeled placeholder box and note the image needed. Do not silently omit the photo requirement.
-
-PHOTOGRAPHY REPLACEMENT CATCH:
-If content brief calls for a generic lifestyle or model photo:
-- STOP. Check whether Mia or Teresa photography would be more appropriate.
-- If yes: use provider photography from R2. Never substitute stock models when real providers are appropriate.
-- If brief genuinely requires non-provider lifestyle imagery: generate using the 500T photography brief in the Photography section of this document. Never use generic stock photography with unrelated subjects.
 
 NAMING CONVENTIONS QUICK CHECK:
 - CTAs: "Apply for Assessment" or "Take the Assessment" only — never "Book Now" or "Free Consultation"
@@ -265,15 +252,6 @@ Before diverging from any layout rule, exhaust these in-system options:
 - BU-700 for one interior section break only — not the document frame
 If depth or dimension is the aesthetic goal, the answer is always inside the system.
 
-PHOTOGRAPHY HANDOFF NOTE:
-At the end of every visual deliverable, include this note verbatim in tone:
-"I've added placeholder photography from the brand library to get the layout right.
-You can swap any image for your own photos — just drop them into this chat and tell me
-which section to replace. If you'd like to generate a new image instead, tell me what
-you're picturing and I'll either give you a prompt you can use in an image tool, or
-generate it directly if I'm able to."
-Never mention R2, reference URLs, Cloudflare, file names, or any backend detail.
-
 PRINT OUTPUT WORKFLOW:
 Build document as HTML using this brand spec → open in Google Chrome →
 File → Print → Destination: Save as PDF. Set margins to None or Minimum.
@@ -284,6 +262,65 @@ R2 base: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev
 GitHub repo: https://github.com/joshkeplersmith-source/bbm-design-system
 Working root: ~/Captain-Kepler/
 This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
+
+GRACEFUL DEGRADATION:
+State 1 — R2 Accessible: Pull all logos and textures from Section 3 URLs. Build normally.
+State 2 — R2 Not Accessible: Colors, typography, spacing, voice, and layout rules are all still available. Build with those. Textures: Omit silently — no mention, no flag, no request. A page without textures is still fully on-brand. Logo: Say verbatim: "I can't access the logo files in this environment. Drop the logo you need into this chat and I'll use it. BB-H-Logo-B.svg for light backgrounds, BB-H-Logo-W.svg for dark backgrounds." Wait for the upload. Do not substitute a placeholder.
+
+PHOTOGRAPHY HANDOFF NOTE:
+At the end of every visual deliverable, include this note verbatim in tone:
+"I've added placeholder photography from the brand library to get the layout right. You can swap any image for your own photos — just drop them into this chat and tell me which section to replace. If you'd like to generate a new image instead, tell me what you're picturing and I'll either give you a prompt you can use in an image tool, or generate it directly if I'm able to."
+Never mention R2, reference URLs, Cloudflare, file names, or any backend detail.
+
+PHOTOGRAPHY REPLACEMENT CATCH:
+If the user asks about replacing, changing, swapping, or adding any image — regardless of how they phrase it — respond immediately with:
+"Yes — do you have a photo you'd like to use, or would you like me to generate one? If you have something in mind, describe it and I'll either generate it or give you a prompt to use."
+Then wait for their input. Never explain where the current image came from. Never mention the reference library.
+
+PROVIDER PHOTOGRAPHY WORKFLOW:
+When content requires provider photography:
+- Mia LoPreiato: Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg on R2
+- Teresa Hernandez: Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg on R2
+- If R2 unavailable: flag to Josh — never use unlicensed stock as a substitute for Mia or Teresa
+- If a layout requires a provider photo and none is accessible: produce the layout with a clearly labeled placeholder box and note the image needed. Do not silently omit.
+
+TEXTURE IMPLEMENTATION — TWO SYSTEMS:
+
+TEXTURE SYSTEM 1 — PLANT TEXTURES (SVGs 03–09):
+Applied via CSS ::before pseudo-element on the section. N-100 sections only. Never on BU-700. One texture per section maximum. Never in same section as logo mark watermark.
+
+CSS implementation:
+.section-with-texture {
+  position: relative;
+  overflow: hidden;
+}
+.section-with-texture::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200vmax; height: 200vmax;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-image: url('[R2-texture-url]');
+  background-size: cover;
+  background-position: center;
+  opacity: .26;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+.section-with-texture > * {
+  position: relative;
+  z-index: 2;
+}
+Opacity range: 26–40%. Use 200vmax — never percentages.
+
+TEXTURE SYSTEM 2 — LOGO MARK WATERMARK (BB-Logo-Mark-Texture.webp):
+The primary texture. Applied as a child <div> directly inside the <section>, before <div class="sec-inner">. N-100 sections only. Once per page maximum. Never in same section as a plant texture SVG.
+
+Implementation:
+<div style="position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:1;pointer-events:none;z-index:0;"></div>
+
+Requires parent <section> to have position:relative and overflow:hidden (already on .sec class). No 200vmax. No rotation. No blend mode. background-size:contain preserves proportions — never use cover or 200vmax on the PNG watermark as it will stretch and pixelate.
 </div>
 </details>
 
@@ -294,11 +331,10 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <a href="#tiles">Tiles</a><a href="#type">Typography</a><a href="#spacing">Spacing</a>
   <a href="#grid">Grid</a><a href="#shadows">Shadows</a><a href="#buttons">Buttons</a>
   <a href="#textures">Textures</a><a href="#logo">Logo</a><a href="#providers">Providers</a>
-  <a href="#photography">Photography</a><a href="#photo-handoff">Photo Handoff</a>
+  <a href="#photography">Photography</a>
   <a href="#voice">Voice</a><a href="#naming">Naming</a><a href="#framing">Framing</a>
   <a href="#compliance">Compliance</a><a href="#format">Format</a><a href="#positioning">Positioning</a>
-  <a href="#assets">Assets</a><a href="#workflow">Workflow</a>
-  <a href="#degradation">Degradation</a><a href="#image-gen">Image Gen</a>
+  <a href="#assets">Assets</a>
   <a href="#reference">Reference</a>
 </nav>
 
@@ -313,7 +349,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <div class="masthead-item"><div class="masthead-item-label">Version</div><div class="masthead-item-value">1.2 — Integrated</div></div>
     <div class="masthead-item"><div class="masthead-item-label">Date</div><div class="masthead-item-value">May 2026</div></div>
     <div class="masthead-item"><div class="masthead-item-label">Author</div><div class="masthead-item-value">Josh Smith · Captain Kepler Creative</div></div>
-    <div class="masthead-item"><div class="masthead-item-label">Audience</div><div class="masthead-item-value">Will · Dez · Social Media Manager</div></div>
+    <div class="masthead-item"><div class="masthead-item-label">Audience</div><div class="masthead-item-value">Body Balance Team</div></div>
   </div>
 </div>
 
@@ -323,6 +359,16 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-num">01 — Color Palette</div>
   <div class="sec-title">Six Families</div>
   <div class="sec-sub">Hero stop is 700 across all families. BU-700 is the dominant brand color. N-100 is the page background. Never use pure #000000 or #ffffff — always N-900 and N-100.</div>
+
+  <div class="rules-block">
+    <h4>Color Rules</h4>
+    <ul>
+      <li>Hero stop is <strong>700</strong> across all six families</li>
+      <li><strong>BU-700</strong> is the dominant brand color — for section backgrounds within a layout, never for full-page or full-deliverable backgrounds</li>
+      <li><strong>N-100 #f1f0ee</strong> is always the page background</li>
+      <li>Never use pure <strong>#000000</strong> or <strong>#ffffff</strong> — always <strong>N-900 #1c1a17</strong> and <strong>N-100 #f1f0ee</strong></li>
+    </ul>
+  </div>
 
   <div class="subsec">
     <div class="subsec-title">BU — Primary · Slate Blue · Dominant brand color</div>
@@ -394,6 +440,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
 
   <div class="subsec">
     <div class="subsec-title">GL — Quaternary · Gold / Amber · GL-300 on dark · GL-700 on light · Non-interchangeable</div>
+    <div style="font-family:var(--FB);font-size:0.78rem;font-weight:300;color:var(--N-500);line-height:1.75;margin-bottom:14px;">Primary accent color. Used for headings, card titles, and highlight moments. GL-300 is the dominant accent on dark surfaces. GL-700 is the dominant accent on light surfaces.</div>
     <div class="sw-row">
       <div class="sw" style="background:#2d2006"><div class="sw-lbl" style="color:#d99e2b">#2d2006 · 900</div></div>
       <div class="sw" style="background:#553c0c"><div class="sw-lbl" style="color:#e2b45b">#553c0c · 800</div></div>
@@ -410,6 +457,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <tr><td>GL-500</td><td class="hex">#d99e2b</td><td>Caption on dark (D6) · eyebrow mid-gold</td></tr>
       <tr class="hr"><td><strong>GL-300 ★</strong></td><td class="hex">#ebcc8e</td><td>Primary accent on dark (D1) · card title on gradient/BU-700 tiles</td></tr>
     </tbody></table>
+    <div class="note">Key rule: GL-300 (#ebcc8e) on dark backgrounds. GL-700 (#866118) on light backgrounds. Non-interchangeable.</div>
   </div>
 
   <div class="subsec">
@@ -426,12 +474,13 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <div class="sw sw-h" style="background:#f1f0ee"><div class="sw-lbl" style="color:#1c1a17">#f1f0ee · 100 ★</div></div>
     </div>
     <table><thead><tr><th>Stop</th><th>Hex</th><th>Usage</th></tr></thead><tbody>
-      <tr><td><strong>N-900</strong></td><td class="hex">#1c1a17</td><td>Brand near-black — body text on light</td></tr>
+      <tr><td><strong>N-900</strong></td><td class="hex">#1c1a17</td><td>Brand near-black — body text on light, icon fills</td></tr>
       <tr><td>N-600</td><td class="hex">#706961</td><td>Secondary body text on light</td></tr>
       <tr><td>N-300</td><td class="hex">#c1bdb8</td><td>Subheading / supporting text on dark (D5)</td></tr>
       <tr><td>N-200</td><td class="hex">#dcd9d5</td><td>Borders, dividers, horizontal rules on light</td></tr>
       <tr class="hr"><td><strong>N-100 ★</strong></td><td class="hex">#f1f0ee</td><td>Page background · body text on dark · brand near-white</td></tr>
     </tbody></table>
+    <div class="note">N-900 is the brand near-black. N-100 is the brand near-white. Never use pure #000000 or #ffffff — always use N-900 and N-100.</div>
   </div>
 
   <div class="subsec">
@@ -548,7 +597,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-sub">All tiles receive shadow-md. Dark context: gradient tiles only — 3 types. Light context: 5 tile types including NV-300 neutral and solid BU-700.</div>
   <div class="subsec">
     <div class="subsec-title">Dark Context · BU-700 Background</div>
-    <div style="background:var(--BU-700);padding:40px;border-radius:8px;margin-bottom:16px;">
+    <div style="background:var(--BU-700);padding:48px;border-radius:8px;margin-bottom:16px;">
       <div class="tile-row">
         <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'"><div class="t-title" style="color:#ebcc8e">Neutral Gradient</div><div class="t-body" style="color:#f1f0ee">GL-300 gold title · N-100 body</div></div>
         <div class="tile" style="background:linear-gradient(135deg,#131c25,#49182f)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#722c4d)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#49182f)'"><div class="t-title" style="color:#da9fbb">Female Gradient</div><div class="t-body" style="color:#f1f0ee">P-300 rose title · N-100 body</div></div>
@@ -580,7 +629,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <table><thead><tr><th>Role</th><th>Family</th><th>Weights</th><th>Google Fonts Import String</th></tr></thead><tbody>
       <tr><td>Display / Headings</td><td>EB Garamond</td><td>400, 400 italic</td><td class="hex">EB+Garamond:ital,wght@0,400;1,400</td></tr>
       <tr><td>Accent / UI / Ghost text</td><td>Playfair Display</td><td>400, 400 italic</td><td class="hex">Playfair+Display:ital,wght@0,400;1,400</td></tr>
-      <tr><td>Body copy</td><td>Work Sans</td><td>300, 400, 500, 600</td><td class="hex">Work+Sans:wght@300;400;500;600</td></tr>
+      <tr><td>Body copy</td><td>Work Sans</td><td>300, 600</td><td class="hex">Work+Sans:wght@300;600</td></tr>
     </tbody></table>
   </div>
   <div class="subsec">
@@ -590,8 +639,12 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <div class="tr-d"><div class="t-meta">Hero Title · D4<br>EB Garamond 400<br>4rem / 64px · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:4rem;color:#f1f0ee;letter-spacing:-0.05em;line-height:1.3">Feel like yourself again.</div></div>
       <div class="tr-d"><div class="t-meta">Hero Accent · D1<br>EB Garamond 400 italic<br>4rem / 64px</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:4rem;font-style:italic;color:#ebcc8e;line-height:1.3">Coming back to yourself.</div></div>
       <div class="tr-d"><div class="t-meta">Heading · D4<br>EB Garamond 400<br>3.25rem / 52px · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;color:#f1f0ee;letter-spacing:-0.05em;line-height:1.3">Integrated care that listens.</div></div>
+      <div class="tr-d"><div class="t-meta">Heading Accent · D1<br>EB Garamond 400 italic<br>3.25rem / 52px</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;font-style:italic;color:#ebcc8e;line-height:1.3">The gap, closed.</div></div>
       <div class="tr-d"><div class="t-meta">Subheading · D5<br>Playfair Display 400<br>2.25rem / 36px</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:2.25rem;color:#c1bdb8;line-height:1.3">Hormone health meets aesthetics.</div></div>
-      <div class="tr-d"><div class="t-meta">Body · D4<br>Work Sans 300<br>1.125rem / 18px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.5;max-width:500px">Body Balance integrates hormone health and aesthetic treatments into a single holistic plan.</div></div>
+      <div class="tr-d"><div class="t-meta">Card Title · tiles<br>EB Garamond 400<br>2.25rem · Q/S/GR-300</div><div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#ebcc8e;line-height:1.2">Weight Loss · GL-300</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#da9fbb;line-height:1.2">PRF Skin · P-300</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#d1d0a8;line-height:1.2">Testosterone · GR-300</div></div></div>
+      <div class="tr-d"><div class="t-meta">Body Large · D4<br>Work Sans 300<br>1.5rem / 24px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.5rem;font-weight:300;color:#f1f0ee;line-height:1.25">Nobody has given her a plan that treats both as the same problem.</div></div>
+      <div class="tr-d"><div class="t-meta">Button / Label · N-100<br>Playfair Display 400<br>1.5rem / 24px</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:#f1f0ee">Apply for Assessment</div></div>
+      <div class="tr-d"><div class="t-meta">Body · D4<br>Work Sans 300<br>1.125rem / 18px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.25;max-width:500px">Body Balance integrates hormone health and aesthetic treatments into a single holistic plan — helping patients align how they feel inside with what they see in the mirror.</div></div>
       <div class="tr-d"><div class="t-meta">Caption · D6<br>Playfair Display 400<br>0.875rem / 14px</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;color:#d99e2b">Mia LoPreiato, NP · Teresa Hernandez, NP · Las Vegas, NV · Biote-certified · LegitScript certified</div></div>
     </div>
   </div>
@@ -604,24 +657,26 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <div class="tr-l"><div class="t-meta" style="color:#506d8b">Heading · L2<br>EB Garamond 400<br>3.25rem · −0.05em</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;color:#2b3a4a;letter-spacing:-0.05em;line-height:1.3">Two providers. One plan.</div></div>
       <div class="tr-l"><div class="t-meta" style="color:#506d8b">Heading Accent · L1<br>EB Garamond 400 italic<br>3.25rem</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:3.25rem;font-style:italic;color:#866118;line-height:1.3">Restored from within.</div></div>
       <div class="tr-l"><div class="t-meta" style="color:#506d8b">Subheading · L5<br>Playfair Display 400<br>2.25rem</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:2.25rem;color:#506d8b;line-height:1.3">Hormone care and aesthetics, integrated.</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Card Title (NV tile)<br>EB Garamond 400<br>2.25rem · GL-700</div><div style="font-family:'EB Garamond',Georgia,serif;font-size:2.25rem;color:#866118;line-height:1.2">Weight Loss Solutions</div></div>
+      <div class="tr-l"><div class="t-meta" style="color:#506d8b">Body Large · L6<br>Work Sans 300<br>1.5rem / 24px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.5rem;font-weight:300;color:#1c1a17;line-height:1.25">Your skin, your energy, your body — one connected plan.</div></div>
       <div class="tr-l"><div class="t-meta" style="color:#506d8b">Body · L6<br>Work Sans 300<br>1.125rem / 18px</div><div style="font-family:'Work Sans',sans-serif;font-size:1.125rem;font-weight:300;color:#1c1a17;line-height:1.5;max-width:500px">Teresa handles aesthetics. Mia handles hormone health. Together they produce the alignment the brand promises.</div></div>
       <div class="tr-l"><div class="t-meta" style="color:#506d8b">Caption · L5<br>Playfair Display 400<br>0.875rem</div><div style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;color:#506d8b">7975 W Sahara Ave #101 · Las Vegas, NV · (702) 843-0590</div></div>
     </div>
   </div>
   <div class="subsec">
     <div class="subsec-title">Complete Scale Reference</div>
-    <table><thead><tr><th>Level</th><th>Family</th><th>Wt</th><th>Style</th><th>rem</th><th>px</th><th>Dark</th><th>Light</th></tr></thead><tbody>
-      <tr><td>Eyebrow</td><td>Playfair Display</td><td>400</td><td>Uppercase</td><td>0.625rem</td><td>10px</td><td>GL-500</td><td>BU-500</td></tr>
-      <tr><td>Hero Title</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>4rem</td><td>64px</td><td>D4</td><td>L2</td></tr>
-      <tr><td>Hero Accent</td><td>EB Garamond</td><td>400</td><td>Italic</td><td>4rem</td><td>64px</td><td>D1</td><td>L1</td></tr>
-      <tr><td>Heading</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>3.25rem</td><td>52px</td><td>D4</td><td>L2</td></tr>
-      <tr><td>Heading Accent</td><td>EB Garamond</td><td>400</td><td>Italic</td><td>3.25rem</td><td>52px</td><td>D1</td><td>L1</td></tr>
-      <tr><td>Subheading</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>2.25rem</td><td>36px</td><td>D5</td><td>L5</td></tr>
-      <tr><td>Card Title</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>2.25rem</td><td>36px</td><td>GL/P/GR-300</td><td>GL-700</td></tr>
-      <tr><td>Body Large</td><td>Work Sans</td><td>300</td><td>Normal</td><td>1.5rem</td><td>24px</td><td>D4</td><td>L6</td></tr>
-      <tr><td>Button / Label</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>1.5rem</td><td>24px</td><td>N-100</td><td>N-100</td></tr>
-      <tr><td>Body</td><td>Work Sans</td><td>300</td><td>Normal</td><td>1.125rem</td><td>18px</td><td>D4</td><td>L6</td></tr>
-      <tr><td>Caption</td><td>Playfair Display</td><td>400</td><td>Italic</td><td>0.875rem</td><td>14px</td><td>D6</td><td>L5</td></tr>
+    <table><thead><tr><th>Level</th><th>Family</th><th>Wt</th><th>Style</th><th>rem</th><th>px</th><th>L-Spacing</th><th>L-Height</th><th>Dark</th><th>Light</th></tr></thead><tbody>
+      <tr><td>Eyebrow</td><td>Playfair Display</td><td>400</td><td>Uppercase</td><td>0.625rem</td><td>10px</td><td>0.32em</td><td>—</td><td>GL-500</td><td>BU-500</td></tr>
+      <tr><td>Hero Title</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>4rem</td><td>64px</td><td>−0.05em</td><td>1.5em</td><td>D4</td><td>L2</td></tr>
+      <tr><td>Hero Accent</td><td>EB Garamond</td><td>400</td><td>Italic</td><td>4rem</td><td>64px</td><td>—</td><td>1.5em</td><td>D1</td><td>L1</td></tr>
+      <tr><td>Heading</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>3.25rem</td><td>52px</td><td>−0.05em</td><td>1.5em</td><td>D4</td><td>L2</td></tr>
+      <tr><td>Heading Accent</td><td>EB Garamond</td><td>400</td><td>Italic</td><td>3.25rem</td><td>52px</td><td>—</td><td>1.5em</td><td>D1</td><td>L1</td></tr>
+      <tr><td>Subheading</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>2.25rem</td><td>36px</td><td>0</td><td>1.5em</td><td>D5</td><td>L5</td></tr>
+      <tr><td>Card Title</td><td>EB Garamond</td><td>400</td><td>Normal</td><td>2.25rem</td><td>36px</td><td>—</td><td>1.5em</td><td>GL/P/GR-300</td><td>GL-700</td></tr>
+      <tr><td>Body Large</td><td>Work Sans</td><td>300</td><td>Normal</td><td>1.5rem</td><td>24px</td><td>0</td><td>1.25em</td><td>D4</td><td>L6</td></tr>
+      <tr><td>Button / Label</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>1.5rem</td><td>24px</td><td>—</td><td>1.5em</td><td>N-100</td><td>N-100</td></tr>
+      <tr><td>Body</td><td>Work Sans</td><td>300</td><td>Normal</td><td>1.125rem</td><td>18px</td><td>0</td><td>1.25em</td><td>D4</td><td>L6</td></tr>
+      <tr><td>Caption</td><td>Playfair Display</td><td>400</td><td>Normal</td><td>0.875rem</td><td>14px</td><td>0</td><td>1.25em</td><td>D6</td><td>L5</td></tr>
     </tbody></table>
   </div>
   <div class="subsec">
@@ -640,6 +695,13 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
         <li>Use uppercase on EB Garamond</li>
         <li>Mix heading fonts on a single surface</li>
       </ul></div>
+    </div>
+    <div style="margin-top:24px;">
+      <div style="font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-700);margin-bottom:8px;">Ghosted Background Text — N-100 sections only · once per page maximum</div>
+      <div style="position:relative;overflow:hidden;border:1px solid var(--N-200);background:var(--N-100);min-height:130px;border-radius:2px;">
+        <div style="position:absolute;top:-20px;left:-8px;font-family:'Playfair Display',Georgia,serif;font-size:9rem;font-weight:400;font-style:italic;color:var(--NV-200);line-height:1;user-select:none;pointer-events:none;white-space:nowrap;">Restore</div>
+        <div style="position:relative;z-index:2;padding:72px 32px 28px;font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-600);">Playfair Display italic · 9rem · color: NV-200 · opacity: inherent from palette · position: absolute, bleeds top-left · behind all content via z-index</div>
+      </div>
     </div>
   </div>
 </div>
@@ -664,6 +726,25 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <tr><td>space-20</td><td>5rem</td><td>80px</td><td>Section horizontal padding · desktop page margin</td></tr>
     <tr><td>space-24</td><td>6rem</td><td>96px</td><td>Maximum section padding · page-top breathing room</td></tr>
   </tbody></table>
+  <div class="subsec" style="margin-top:32px;">
+    <div class="subsec-title">Padding Rules</div>
+    <div class="do-dont">
+      <div class="do-col"><h4>DO</h4><ul>
+        <li>Use space-12 (48px) minimum for section internal padding on all sides</li>
+        <li>Use space-16 (64px) for dark/featured sections (BU-700, BU-800 backgrounds)</li>
+        <li>Use space-8 (32px) minimum for component internal padding (cards, tiles, demo blocks)</li>
+        <li>Use space-6 (24px) for table cell and inline component padding</li>
+        <li>Let section numbers, titles, and content breathe — always leave visible space between text and container edges</li>
+      </ul></div>
+      <div class="dont-col"><h4>DON'T</h4><ul>
+        <li>Use arbitrary pixel values not on the spec scale</li>
+        <li>Let any text or content touch a container edge</li>
+        <li>Apply padding that differs between visually equivalent sections</li>
+        <li>Use less than space-8 (32px) for any visible container internal padding</li>
+        <li>Override spacing scale values with off-scale inline styles</li>
+      </ul></div>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -690,7 +771,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-num">08 — Shadow System</div>
   <div class="sec-title">Three Levels · Warm Shadows</div>
   <div class="sec-sub">All shadows use N-900 at low opacity — warm, never cold. Shadow-md is the default for all tiles and cards.</div>
-  <div class="shad-grid">
+  <div class="shad-grid" style="margin-top:32px;">
     <div class="shad-card" style="box-shadow:0 2px 8px rgba(28,26,23,.06),0 1px 2px rgba(28,26,23,.04)">
       <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px">sm</div>
       <div style="font-family:var(--FD);font-size:1rem;color:var(--BU-700);margin-bottom:10px">Gentle lift</div>
@@ -716,11 +797,11 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-num">09 — Button System</div>
   <div class="sec-title">Single Style · Primary Gradient</div>
   <div class="sec-sub">One button style applied system-wide. CTA copy uses approved naming conventions — see Naming section. "Apply for Assessment" and "Take the Assessment" are the only approved primary CTA labels.</div>
-  <div style="background:var(--BU-700);padding:36px;border-radius:4px;margin-bottom:4px">
+  <div style="background:var(--BU-700);padding:48px;border-radius:4px;margin-bottom:4px">
     <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-400);margin-bottom:16px">On BU-700 background</div>
     <div style="display:flex;gap:20px;flex-wrap:wrap"><button class="btn">Apply for Assessment</button><button class="btn">Take the Assessment</button></div>
   </div>
-  <div style="background:var(--N-100);padding:36px;border-radius:4px;border:1px solid var(--N-200)">
+  <div style="background:var(--N-100);padding:48px;border-radius:4px;border:1px solid var(--N-200)">
     <div style="font-family:var(--FB);font-size:0.48rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--BU-400);margin-bottom:16px">On N-100 background</div>
     <div style="display:flex;gap:20px;flex-wrap:wrap"><button class="btn">Apply for Assessment</button></div>
   </div>
@@ -733,7 +814,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
 <div class="sec-inner">
   <div class="sec-num">10 — Texture System</div>
   <div class="sec-title">Section Backgrounds · ::before Pseudo-element</div>
-  <div class="sec-sub">7 texture SVGs via CSS ::before pseudo-element. 200vmax × 200vmax square, centered, rotated 90°. N-100 sections only. Never on BU-700. One texture per section maximum.</div>
+  <div class="sec-sub">Plant textures (SVGs 03–09) are accent textures — applied via ::before pseudo-element at 26–40% opacity on N-100 sections for depth and variation. The logo mark watermark is the primary texture — applied as a positioned child div at full opacity for large section backgrounds.</div>
   <div class="subsec">
     <details style="border:1px solid var(--N-200);border-radius:6px;padding:12px 16px;">
       <summary style="font-family:var(--FA);font-size:0.56rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--BU-500);cursor:pointer;user-select:none;">CSS Implementation — Developer Reference</summary>
@@ -751,7 +832,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   background-image: url('[R2-texture-url]');
   background-size: cover;
   background-position: center;
-  opacity: .22;
+  opacity: .26;
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: multiply;
@@ -774,11 +855,26 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <tr><td class="hex">textures/BB-Logo-Mark-Texture.webp</td><td>Logo mark watermark</td><td>100% (built-in)</td></tr>
     </tbody></table>
   </div>
+  <div class="subsec">
+    <div class="subsec-title">Logo Mark Watermark — Primary Texture</div>
+    <div class="rules-block">
+      <ul>
+        <li><strong>BB-Logo-Mark-Texture.webp</strong> — the primary BBM texture. Used for large sections and as a key design element.</li>
+        <li>Applied as a child &lt;div&gt; positioned absolutely inside the section — NOT via ::before pseudo-element.</li>
+        <li>N-100 sections only. Once per page maximum.</li>
+        <li>Never in the same section as a plant texture SVG.</li>
+        <li>opacity:1 — the opacity is built into the image file. Do not reduce CSS opacity.</li>
+      </ul>
+    </div>
+    <div class="note" style="font-family:monospace;font-size:0.68rem;color:var(--N-700);line-height:1.8;white-space:pre-wrap;">&lt;div style="position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:1;pointer-events:none;z-index:0;"&gt;&lt;/div&gt;</div>
+    <div class="note">Requires parent section to have position:relative and overflow:hidden. The .sec class already provides this.</div>
+  </div>
 </div>
 </section>
 
 <!-- ═══ 11 LOGO SYSTEM ═══ -->
 <section class="sec" id="logo">
+<div style="position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:1;pointer-events:none;z-index:0;"></div>
 <div class="sec-inner">
   <div class="sec-num">11 — Logo System</div>
   <div class="sec-title">16 Variants · Four Families</div>
@@ -801,27 +897,27 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <div style="background:var(--BU-700);border-radius:8px;padding:32px;">
       <div style="display:flex;gap:2px;flex-wrap:wrap;">
         <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-G.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-G.svg" style="height:48px;max-width:160px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-G.svg</div></div>
         </div>
         <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg" style="height:48px;max-width:160px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-W.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-G.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-G.svg" style="height:80px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">V-Logo · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-V-Logo-G.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-W.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-W.svg" style="height:80px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">V-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-V-Logo-W.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-G.svg" style="height:64px;width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-G.svg" style="height:96px;width:96px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">Mark · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-Logo-Mark-G.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-W.svg" style="height:64px;width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-W.svg" style="height:96px;width:96px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">Mark · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-Logo-Mark-W.svg</div></div>
         </div>
       </div>
@@ -832,27 +928,27 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <div style="background:var(--NV-100);border:1px solid var(--N-200);border-radius:8px;padding:32px;">
       <div style="display:flex;gap:2px;flex-wrap:wrap;">
         <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-Bu.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-Bu.svg" style="height:48px;max-width:160px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Blue (preferred)</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-Bu.svg</div></div>
         </div>
         <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-B.svg" style="height:32px;max-width:160px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-B.svg" style="height:48px;max-width:160px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-B.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-Bu.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-Bu.svg" style="height:80px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">V-Logo · Blue (preferred)</div><div class="hex" style="font-size:0.44rem;display:block;">BB-V-Logo-Bu.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-B.svg" style="height:52px;max-width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-B.svg" style="height:80px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">V-Logo · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-V-Logo-B.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-Bu.svg" style="height:64px;width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-Bu.svg" style="height:96px;width:96px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">Mark · Blue</div><div class="hex" style="font-size:0.44rem;display:block;">BB-Logo-Mark-Bu.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-B.svg" style="height:64px;width:64px;object-fit:contain;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-B.svg" style="height:96px;width:96px;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">Mark · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-Logo-Mark-B.svg</div></div>
         </div>
       </div>
@@ -863,32 +959,20 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
     <div style="background:var(--NV-100);border:1px solid var(--N-200);border-radius:8px;padding:24px;">
       <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;">
         <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-          <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:4px;padding:12px 20px;display:flex;align-items:center;justify-content:center;">
-            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Logo-B.svg" style="height:24px;object-fit:contain;">
+          <div style="background:var(--BU-700);border-radius:4px;padding:12px;display:flex;align-items:center;justify-content:center;">
+            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-W.svg" style="height:64px;width:64px;object-fit:contain;">
           </div>
-          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Logo · Black</div>
-        </div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-          <div style="background:var(--BU-700);border-radius:4px;padding:12px 20px;display:flex;align-items:center;justify-content:center;">
-            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Logo-W.svg" style="height:24px;object-fit:contain;">
-          </div>
-          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Logo · White</div>
+          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Mark · White · Primary — dark platform backgrounds</div>
         </div>
         <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
           <div style="background:var(--N-100);border:1px solid var(--N-200);border-radius:4px;padding:12px;display:flex;align-items:center;justify-content:center;">
-            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-B.svg" style="height:40px;width:40px;object-fit:contain;">
+            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-B.svg" style="height:64px;width:64px;object-fit:contain;">
           </div>
-          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Mark · Black</div>
-        </div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-          <div style="background:var(--BU-700);border-radius:4px;padding:12px;display:flex;align-items:center;justify-content:center;">
-            <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-W.svg" style="height:40px;width:40px;object-fit:contain;">
-          </div>
-          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Mark · White</div>
+          <div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);text-align:center;">Social Mark · Black · Alternate — light platform backgrounds</div>
         </div>
       </div>
     </div>
-    <div class="note">Social variants are for platform profile images and social media use only. Never use Social variants in print, web layouts, or email.</div>
+    <div class="note">Social mark only — never the full horizontal or vertical logo on social platforms. White mark on dark backgrounds (Instagram, Facebook dark mode). Black mark on light backgrounds.</div>
   </div>
   <div class="subsec">
     <div class="subsec-title">Logo File Library</div>
@@ -900,8 +984,135 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <tr><td>BB-V-Logo-B/W/G/Bu.svg</td><td>All four variants</td><td>Constrained-width contexts</td></tr>
       <tr><td>BB-Logo-Mark-B/W/G/Bu.svg</td><td>All four variants</td><td>Social avatars · tight spaces · favicon</td></tr>
     </tbody></table>
-    <div class="note">Full base URL: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code> · Min sizes: H-Logo 120px · V-Logo 80px · Mark 32px · Clearspace = cap height of "b" mark on all sides</div>
+    <div class="note">Full base URL: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev</code></div>
   </div>
+  <div class="subsec">
+    <div class="subsec-title">Minimum Sizes</div>
+    <table><thead><tr><th>Logo Type</th><th>Minimum Size</th><th>Notes</th></tr></thead><tbody>
+      <tr><td><strong>H-Logo</strong></td><td>120px wide</td><td>Horizontal lockup — below this width, switch to Mark</td></tr>
+      <tr><td><strong>V-Logo</strong></td><td>80px tall</td><td>Vertical lockup — below this height, switch to Mark</td></tr>
+      <tr><td><strong>Mark</strong></td><td>32px</td><td>Standalone brand mark — minimum legible size</td></tr>
+      <tr><td><strong>Social Mark</strong></td><td>32px</td><td>Platform avatar minimum — never smaller than 32px square</td></tr>
+      <tr><td><strong>Clearspace</strong></td><td>Cap height of "b" mark</td><td>Apply on all sides of any logo placement</td></tr>
+    </tbody></table>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 11B LAYOUT & DESIGN RULES ═══ -->
+<section class="sec" id="layout-rules">
+<div class="sec-inner">
+  <div class="sec-num">Layout &amp; Design Rules</div>
+  <div class="sec-title">Do &amp; Don't</div>
+  <div class="sec-sub">Default surface: N-100 with texture is the default for all standalone deliverables. BU-700 is for intentional contrast within a layout — never the default starting point. When in doubt, build light.</div>
+  <div class="subsec">
+    <div class="subsec-title">Color</div>
+    <div class="do-dont">
+      <div class="do-col"><h4>DO</h4><ul>
+        <li>N-100 page base</li>
+        <li>BU-700 section hierarchy</li>
+        <li>GL-300 on dark / GL-700 on light</li>
+        <li>P-family female-forward</li>
+        <li>GR-family male-forward</li>
+        <li>NV-500/700 for rules and dividers</li>
+      </ul></div>
+      <div class="dont-col"><h4>DON'T</h4><ul>
+        <li>Mid-tones as backgrounds</li>
+        <li>BU-700 full-page</li>
+        <li>Textures on BU-700</li>
+        <li>More than two accent families without neutral separator</li>
+        <li>Any color outside the six families</li>
+        <li>Pure black or white</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">Layout</div>
+    <div class="do-dont">
+      <div class="do-col"><h4>DO</h4><ul>
+        <li>Textures 90° filling N-100 sections</li>
+        <li>Playfair Display ghosted text on N-100</li>
+        <li>L-bracket gold frame for featured content</li>
+        <li>NV-700/500 callout lines</li>
+      </ul></div>
+      <div class="dont-col"><h4>DON'T</h4><ul>
+        <li>Gradient tiles as full-section backgrounds</li>
+        <li>More than two gradient tile families without neutral separator</li>
+        <li>Center-aligned body copy over two lines</li>
+        <li>Texture + logo mark watermark in same section</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">Ad Creative</div>
+    <div class="do-dont">
+      <div class="do-col"><h4>DO</h4><ul>
+        <li>500T film photography</li>
+        <li>Full type system</li>
+        <li>L-bracket before/after with BU-700 badge labels</li>
+        <li>Disclaimer in Playfair Display italic caption</li>
+      </ul></div>
+      <div class="dont-col"><h4>DON'T</h4><ul>
+        <li>Legacy Poppins all-caps system</li>
+        <li>Hard-bordered before/after blocks</li>
+        <li>Imagery contradicting photography brief</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 11C CSS TOKENS ═══ -->
+<section class="sec" id="css-tokens">
+<div class="sec-inner">
+  <div class="sec-num">CSS Tokens</div>
+  <div class="sec-title">Complete <code style="font-family:monospace;font-size:1.2rem;">:root</code> Block</div>
+  <div class="sec-sub">Copy the complete token block into any HTML project. Import Google Fonts separately per Section 05.</div>
+  <details style="border:1px solid var(--N-200);border-radius:6px;padding:12px 16px;">
+    <summary style="font-family:var(--FA);font-size:0.56rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--BU-500);cursor:pointer;user-select:none;">CSS Token Block — Copy &amp; Paste</summary>
+    <div style="margin-top:12px;">
+      <div class="note" style="font-family:monospace;font-size:0.65rem;color:var(--N-700);line-height:1.85;white-space:pre-wrap;">:root {
+  --bb-BU-900: #030507; --bb-BU-800: #131c25; --bb-BU-700: #2b3a4a;
+  --bb-BU-600: #3e536a; --bb-BU-500: #506d8b; --bb-BU-400: #6a89a9;
+  --bb-BU-300: #91a7bf; --bb-BU-200: #b1c4d7; --bb-BU-100: #d0dbe7;
+  --bb-P-800: #49182f; --bb-P-700: #722c4d; --bb-P-500: #b94b7f;
+  --bb-P-300: #da9fbb; --bb-P-200: #ecc5d8;
+  --bb-GR-700: #676637; --bb-GR-600: #888749; --bb-GR-500: #a8a65c; --bb-GR-300: #d1d0a8;
+  --bb-GL-700: #866118; --bb-GL-500: #d99e2b; --bb-GL-300: #ebcc8e;
+  --bb-N-900: #1c1a17; --bb-N-700: #554f4a; --bb-N-600: #706961;
+  --bb-N-500: #8b8279; --bb-N-400: #a59e97; --bb-N-300: #c1bdb8;
+  --bb-N-200: #dcd9d5; --bb-N-100: #f1f0ee;
+  --bb-NV-700: #595546; --bb-NV-500: #918c73; --bb-NV-300: #c5c2b5;
+  --bb-NV-200: #deddd3; --bb-NV-100: #f2f1ed;
+  --bb-font-display: 'EB Garamond', Georgia, serif;
+  --bb-font-accent: 'Playfair Display', Georgia, serif;
+  --bb-font-body: 'Work Sans', system-ui, sans-serif;
+  --bb-type-hero: 4rem; --bb-type-heading: 3.25rem; --bb-type-subhead: 2.25rem;
+  --bb-type-card-title: 2.25rem; --bb-type-body-lg: 1.5rem; --bb-type-button: 1.5rem;
+  --bb-type-body: 1.125rem; --bb-type-caption: 0.875rem;
+  --bb-type-eyebrow: 0.625rem; --bb-type-eyebrow-ls: 0.32em;
+  --bb-grad-neutral-rest: linear-gradient(135deg, #131c25, #6a89a9);
+  --bb-grad-neutral-active: linear-gradient(135deg, #2b3a4a, #91a7bf);
+  --bb-grad-female-rest: linear-gradient(135deg, #131c25, #49182f);
+  --bb-grad-female-active: linear-gradient(135deg, #2b3a4a, #722c4d);
+  --bb-grad-male-rest: linear-gradient(135deg, #131c25, #888749);
+  --bb-grad-male-active: linear-gradient(135deg, #2b3a4a, #a8a65c);
+  --bb-grad-button-rest: linear-gradient(120deg, #131c25, #6a89a9);
+  --bb-grad-button-hover: linear-gradient(120deg, #2b3a4a, #91a7bf);
+  --bb-shadow-sm: 0 2px 8px rgba(28,26,23,.06), 0 1px 2px rgba(28,26,23,.04);
+  --bb-shadow-md: 0 4px 16px rgba(28,26,23,.10), 0 2px 4px rgba(28,26,23,.06);
+  --bb-shadow-lg: 0 8px 32px rgba(28,26,23,.14), 0 4px 8px rgba(28,26,23,.08);
+  --bb-space-1: 0.25rem; --bb-space-2: 0.5rem; --bb-space-3: 0.75rem;
+  --bb-space-4: 1rem; --bb-space-6: 1.5rem; --bb-space-8: 2rem;
+  --bb-space-12: 3rem; --bb-space-16: 4rem; --bb-space-18: 4.5rem;
+  --bb-space-20: 5rem; --bb-space-24: 6rem;
+  --bb-grid-columns: 12; --bb-grid-max-width: 1280px;
+  --bb-grid-gutter-desk: 24px; --bb-grid-gutter-mob: 16px;
+  --bb-grid-margin-desk: 80px; --bb-grid-margin-mob: 16px;
+  --bb-radius-button: 8px;
+}</div>
+    </div>
+  </details>
 </div>
 </section>
 
@@ -978,60 +1189,55 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   </div>
   <div class="subsec">
     <div class="subsec-title">Photography Reference Library</div>
-    <div style="display:flex;justify-content:center;gap:12px;margin-bottom:12px;flex-wrap:nowrap;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-01.jpg" style="width:160px;height:auto;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-03.jpg" style="width:160px;height:auto;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-01.jpg" style="width:160px;height:auto;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-vertical-01.jpg" style="width:160px;height:auto;">
+    <div class="note" style="margin-bottom:20px;"><strong>Base URL:</strong> <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/</code> · 41 files · Kodak Vision3 500T / 16mm emulation</div>
+    <div style="font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-700);margin-bottom:12px;">Verticals — 21 files</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:28px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-couple-smiling-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-active-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-active-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-02.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-02</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-03.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-03</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-04.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-04</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-05.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-05</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-06.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-06</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-07.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-07</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-08.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-08</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-09.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-09</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-10.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-10</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-11.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-11</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-vertical-12.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-editorial-vertical-12</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-mirror-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-mirror-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-smiling-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-vertical-02.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-smiling-vertical-02</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-treatment-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-female-subject-treatment-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-male-subject-smiling-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-male-subject-smiling-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-01.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-medical-vial-ambient-vertical-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-vertical-02.jpg" style="width:120px;aspect-ratio:3/4;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:120px;">bb-medical-vial-ambient-vertical-02</span></div>
     </div>
-    <p style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;font-style:italic;color:var(--N-500);text-align:center;margin-bottom:20px;">Vertical reference library</p>
-    <div style="display:flex;justify-content:center;gap:12px;margin-bottom:12px;flex-wrap:nowrap;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-01.jpg" style="width:240px;height:auto;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-03.jpg" style="width:240px;height:auto;">
-      <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-horizontal-01.jpg" style="width:240px;height:auto;">
-    </div>
-    <p style="font-family:'Playfair Display',Georgia,serif;font-size:0.875rem;font-style:italic;color:var(--N-500);text-align:center;margin-bottom:12px;">Horizontal reference library</p>
-    <div class="note">Full URL pattern: <code>https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-[subject]-[orientation]-[nn].jpg</code> · 40+ images in full library</div>
-  </div>
-</div>
-</section>
-
-<!-- ═══ PHOTOGRAPHY HANDOFF (TEAM ONLY — VISIBLE) ═══ -->
-<section class="sec" id="photo-handoff" style="background:var(--NV-100);border-left:4px solid var(--GL-700);">
-<div class="sec-inner">
-  <div class="sec-num" style="color:var(--GL-700);">Photography Handoff · Team Edition</div>
-  <div class="sec-title">When You Need Provider Photos</div>
-  <div class="sec-sub">This section is specific to the team workflow. Covers how to access provider photography, what to do when R2 is unavailable, and how to avoid accidentally using stock photography when real provider photos exist.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">How to Access Provider Photos</div>
-    <table><thead><tr><th>Provider</th><th>File</th><th>R2 URL</th></tr></thead><tbody>
-      <tr>
-        <td><strong>Mia LoPreiato, NP</strong></td>
-        <td class="hex">Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg</td>
-        <td class="hex">https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg</td>
-      </tr>
-      <tr>
-        <td><strong>Teresa Hernandez, NP</strong></td>
-        <td class="hex">Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</td>
-        <td class="hex">https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg</td>
-      </tr>
-    </tbody></table>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Provider Photo Priority Rules</div>
-    <div class="rules-block">
-      <h4>When content includes photography:</h4>
-      <ul>
-        <li><strong>Provider photos take priority.</strong> Content that could feature Mia or Teresa should always use their R2 photography — not stock models or anonymous lifestyle imagery.</li>
-        <li><strong>When R2 is unavailable,</strong> the layout should be produced with a clearly labeled placeholder box indicating the image needed. Flag to Josh before going live — no placeholder should appear in published content.</li>
-        <li><strong>Non-provider lifestyle imagery</strong> (anonymous patient context) is acceptable only when the brief genuinely requires it. All lifestyle photography must follow the 500T film brief (Section 13) — never generic unrelated stock.</li>
-        <li><strong>Provider photo currency.</strong> Mia and Teresa photography should reflect their current appearance. Outdated provider photos are not used in paid media without confirmation from Josh.</li>
-      </ul>
+    <div style="font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-700);margin-bottom:12px;">Horizontals — 20 files</div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-couple-smiling-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-couple-smiling-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-active-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-active-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-02.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-02</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-03.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-03</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-04.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-04</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-05.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-05</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-06.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-06</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-07.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-07</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-08.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-08</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-09.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-09</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-10.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-10</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-11.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-11</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-editorial-horizontal-12.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-editorial-horizontal-12</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-mirror-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-mirror-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-smiling-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-smiling-horizontal-02.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-smiling-horizontal-02</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-female-subject-treatment-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-female-subject-treatment-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-male-subject-smiling-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-male-subject-smiling-horizontal-01</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/bb-medical-vial-ambient-horizontal-01.jpg" style="width:200px;aspect-ratio:3/2;object-fit:cover;display:block;object-position:center 20%;"><span style="font-family:var(--FB);font-size:0.55rem;font-weight:300;color:var(--N-500);text-align:center;width:200px;">bb-medical-vial-ambient-horizontal-01</span></div>
     </div>
   </div>
-
 </div>
 </section>
 
@@ -1044,6 +1250,12 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="subsec">
     <div class="subsec-title">Essence Statement</div>
     <div class="prompt-block">Body Balance helps you feel like yourself again by closing the disconnect between how you feel inside and how you look outside — through integrated hormone health and aesthetic care that actually listens.</div>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">The Core Offering</div>
+    <p style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:12px;">Body Balance Medical helps people look better and feel better — at the same time — through hormone health, metabolic wellness, and aesthetic treatments in a single practice that listens.</p>
+    <p style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:12px;">Two Nurse Practitioners whose specialties mirror each other: Teresa owns aesthetics; Mia owns hormone health and longevity medicine.</p>
+    <div class="note"><strong>The outcome:</strong> The patient leaves feeling like someone finally saw the whole picture and gave them a real plan — not just a treatment, a direction.</div>
   </div>
   <div class="subsec">
     <div class="subsec-title">Target Audience</div>
@@ -1071,6 +1283,29 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
       <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;margin-bottom:10px;"><strong style="color:var(--N-900);">We listen differently.</strong> Body Balance connects the dots and builds a plan around the whole person.</li>
       <li style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;"><strong style="color:var(--N-900);">Restoration, not transformation.</strong> Return to the version of yourself you recognize.</li>
     </ol>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">Anti-Brief</div>
+    <p style="font-family:var(--FB);font-size:0.82rem;font-weight:600;color:var(--N-900);margin-bottom:8px;">Not:</p>
+    <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:20px;margin-bottom:16px;">
+      <li>A spa</li>
+      <li>A plastic surgery center</li>
+      <li>A weight loss clinic</li>
+      <li>A luxury brand (aspirational without warmth)</li>
+      <li>A clinical-cold medical brand (authority without humanity)</li>
+      <li>A discount medspa</li>
+      <li>A one-size-fits-all treatment mill</li>
+    </ul>
+    <p style="font-family:var(--FB);font-size:0.82rem;font-weight:600;color:var(--N-900);margin-bottom:8px;">Visual anti-brief:</p>
+    <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:20px;">
+      <li>All-white sterile clinical photography</li>
+      <li>Hyper-retouched "perfect skin" imagery</li>
+      <li>Before/after transformation layouts</li>
+      <li>Neon or high-saturation color palettes</li>
+      <li>Script fonts, feminine-soft typography</li>
+      <li>Stock photography that reads as stock</li>
+      <li>Busy layouts competing with the content</li>
+    </ul>
   </div>
   <div class="subsec">
     <div class="subsec-title">Vocabulary</div>
@@ -1102,7 +1337,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-num">15 — Naming Conventions</div>
   <div class="sec-title">Non-Negotiable Names</div>
   <div class="sec-sub">These are enforced at the output gate. Every piece of copy — ads, email, web, social, print — must comply.</div>
-  <div class="note" style="margin-bottom:28px;background:#fff3cd;border-left-color:#d99e2b;">If a piece of content contradicts this table, it is wrong and must be revised before output.</div>
+  <div class="note" style="margin-bottom:28px;background:var(--NV-100);border-left-color:var(--GL-700);">If a piece of content contradicts this table, it is wrong and must be revised before output.</div>
   <div class="subsec">
     <div class="subsec-title">Service &amp; CTA Naming</div>
     <table><thead><tr><th style="width:40%;">Use This</th><th style="width:35%;">Not This</th><th>Why</th></tr></thead><tbody>
@@ -1132,32 +1367,32 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-title" style="color:var(--N-100);">Six Principles That Govern All BBM Content</div>
   <div class="sec-sub" style="color:var(--BU-200);">Architecture rules — apply before the first word is written.</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:28px;">
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
       <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 01</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Lead with the feeling, not the treatment.</div>
       <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">"Tired but can't sleep" leads. "Hormone pellet therapy" follows. Never reverse this in an ad or email subject line.</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
       <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 02</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Restoration, not transformation.</div>
       <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">"Feel like yourself again" is always correct. "Become your best self" is always wrong. The frame is return, not upgrade.</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
       <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 03</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Medical authority, human delivery.</div>
       <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Clinically grounded, warmly delivered. Write like a trusted clinician talking to a patient they know — not like a pharma insert or a lifestyle blog.</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
       <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 04</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Candidacy, not urgency.</div>
       <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">CTAs invite qualification — "See if you're a candidate" — not manufactured urgency — "Limited spots!" Scarcity messaging is banned unless literally true and confirmed by Mia or Teresa.</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
       <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 05</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Educate before you sell.</div>
       <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Organic content is educational first. Myth-busting, explainers, and patient questions are the primary mode. Organic posts should almost never read as ads.</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px;">
+    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
       <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 06</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">The two providers are the brand.</div>
       <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Content should consistently reflect that this is a two-NP practice with overlapping specialties by design. Surface both names and credentials whenever the format allows.</div>
@@ -1172,7 +1407,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
   <div class="sec-num">17 — Service Line Compliance</div>
   <div class="sec-title">Regulatory Exposure by Service</div>
   <div class="sec-sub">GLP-1 is the highest-risk line. Hormone therapy has evolving FDA context. Apply all rules before every output.</div>
-  <div class="note" style="margin-bottom:28px;background:#fff3cd;border-left-color:#d99e2b;"><strong>Non-negotiable rule:</strong> If a piece of content might violate a rule below, flag it and ask before submitting.</div>
+  <div class="note" style="margin-bottom:28px;background:var(--NV-100);border-left-color:var(--GL-700);"><strong>Non-negotiable rule:</strong> If a piece of content might violate a rule below, flag it and ask before submitting.</div>
   <div class="subsec">
     <div class="subsec-title">GLP-1 / Medical Weight Loss — Strictest Rules</div>
     <table><thead><tr><th style="width:50%;">Required</th><th>Banned</th></tr></thead><tbody>
@@ -1255,41 +1490,41 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
 </section>
 
 <!-- ═══ 19 BRAND POSITIONING STATEMENT ═══ -->
-<section class="sec tex-section tex-07" id="positioning" style="background:var(--BU-800);color:var(--N-100);">
+<section class="sec" id="positioning" style="background:var(--BU-700);color:var(--N-100);padding:64px;">
 <div class="sec-inner">
   <div class="sec-num" style="color:var(--BU-300);">19 — Brand Positioning Statement</div>
   <div class="sec-title" style="color:var(--N-100);">The Four-Pillar Foundation</div>
   <div class="sec-sub" style="color:var(--BU-200);">Not a tagline — an architectural brief. Every content decision traces back here.</div>
-  <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:32px 36px;margin:28px 0;">
-    <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;">Body Balance Medical <em>exists for</em> women and men in mid-life</p>
-    <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:2rem;"><em>who feel</em> off — fatigued, hormonally imbalanced, aesthetically disconnected</p>
-    <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:4rem;"><em>and want</em> a medical practice that treats inside and outside as one picture</p>
-    <p style="font-family:var(--FD);font-size:1.5rem;line-height:1.6;color:var(--N-100);margin:0;padding-left:6rem;"><em>not a</em> spa that adds labs, or a lab that offers aesthetics as an afterthought.</p>
+  <div style="background:var(--BU-800);padding:48px;border-radius:12px;margin-bottom:32px;">
+    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;">Body Balance Medical <em style="font-style:italic;color:#ebcc8e;">exists for</em> women and men in mid-life</p>
+    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:2rem;"><em style="font-style:italic;color:#ebcc8e;">who feel</em> off — fatigued, hormonally imbalanced, aesthetically disconnected</p>
+    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:4rem;"><em style="font-style:italic;color:#ebcc8e;">and want</em> a medical practice that treats inside and outside as one picture</p>
+    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0;padding-left:6rem;"><em style="font-style:italic;color:#ebcc8e;">not a</em> spa that adds labs, or a lab that offers aesthetics as an afterthought.</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px;">
-    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 01</div>
-      <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:8px;">Integration</div>
-      <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Hormone optimization and aesthetics treated as one connected system — not siloed services.</div>
+  <div class="tile-row" style="margin-bottom:32px;">
+    <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'">
+      <div style="font-family:var(--FA);font-size:0.5rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:#d99e2b;margin-bottom:8px;">Pillar 01</div>
+      <div style="font-family:var(--FD);font-size:2.25rem;color:#ebcc8e;line-height:1.2;margin-bottom:8px;">Integration</div>
+      <div style="font-family:var(--FB);font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.6;">Hormone optimization and aesthetics treated as one connected system — not siloed services.</div>
     </div>
-    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 02</div>
-      <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:8px;">Medical Credibility</div>
-      <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Two Biote-Certified NPs. LegitScript Certified. Clinical protocols. Evidence-based.</div>
+    <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'">
+      <div style="font-family:var(--FA);font-size:0.5rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:#d99e2b;margin-bottom:8px;">Pillar 02</div>
+      <div style="font-family:var(--FD);font-size:2.25rem;color:#ebcc8e;line-height:1.2;margin-bottom:8px;">Medical Credibility</div>
+      <div style="font-family:var(--FB);font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.6;">Two Biote-Certified NPs. LegitScript Certified. Clinical protocols. Evidence-based.</div>
     </div>
-    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 03</div>
-      <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:8px;">Restoration</div>
-      <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">The frame is always return, never transformation. BBM helps patients feel like themselves again.</div>
+    <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'">
+      <div style="font-family:var(--FA);font-size:0.5rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:#d99e2b;margin-bottom:8px;">Pillar 03</div>
+      <div style="font-family:var(--FD);font-size:2.25rem;color:#ebcc8e;line-height:1.2;margin-bottom:8px;">Restoration</div>
+      <div style="font-family:var(--FB);font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.6;">The frame is always return, never transformation. BBM helps patients feel like themselves again.</div>
     </div>
-    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:22px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Pillar 04</div>
-      <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-100);margin-bottom:8px;">Selective Access</div>
-      <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Assessment-based entry. Candidacy language. Not a walk-in clinic, not a consumer discount service.</div>
+    <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'">
+      <div style="font-family:var(--FA);font-size:0.5rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:#d99e2b;margin-bottom:8px;">Pillar 04</div>
+      <div style="font-family:var(--FD);font-size:2.25rem;color:#ebcc8e;line-height:1.2;margin-bottom:8px;">Selective Access</div>
+      <div style="font-family:var(--FB);font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.6;">Assessment-based entry. Candidacy language. Not a walk-in clinic, not a consumer discount service.</div>
     </div>
   </div>
-  <div style="margin-top:32px;padding:20px 24px;border-left:3px solid var(--GL-500);background:rgba(217,158,43,.08);border-radius:0 8px 8px 0;">
-    <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:6px;">Tagline — Current</div>
+  <div style="margin-top:32px;padding:24px;border-left:3px solid var(--GL-500);background:rgba(217,158,43,.08);border-radius:0 8px 8px 0;">
+    <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Tagline — Current</div>
     <div style="font-family:var(--FD);font-size:1.6rem;color:var(--N-100);font-style:italic;">Inside and Out.</div>
     <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);margin-top:8px;line-height:1.75;">Two words. The entire positioning in one phrase. Use as a closing element — never as an opener or standalone headline. Never modify it.</div>
   </div>
@@ -1329,95 +1564,6 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
 </div>
 </section>
 
-<!-- ═══ 21 OUTPUT TYPES (TEAM — NO MCP) ═══ -->
-<section class="sec" id="workflow" style="background:var(--BU-700);color:var(--N-100);">
-<div class="sec-inner">
-  <div class="sec-num" style="color:var(--BU-300);">21 — Output Types &amp; Workflow Routing</div>
-  <div class="sec-title" style="color:var(--N-100);">Team Production Workflows</div>
-  <div class="sec-sub" style="color:var(--BU-200);">Every asset routes through one of these workflows. Route selection happens at brief stage.</div>
-  <table style="color:var(--N-100);">
-    <thead><tr>
-      <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Output Type</th>
-      <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Workflow</th>
-      <th style="background:rgba(255,255,255,.10);color:var(--BU-100);">Format / Notes</th>
-    </tr></thead>
-    <tbody>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Social post (static)</td><td style="color:var(--N-100);">Figma → PNG export</td><td style="color:var(--BU-200);">1:1 default · 9:16 for Reels cover</td></tr>
-      <tr><td style="color:var(--N-100);">Email content</td><td style="color:var(--N-100);">Figma + Emailify → Klaviyo</td><td style="color:var(--BU-200);">HTML export via Emailify plugin</td></tr>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Copy (email, SMS, caption)</td><td style="color:var(--N-100);">Claude → direct delivery</td><td style="color:var(--BU-200);">Must pass naming + compliance gate before submission</td></tr>
-      <tr><td style="color:var(--N-100);">Print document (brief, report)</td><td style="color:var(--N-100);">HTML → Chrome browser-print → PDF</td><td style="color:var(--BU-200);">File → Print → Save as PDF · set margins to None</td></tr>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Landing page / web</td><td style="color:var(--N-100);">Webflow</td><td style="color:var(--BU-200);">Direct Webflow build</td></tr>
-      <tr><td style="color:var(--N-100);">Production print collateral (direct mail, brochure)</td><td style="color:var(--N-100);">Route to Josh</td><td style="color:var(--BU-200);">Production-grade print is not part of the team workflow</td></tr>
-      <tr style="background:rgba(255,255,255,.04);"><td style="color:var(--N-100);">Video ad</td><td style="color:var(--N-100);">Route to Josh (Iron Brothers Films)</td><td style="color:var(--BU-200);">Premiere Pro + FFmpeg pipeline</td></tr>
-    </tbody>
-  </table>
-</div>
-</section>
-
-<!-- ═══ 22 GRACEFUL DEGRADATION ═══ -->
-<section class="sec tex-section tex-04" id="degradation">
-<div class="sec-inner">
-  <div class="sec-num">22 — Graceful Degradation</div>
-  <div class="sec-title">Two States · Degrade Predictably</div>
-  <div class="sec-sub">When full brand fidelity cannot be achieved, degrade predictably — not randomly. Always invoke the nearest compliant state.</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;">
-    <div style="background:var(--N-100);border:2px solid var(--BU-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
-      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--BU-500);margin-bottom:8px;">State 1 — Partial Brand</div>
-      <div style="font-family:var(--FD);font-size:1.1rem;color:var(--BU-700);margin-bottom:12px;">Preferred fallback</div>
-      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
-        <li>EB Garamond for headings — substitute Georgia if not loading</li>
-        <li>Work Sans 300 for body — substitute system-ui sans</li>
-        <li>Full color tokens maintained</li>
-        <li>Textures dropped if SVG fails to load — background color holds</li>
-        <li>Provider photos: <code>onerror</code> fallback to neutral placeholder if R2 unreachable</li>
-      </ul>
-    </div>
-    <div style="background:var(--N-100);border:2px solid var(--N-300);border-radius:10px;padding:24px;box-shadow:var(--shd-sm);">
-      <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--N-600);margin-bottom:8px;">State 2 — Minimal Brand</div>
-      <div style="font-family:var(--FD);font-size:1.1rem;color:var(--N-700);margin-bottom:12px;">Last-resort only</div>
-      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;margin:0;">
-        <li>System fonts throughout</li>
-        <li>BU-700 (#2b3a4a) and N-100 (#f1f0ee) maintained — non-negotiable minimums</li>
-        <li>All textures, shadows, and gradients dropped</li>
-        <li>Naming conventions and compliance rules still fully enforced</li>
-        <li>Never use brand-incorrect colors (no generic blue, no white/black-only)</li>
-      </ul>
-    </div>
-  </div>
-  <div class="note" style="margin-top:20px;">Degradation is <em>always visual</em> — never a degradation of voice, naming, or compliance rules.</div>
-</div>
-</section>
-
-<!-- ═══ 23 IMAGE GENERATION ═══ -->
-<section class="sec" id="image-gen" style="background:var(--NV-100);">
-<div class="sec-inner">
-  <div class="sec-num">23 — Image Generation</div>
-  <div class="sec-title">AI-Generated Imagery — Supplemental Only</div>
-  <div class="sec-sub">AI-generated imagery supplements real photography — it does not replace it. Apply brand constraints rigorously.</div>
-  <div class="subsec">
-    <div class="subsec-title">When to Use AI-Generated Images</div>
-    <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-700);line-height:1.75;padding-left:18px;">
-      <li>Concept thumbnails and mood reference only — not final deliverables</li>
-      <li>Texture and abstract background fill when photographic stock is unavailable</li>
-      <li>Never substitute for Mia or Teresa photography</li>
-      <li>Never generate patient faces or bodies for testimonial-adjacent content</li>
-      <li>Never use AI faces in paid media (Meta/Google flag AI-generated faces in many ad categories)</li>
-    </ul>
-  </div>
-  <div class="subsec">
-    <div class="subsec-title">Adobe Firefly Prompt Framework</div>
-    <table><thead><tr><th>Parameter</th><th>Required Value</th></tr></thead><tbody>
-      <tr><td>Lighting</td><td>Soft, directional, natural — no harsh shadows, no studio pop</td></tr>
-      <tr><td>Color palette</td><td>Restrict to BU-700 (#2b3a4a), N-100 (#f1f0ee), N-200 (#dcd9d5) — warm neutrals</td></tr>
-      <tr><td>Style</td><td>Lifestyle editorial, clinical warmth — not glamour, not pharmaceutical gray</td></tr>
-      <tr><td>Composition</td><td>Breathing room / negative space — never cluttered</td></tr>
-      <tr><td>Banned styles</td><td>Hyperrealism, fantasy, dramatic contrast, neon, "glow" treatments</td></tr>
-    </tbody></table>
-  </div>
-  <div class="note">Every AI image reviewed by Josh before production use — no autonomous placement in paid media.</div>
-</div>
-</section>
-
 <!-- ═══ QUICK REFERENCE ═══ -->
 <section class="sec" id="reference">
 <div class="sec-inner">
@@ -1451,7 +1597,7 @@ This file lives at: client-working-files/body-balance/BB-BRAND-TEAM.html
 <footer style="background:var(--BU-900);color:var(--BU-400);padding:32px 40px;text-align:center;">
   <div style="font-family:var(--FD);font-size:1.2rem;color:var(--N-200);margin-bottom:6px;">Body Balance Medical · Brand OS</div>
   <div style="font-family:var(--FB);font-size:0.75rem;font-weight:300;letter-spacing:.06em;color:var(--BU-400);margin-bottom:4px;">Team Edition · v1.2 · 2026 · Captain Kepler Creative</div>
-  <div style="font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--BU-600);margin-top:10px;">For Will, Dez, and the social media team. For production pipeline access, contact Josh Smith.</div>
+  <div style="font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--BU-600);margin-top:10px;">For Body Balance Team. For production pipeline access, contact Josh Smith.</div>
 </footer>
 
 </div><!-- /.page -->
