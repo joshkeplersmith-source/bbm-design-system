@@ -1642,11 +1642,23 @@ Requires parent <section> to have position:relative and overflow:hidden (already
   <div class="sec-num" style="color:var(--BU-300);">19 — Brand Positioning Statement</div>
   <div class="sec-title" style="color:var(--N-100);">The Four-Pillar Foundation</div>
   <div class="sec-sub" style="color:var(--BU-200);">Not a tagline — an architectural brief. Every content decision traces back here.</div>
-  <div style="background:var(--BU-800);padding:48px;border-radius:12px;margin-bottom:32px;">
-    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;">Body Balance Medical <em style="font-style:italic;color:#ebcc8e;">exists for</em> women and men in mid-life</p>
-    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:2rem;"><em style="font-style:italic;color:#ebcc8e;">who feel</em> off — fatigued, hormonally imbalanced, aesthetically disconnected</p>
-    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0 0 8px 0;padding-left:4rem;"><em style="font-style:italic;color:#ebcc8e;">and want</em> a medical practice that treats inside and outside as one picture</p>
-    <p style="font-family:var(--FD);font-size:1.6rem;line-height:1.6;color:var(--N-100);margin:0;padding-left:6rem;"><em style="font-style:italic;color:#ebcc8e;">not a</em> spa that adds labs, or a lab that offers aesthetics as an afterthought.</p>
+  <div style="position:relative;overflow:hidden;padding:48px 0;margin-bottom:32px;">
+
+    <!-- Opening quote watermark -->
+    <div style="position:absolute;top:-40px;left:-16px;font-family:'EB Garamond',Georgia,serif;font-size:28rem;line-height:1;color:#3e536a;opacity:0.30;z-index:0;pointer-events:none;user-select:none;">&ldquo;</div>
+
+    <!-- Closing quote watermark -->
+    <div style="position:absolute;bottom:-120px;right:-16px;font-family:'EB Garamond',Georgia,serif;font-size:28rem;line-height:1;color:#3e536a;opacity:0.30;z-index:0;pointer-events:none;user-select:none;">&rdquo;</div>
+
+    <!-- Stepped text lines — position:relative z-index:1 to sit above watermarks -->
+    <p style="position:relative;z-index:1;font-family:'EB Garamond',Georgia,serif;font-size:1.6rem;line-height:1.6;color:#ebcc8e;font-style:italic;margin:0 0 8px 0;">Body Balance Medical <em style="color:#ebcc8e;">exists for</em> women and men in mid-life</p>
+
+    <p style="position:relative;z-index:1;font-family:'EB Garamond',Georgia,serif;font-size:1.6rem;line-height:1.6;color:#ebcc8e;font-style:italic;margin:0 0 8px 0;padding-left:2rem;"><em style="color:#ebcc8e;">who feel</em> off — fatigued, hormonally imbalanced, aesthetically disconnected</p>
+
+    <p style="position:relative;z-index:1;font-family:'EB Garamond',Georgia,serif;font-size:1.6rem;line-height:1.6;color:#ebcc8e;font-style:italic;margin:0 0 8px 0;padding-left:4rem;"><em style="color:#ebcc8e;">and want</em> a medical practice that treats inside and outside as one picture</p>
+
+    <p style="position:relative;z-index:1;font-family:'EB Garamond',Georgia,serif;font-size:1.6rem;line-height:1.6;color:#ebcc8e;font-style:italic;margin:0;padding-left:6rem;"><em style="color:#ebcc8e;">not a</em> spa that adds labs, or a lab that offers aesthetics as an afterthought.</p>
+
   </div>
   <div class="tile-row" style="margin-bottom:32px;">
     <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'">
