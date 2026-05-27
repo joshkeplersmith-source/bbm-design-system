@@ -90,6 +90,12 @@ tr:hover td{background:rgba(242,241,237,.7);}
 .t-title{font-family:var(--FD);font-size:2.25rem;font-weight:400;line-height:1.2;margin-bottom:8px;}
 .t-body{font-family:var(--FB);font-size:1.125rem;font-weight:300;line-height:1.6;}
 
+/* KEY TAKEAWAY TILES — inline callouts within body copy / blog content */
+/* BU-300 body is exclusive to .tile-kta-gl — never used as body text elsewhere */
+.tile-kta-nv{background:var(--NV-200);border-left:3px solid var(--GL-700);padding:32px;border-radius:8px;margin-bottom:24px;}
+.tile-kta-bu{background:var(--BU-100);border-left:3px solid var(--BU-700);padding:32px;border-radius:8px;margin-bottom:24px;}
+.tile-kta-gl{background:rgba(217,158,43,.10);border-left:3px solid var(--GL-700);padding:32px;border-radius:8px;margin-bottom:24px;}
+
 /* TYPOGRAPHY SCALE */
 .tr-d{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid rgba(241,240,238,.07);}
 .tr-d:last-child{border-bottom:none;}
@@ -134,18 +140,18 @@ tr:hover td{background:rgba(242,241,237,.7);}
 .code{font-family:monospace;font-size:0.7rem;background:var(--N-200);padding:1px 8px;border-radius:2px;color:var(--N-700);}
 .prompt-block{font-family:var(--FD);font-size:1rem;font-weight:400;font-style:italic;color:var(--BU-700);line-height:1.75;background:var(--NV-100);padding:32px;border-left:3px solid var(--GL-700);margin-bottom:24px;}
 
-/* DO / DONT */
+/* DO / DONT — DO column uses NV-200 KTA spec · DON'T column uses BU-100 KTA spec */
 .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-.do-col{background:var(--NV-300);padding:32px;border-top:3px solid var(--BU-500);}
-.dont-col{background:var(--BU-700);padding:32px;border-top:3px solid var(--GL-500);}
+.do-col{background:var(--NV-200);padding:32px;border-left:3px solid var(--GL-700);}
+.dont-col{background:var(--BU-100);padding:32px;border-left:3px solid var(--BU-700);}
 .do-col h4,.dont-col h4{font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:16px;}
-.do-col h4{color:var(--BU-700);}
-.dont-col h4{color:var(--GL-300);}
+.do-col h4{color:var(--GL-700);}
+.dont-col h4{color:var(--BU-700);}
 .do-col li,.dont-col li{font-family:var(--FB);font-size:0.75rem;font-weight:300;line-height:1.65;margin-bottom:8px;padding-left:16px;position:relative;list-style:none;}
 .do-col li{color:var(--N-900);}
-.dont-col li{color:var(--N-100);}
-.do-col li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--BU-500);}
-.dont-col li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--GL-300);}
+.dont-col li{color:var(--N-900);}
+.do-col li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--GL-700);}
+.dont-col li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--BU-700);}
 
 /* RULES BLOCK */
 .rules-block{background:var(--NV-100);border-radius:8px;padding:32px;margin-bottom:24px;}
@@ -313,6 +319,54 @@ CSS implementation:
   z-index: 2;
 }
 Opacity range: 26–40%. Use 200vmax — never percentages.
+
+TILE SYSTEM:
+
+Two tile categories. Use the right one based on context.
+
+FEATURE TILES — section-level structured content.
+Variants: Neutral gradient · Female gradient · Male gradient · Solid BU-700.
+Use in: service grids, treatment navigation, section-level structured layouts.
+Never use inline within body copy or blog content.
+CSS class: .tile (existing). Background and gradient applied inline per variant.
+
+KEY TAKEAWAY TILES — inline callouts within body copy.
+Use inline within body copy, blog posts, and web pages to surface key points, callouts, and important information without breaking the content flow. Three variants:
+
+.tile-kta-nv — NV-200 light variant
+  Background: var(--NV-200) #deddd3
+  Border-left: 3px solid var(--GL-700) #866118
+  Eyebrow: var(--BU-500)
+  Title: var(--GL-700) #866118
+  Body: var(--N-900)
+  Use on: N-100 page backgrounds for inline takeaways, key facts, clinical notes, blog callouts.
+
+.tile-kta-bu — BU-100 light variant
+  Background: var(--BU-100) #d0dbe7
+  Border-left: 3px solid var(--BU-700) #2b3a4a
+  Eyebrow: var(--BU-500)
+  Title: var(--BU-700) #2b3a4a
+  Body: var(--N-900)
+  Use on: N-100 page backgrounds. Default DON'T column tile in all Do/Don't blocks. Pairs with NV-200.
+
+.tile-kta-gl — GL-500 dark variant (dark context only)
+  Background: rgba(217,158,43,.10)
+  Border-left: 3px solid var(--GL-700) #866118
+  Eyebrow: var(--GL-300) #ebcc8e
+  Title: var(--N-100) #f1f0ee
+  Body: var(--BU-300) #91a7bf
+  Use inside BU-700 section backgrounds only — never on N-100. Appropriate for callouts within dark hero sections and positioning statements.
+
+BU-300 EXCLUSIVITY RULE:
+BU-300 body text is exclusive to .tile-kta-gl. Never use BU-300 as body text in any other context — not in feature tiles, not in section sub copy, not in dark-section paragraphs. All other dark-context body text uses N-100 or N-300.
+
+GL-500 PLACEMENT RULE:
+.tile-kta-gl must be inside a BU-700 container — either a section with BU-700 background or a wrapping BU-700 block. Placing it on N-100 produces low contrast and is forbidden.
+
+DO/DON'T BLOCK RULE:
+The DO column always uses NV-200 tile spec (.do-col class — GL-700 left border, GL-700 h4, GL-700 bullet markers, N-900 body).
+The DON'T column always uses BU-100 tile spec (.dont-col class — BU-700 left border, BU-700 h4, BU-700 bullet markers, N-900 body).
+Both columns use left border only — no top border. Backgrounds are NV-200 and BU-100. Never invert the pairing.
 
 TEXTURE SYSTEM 2 — LOGO MARK WATERMARK (BB-Logo-Mark-Texture.webp):
 The primary texture. Applied as a child <div> directly inside the <section>, before <div class="sec-inner">. N-100 sections only. Once per page maximum. Never in same section as a plant texture SVG.
@@ -595,6 +649,15 @@ Requires parent <section> to have position:relative and overflow:hidden (already
   <div class="sec-num">04 — Tile System</div>
   <div class="sec-title">Dark &amp; Light Contexts · Hover for selected state</div>
   <div class="sec-sub">All tiles receive shadow-md. Dark context: gradient tiles only — 3 types. Light context: 5 tile types including NV-300 neutral and solid BU-700.</div>
+
+  <div class="rules-block">
+    <h4>When to Use</h4>
+    <ul>
+      <li><strong>Feature Tiles</strong> — use in service grids, treatment navigation, and section-level structured layouts. Applies to: Neutral gradient, Female gradient, Male gradient, Solid BU-700. Never use feature tiles inline within body copy or blog content.</li>
+      <li><strong>Key Takeaway Tiles</strong> — use inline within body copy, blog posts, and web pages to surface key points, callouts, and important information without breaking the content flow. Three variants: NV-200 (light), BU-100 (light), GL-500 (dark — inside BU-700 sections only).</li>
+    </ul>
+  </div>
+
   <div class="subsec">
     <div class="subsec-title">Dark Context · BU-700 Background</div>
     <div style="background:var(--BU-700);padding:48px;border-radius:8px;margin-bottom:16px;">
@@ -613,6 +676,45 @@ Requires parent <section> to have position:relative and overflow:hidden (already
       <div class="tile" style="background:linear-gradient(135deg,#131c25,#6a89a9)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#91a7bf)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#6a89a9)'"><div class="t-title" style="color:#ebcc8e">Neutral Gradient</div><div class="t-body" style="color:#f1f0ee">Same as dark context</div></div>
       <div class="tile" style="background:linear-gradient(135deg,#131c25,#49182f)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#722c4d)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#49182f)'"><div class="t-title" style="color:#da9fbb">Female Gradient</div><div class="t-body" style="color:#f1f0ee">Same as dark context</div></div>
       <div class="tile" style="background:linear-gradient(135deg,#131c25,#888749)" onmouseover="this.style.background='linear-gradient(135deg,#2b3a4a,#a8a65c)'" onmouseout="this.style.background='linear-gradient(135deg,#131c25,#888749)'"><div class="t-title" style="color:#d1d0a8">Male Gradient</div><div class="t-body" style="color:#f1f0ee">Same as dark context</div></div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Key Takeaway Tiles · Inline Callouts</div>
+
+    <div class="tile-kta-nv">
+      <div style="font-family:var(--FA);font-size:0.625rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Key Takeaway · Light Context</div>
+      <div style="font-family:var(--FD);font-size:1.5rem;font-weight:400;color:var(--GL-700);line-height:1.2;margin-bottom:14px;">NV-200 Takeaway Tile</div>
+      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-900);line-height:1.75;padding-left:18px;margin:0;">
+        <li>Use on N-100 page backgrounds for inline callouts and key points</li>
+        <li>Left border GL-700 · Title GL-700 · Body N-900</li>
+        <li>Appropriate for takeaways, key facts, clinical notes, blog callouts</li>
+        <li>Never use as a navigation or service tile</li>
+      </ul>
+    </div>
+
+    <div class="tile-kta-bu">
+      <div style="font-family:var(--FA);font-size:0.625rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;color:var(--BU-500);margin-bottom:10px;">Key Takeaway · Light Context</div>
+      <div style="font-family:var(--FD);font-size:1.5rem;font-weight:400;color:var(--BU-700);line-height:1.2;margin-bottom:14px;">BU-100 Takeaway Tile</div>
+      <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--N-900);line-height:1.75;padding-left:18px;margin:0;">
+        <li>Use on N-100 page backgrounds — pairs with NV-200 for Do/Don't blocks</li>
+        <li>Left border BU-700 · Title BU-700 · Body N-900</li>
+        <li>Default DON'T column tile in all Do/Don't blocks</li>
+        <li>Never use as a navigation or service tile</li>
+      </ul>
+    </div>
+
+    <div style="background:var(--BU-700);padding:48px;border-radius:8px;">
+      <div class="tile-kta-gl">
+        <div style="font-family:var(--FA);font-size:0.625rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;color:var(--GL-300);margin-bottom:10px;">Key Takeaway · Dark Context</div>
+        <div style="font-family:var(--FD);font-size:1.5rem;font-weight:400;color:var(--N-100);line-height:1.2;margin-bottom:14px;">GL-500 Takeaway Tile</div>
+        <ul style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;padding-left:18px;margin:0;">
+          <li>Use inside BU-700 section backgrounds only — never on N-100</li>
+          <li>Left border GL-700 · Eyebrow GL-300 · Title N-100 · Body BU-300</li>
+          <li>BU-300 body text is exclusive to this tile variant</li>
+          <li>Appropriate for callouts within dark hero sections and positioning statements</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -896,12 +998,12 @@ Requires parent <section> to have position:relative and overflow:hidden (already
     <div class="subsec-title">Dark Context · BU-700 Background</div>
     <div style="background:var(--BU-700);border-radius:8px;padding:32px;">
       <div style="display:flex;gap:2px;flex-wrap:wrap;">
-        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-G.svg" style="height:48px;max-width:200px;object-fit:contain;">
+        <div style="flex:2;min-width:220px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-G.svg" style="width:100%;max-height:48px;height:auto;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · Gold</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-G.svg</div></div>
         </div>
-        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg" style="height:48px;max-width:200px;object-fit:contain;">
+        <div style="flex:2;min-width:220px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg" style="width:100%;max-height:48px;height:auto;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#d99e2b;margin-bottom:3px;">H-Logo · White</div><div class="hex" style="color:rgba(241,240,238,.5);font-size:0.44rem;display:block;">BB-H-Logo-W.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:rgba(0,0,0,.18);border-radius:4px;">
@@ -927,12 +1029,12 @@ Requires parent <section> to have position:relative and overflow:hidden (already
     <div class="subsec-title">Light Context · N-100 Background</div>
     <div style="background:var(--NV-100);border:1px solid var(--N-200);border-radius:8px;padding:32px;">
       <div style="display:flex;gap:2px;flex-wrap:wrap;">
-        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-Bu.svg" style="height:48px;max-width:200px;object-fit:contain;">
+        <div style="flex:2;min-width:220px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-Bu.svg" style="width:100%;max-height:48px;height:auto;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Blue (preferred)</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-Bu.svg</div></div>
         </div>
-        <div style="flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
-          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-B.svg" style="height:48px;max-width:200px;object-fit:contain;">
+        <div style="flex:2;min-width:220px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
+          <img src="https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-B.svg" style="width:100%;max-height:48px;height:auto;object-fit:contain;">
           <div style="text-align:center;"><div style="font-family:var(--FA);font-size:0.4rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--BU-500);margin-bottom:3px;">H-Logo · Black</div><div class="hex" style="font-size:0.44rem;display:block;">BB-H-Logo-B.svg</div></div>
         </div>
         <div style="flex:1;min-width:60px;display:flex;flex-direction:column;align-items:center;padding:24px 12px 20px;gap:10px;background:var(--N-100);border-radius:4px;">
@@ -1369,35 +1471,35 @@ Requires parent <section> to have position:relative and overflow:hidden (already
   <div class="sec-title" style="color:var(--N-100);">Six Principles That Govern All BBM Content</div>
   <div class="sec-sub" style="color:var(--BU-200);">Architecture rules — apply before the first word is written.</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:28px;">
-    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 01</div>
+    <div class="tile-kta-gl">
+      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Principle 01</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Lead with the feeling, not the treatment.</div>
-      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">"Tired but can't sleep" leads. "Hormone pellet therapy" follows. Never reverse this in an ad or email subject line.</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;">"Tired but can't sleep" leads. "Hormone pellet therapy" follows. Never reverse this in an ad or email subject line.</div>
     </div>
-    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 02</div>
+    <div class="tile-kta-gl">
+      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Principle 02</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Restoration, not transformation.</div>
-      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">"Feel like yourself again" is always correct. "Become your best self" is always wrong. The frame is return, not upgrade.</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;">"Feel like yourself again" is always correct. "Become your best self" is always wrong. The frame is return, not upgrade.</div>
     </div>
-    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 03</div>
+    <div class="tile-kta-gl">
+      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Principle 03</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Medical authority, human delivery.</div>
-      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Clinically grounded, warmly delivered. Write like a trusted clinician talking to a patient they know — not like a pharma insert or a lifestyle blog.</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;">Clinically grounded, warmly delivered. Write like a trusted clinician talking to a patient they know — not like a pharma insert or a lifestyle blog.</div>
     </div>
-    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 04</div>
+    <div class="tile-kta-gl">
+      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Principle 04</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Candidacy, not urgency.</div>
-      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">CTAs invite qualification — "See if you're a candidate" — not manufactured urgency — "Limited spots!" Scarcity messaging is banned unless literally true and confirmed by Mia or Teresa.</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;">CTAs invite qualification — "See if you're a candidate" — not manufactured urgency — "Limited spots!" Scarcity messaging is banned unless literally true and confirmed by Mia or Teresa.</div>
     </div>
-    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 05</div>
+    <div class="tile-kta-gl">
+      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Principle 05</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">Educate before you sell.</div>
-      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Organic content is educational first. Myth-busting, explainers, and patient questions are the primary mode. Organic posts should almost never read as ads.</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;">Organic content is educational first. Myth-busting, explainers, and patient questions are the primary mode. Organic posts should almost never read as ads.</div>
     </div>
-    <div style="background:rgba(241,240,238,.07);border:1px solid rgba(241,240,238,.12);border-radius:10px;padding:24px;">
-      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--BU-300);margin-bottom:8px;">Principle 06</div>
+    <div class="tile-kta-gl">
+      <div style="font-family:var(--FA);font-size:0.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Principle 06</div>
       <div style="font-family:var(--FD);font-size:1.25rem;color:var(--N-100);margin-bottom:10px;">The two providers are the brand.</div>
-      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-200);line-height:1.75;">Content should consistently reflect that this is a two-NP practice with overlapping specialties by design. Surface both names and credentials whenever the format allows.</div>
+      <div style="font-family:var(--FB);font-size:0.82rem;font-weight:300;color:var(--BU-300);line-height:1.75;">Content should consistently reflect that this is a two-NP practice with overlapping specialties by design. Surface both names and credentials whenever the format allows.</div>
     </div>
   </div>
 </div>
@@ -1568,10 +1670,10 @@ Requires parent <section> to have position:relative and overflow:hidden (already
       <div style="font-family:var(--FB);font-size:1.125rem;font-weight:300;color:#f1f0ee;line-height:1.6;">Assessment-based entry. Candidacy language. Not a walk-in clinic, not a consumer discount service.</div>
     </div>
   </div>
-  <div style="margin-top:32px;padding:24px;border-left:3px solid var(--GL-500);background:rgba(217,158,43,.08);border-radius:0 8px 8px 0;">
+  <div class="tile-kta-gl" style="margin-top:32px;margin-bottom:0;">
     <div style="font-family:var(--FA);font-size:0.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--GL-300);margin-bottom:8px;">Tagline — Current</div>
     <div style="font-family:var(--FD);font-size:1.6rem;color:var(--N-100);font-style:italic;">Inside and Out.</div>
-    <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-200);margin-top:8px;line-height:1.75;">Two words. The entire positioning in one phrase. Use as a closing element — never as an opener or standalone headline. Never modify it.</div>
+    <div style="font-family:var(--FB);font-size:0.8rem;font-weight:300;color:var(--BU-300);margin-top:8px;line-height:1.75;">Two words. The entire positioning in one phrase. Use as a closing element — never as an opener or standalone headline. Never modify it.</div>
   </div>
 </div>
 </section>
