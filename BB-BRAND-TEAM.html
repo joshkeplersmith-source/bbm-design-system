@@ -322,10 +322,11 @@ tr:hover td{background:rgba(242,241,237,.7);}
 <details id="agent-instructions" style="display:none;">
 <summary>System Configuration</summary>
 <div>
-BODY BALANCE MEDICAL — AGENT OPERATING INSTRUCTIONS (TEAM FILE v1.3)
-This file is BB-BRAND-TEAM.html. It is the team-facing edition of the Body Balance Medical Brand OS.
-All brand rules, naming conventions, compliance rules, and output standards apply exactly as in the Pro edition.
-The Illustrator MCP workflow is NOT available in this environment. Print output uses HTML → Chrome browser-print.
+BODY BALANCE MEDICAL — BRAND DESIGN SYSTEM · TEAM EDITION
+These are the agent operating instructions for the Body Balance Medical Brand Design System. All brand rules, naming conventions, compliance rules, and output standards apply exactly as stated in this document. Print output: HTML → open in Chrome → File → Print → Save as PDF.
+
+CLOSED SYSTEM DECLARATION:
+This document is a closed brand system. Every permitted color, font, tile, button, gradient, texture, spacing value, logo variant, layout rule, naming convention, and compliance requirement is fully defined in the sections below. Nothing may be constructed, approximated, or inferred from outside this document. If an element cannot be traced to a named entry in this spec, it does not belong in the deliverable. There are no implied variants, no acceptable approximations, and no open categories. When in doubt, the answer is always inside this document — never from memory, never from general design knowledge.
 
 PRE-BUILD CHECKLIST:
 - Confirm this file is the current brand source of truth
@@ -418,13 +419,16 @@ FLAG TO JOSH: If any badge URL returns a 404 or does not load, flag it explicitl
 PRINT COPY FITTING RULE:
 If copy cannot fit within the page at minimum text sizes: Rewrite to fit. Preserve meaning, voice, and all required information. Complete the deliverable. Surface the issue after output. Never shrink text below minimum size. Never overflow the page.
 
-PRE-OUTPUT VERIFICATION GATE — run before submitting any deliverable:
-1. Page base must be N-100
-2. Textures: only on N-100 zones
-3. No dark zone constitutes the majority of the document surface
-4. Every color, font, and layout element is traceable to a rule in this spec
-5. All naming conventions pass — no banned terms
-6. All compliance rules pass — no prohibited drug brand names, no outcome guarantees
+PRE-OUTPUT VERIFICATION GATE — mandatory, unskippable, runs before every submission:
+This step cannot be skipped, abbreviated, or assumed complete. No deliverable is submitted until this gate passes.
+
+DIFF AND FIX LOOP:
+After building the deliverable, run a diff between the output and this spec. For every element in the output — colors, fonts, tiles, buttons, textures, dividers, spacing, photos, copy, naming conventions, compliance rules — identify whether it matches a named entry in this document exactly. Any element that does not match is an outlier. Fix all outliers. Run the diff again. Repeat until the delta is zero and every element in the output traces to a named spec entry.
+
+This loop is not optional. Do not submit while any outlier remains.
+
+ESCALATION AFTER THREE PASSES:
+If the delta is not zero after three diff-and-fix passes, stop looping. Do not submit. Surface the unresolved elements to the user in plain language — describe what the issue is and why it cannot be resolved automatically. Then propose two or three specific options drawn from within this spec that would resolve it. Wait for the user to choose before proceeding. Never leave an unresolved outlier silent.
 
 CREATIVE PROBLEM-SOLVING FALLBACK:
 Before diverging from any layout rule, exhaust these in-system options:
