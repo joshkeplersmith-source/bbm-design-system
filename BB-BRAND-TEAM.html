@@ -455,6 +455,9 @@ GRACEFUL DEGRADATION:
 State 1 — R2 Accessible: Pull all logos and textures from Section 3 URLs. Build normally.
 State 2 — R2 Not Accessible: Colors, typography, spacing, voice, and layout rules are all still available. Build with those. Textures: Omit silently — no mention, no flag, no request. A page without textures is still fully on-brand. Logo: Say verbatim: "I can't access the logo files in this environment. Drop the logo you need into this chat and I'll use it. BB-H-Logo-B.svg for light backgrounds, BB-H-Logo-W.svg for dark backgrounds." Wait for the upload. Do not substitute a placeholder.
 
+POST-DELIVERY COMMUNICATION RULE:
+After delivering any completed output, do not surface technical verification details, color codes, font names, spec section references, or any system terminology in the post-delivery message. The user does not need to know how compliance was verified — only that it was. State completion in plain language: confirm the deliverable is on brand, then move directly to anything the user needs to act on. Keep the post-delivery note to three sentences or fewer. Example: "Everything here is on brand — colors, fonts, layout, and copy all check out. Here is what you need to do next: [photo brief or next step]."
+
 PHOTOGRAPHY HANDOFF NOTE:
 At the end of every visual deliverable, deliver all three of the following in order:
 1. State that reference photos from the brand library have been used to set the layout.
@@ -831,6 +834,15 @@ Requires parent <section> to have position:relative and overflow:hidden (already
     <tr><td>Male</td><td class="hex">linear-gradient(135deg, #131c25, #888749)</td><td class="hex">linear-gradient(135deg, #2b3a4a, #a8a65c)</td><td class="hex">GR-300 #d1d0a8</td></tr>
   </tbody></table>
   <div class="note">Tile body text on all gradients: N-100 #f1f0ee · Work Sans 300. Button gradient runs at 120° (not 135°) — see Button system.</div>
+  <div class="rules-block" style="margin-top:24px;">
+    <h4>Gradient Selection Rule — Content-Coded, Not Decorative</h4>
+    <ul>
+      <li><strong>Neutral</strong> — default for all content without a gender-coded subject. Use when in doubt.</li>
+      <li><strong>Female (P-family)</strong> — female-forward services only: aesthetics, cosmetic, PRF, female hormone content. Never use for visual variety on gender-neutral content.</li>
+      <li><strong>Male (GR-family)</strong> — male-forward services only: testosterone, peptides, men's metabolic content. Never use for visual variety on gender-neutral content.</li>
+    </ul>
+    <p>Using all three families in a single row requires three tiles each with a distinct gender-coded subject. It is not a layout default. If the tile content does not have a clear gender-coded subject, use Neutral.</p>
+  </div>
 </div>
 </section>
 
@@ -847,6 +859,15 @@ Requires parent <section> to have position:relative and overflow:hidden (already
       <li><strong>Feature Tiles</strong> — use in service grids, treatment navigation, and section-level structured layouts. Applies to: Neutral gradient, Female gradient, Male gradient, Solid BU-700. Never use feature tiles inline within body copy or blog content.</li>
       <li><strong>Key Takeaway Tiles</strong> — use inline within body copy, blog posts, and web pages to surface key points, callouts, and important information without breaking the content flow. Three variants: NV-200 (light), BU-100 (light), GL-500 (dark — inside BU-700 sections only).</li>
     </ul>
+  </div>
+  <div class="rules-block" style="margin-top:0;margin-bottom:24px;">
+    <h4>Gradient Selection Rule — Content-Coded, Not Decorative</h4>
+    <ul>
+      <li><strong>Neutral</strong> — default for all content without a gender-coded subject. Use when in doubt.</li>
+      <li><strong>Female (P-family)</strong> — female-forward services only: aesthetics, cosmetic, PRF, female hormone content.</li>
+      <li><strong>Male (GR-family)</strong> — male-forward services only: testosterone, peptides, men's metabolic content.</li>
+    </ul>
+    <p>Never select Female or Male gradient for visual variety alone. Using all three families in a single row requires three tiles each with a distinct gender-coded subject.</p>
   </div>
 
   <div class="subsec">
@@ -990,11 +1011,7 @@ Requires parent <section> to have position:relative and overflow:hidden (already
       </ul></div>
     </div>
     <div style="margin-top:24px;">
-      <div style="font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-700);margin-bottom:8px;">Ghosted Background Text — N-100 sections only · once per page maximum</div>
-      <div style="position:relative;overflow:hidden;border:1px solid var(--N-200);background:var(--N-100);min-height:130px;border-radius:2px;">
-        <div style="position:absolute;top:-20px;left:-8px;font-family:'Playfair Display',Georgia,serif;font-size:9rem;font-weight:400;font-style:italic;color:var(--NV-200);line-height:1;user-select:none;pointer-events:none;white-space:nowrap;">Restore</div>
-        <div style="position:relative;z-index:2;padding:72px 32px 28px;font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-600);">Playfair Display italic · 9rem · color: NV-200 · opacity: inherent from palette · position: absolute, bleeds top-left · behind all content via z-index</div>
-      </div>
+      <div style="font-family:var(--FB);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--BU-700);margin-bottom:8px;">Ghosted Background Text — see Section 10 · Layout Depth Tools</div>
     </div>
   </div>
 </div>
@@ -1161,6 +1178,23 @@ Requires parent <section> to have position:relative and overflow:hidden (already
     </div>
     <div class="note" style="font-family:monospace;font-size:0.68rem;color:var(--N-700);line-height:1.8;white-space:pre-wrap;">&lt;div style="position:absolute;inset:0;background-image:url('https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:1;pointer-events:none;z-index:0;"&gt;&lt;/div&gt;</div>
     <div class="note">Requires parent section to have position:relative and overflow:hidden. The .sec class already provides this.</div>
+  </div>
+  <div class="subsec">
+    <div class="subsec-title">Ghosted Background Text — Layout Depth Tool</div>
+    <div class="rules-block">
+      <h4>Default Expectation</h4>
+      <p>Use on at least one N-100 section in every multi-section deliverable. Its absence is a deliberate choice, not a default. If you are not using it, you must have a reason.</p>
+      <h4>When to Deploy</h4>
+      <p>Any N-100 section where a single strong word captures the section's theme — clinical content blocks, provider sections, offer callouts, educational panels. This is the primary typographic depth tool on light surfaces.</p>
+      <h4>Word Selection</h4>
+      <p>One word only. Thematically aligned with the section — not decorative. Examples: <em>Restore · Return · Aligned · Within · Clarity · Balance.</em> Never use a word from the banned vocabulary list.</p>
+      <h4>Implementation</h4>
+      <p>Playfair Display italic · 9rem · color: NV-200 · position: absolute, top-left, bleeds behind all content · z-index: 0 · N-100 sections only · once per page maximum.</p>
+    </div>
+    <div style="position:relative;overflow:hidden;border:1px solid var(--N-200);background:var(--N-100);min-height:130px;border-radius:2px;margin-top:16px;">
+      <div style="position:absolute;top:-20px;left:-8px;font-family:'Playfair Display',Georgia,serif;font-size:9rem;font-weight:400;font-style:italic;color:var(--NV-200);line-height:1;user-select:none;pointer-events:none;white-space:nowrap;">Restore</div>
+      <div style="position:relative;z-index:2;padding:72px 32px 28px;font-family:var(--FB);font-size:0.75rem;font-weight:300;color:var(--N-600);">Playfair Display italic · 9rem · NV-200 · absolute top-left · z-index 0</div>
+    </div>
   </div>
 </div>
 </section>
