@@ -3,7 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BB Brand TEAM — Body Balance Medical · v1.2</title>
+<script type="application/json" id="bb-brand-config">
+{
+  "meta": {
+    "document": "BB-BRAND-TEAM.html",
+    "version": "1.3",
+    "client": "Body Balance Medical",
+    "edition": "team",
+    "r2_base": "https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev"
+  },
+  "colors": {
+    "page_background": "#f1f0ee",
+    "section_dark": "#2b3a4a",
+    "brand_near_black": "#1c1a17",
+    "accent_on_dark": "#ebcc8e",
+    "accent_on_light": "#866118",
+    "never_use": ["#000000", "#ffffff"]
+  },
+  "typography": {
+    "display": { "family": "EB Garamond", "rule": "upright leads, italic follows — never open italic" },
+    "subheading": { "family": "Playfair Display", "use": "eyebrows, subheadings, captions, UI labels, buttons, ghosted text" },
+    "body": { "family": "Work Sans", "weights": [300, 600] }
+  },
+  "cta": {
+    "approved": ["Apply for Assessment", "Take the Assessment"],
+    "banned": ["Book Now", "Free Consultation", "Sign Up", "Get Started", "Learn More", "Schedule Now", "Reserve Your Spot"]
+  },
+  "naming": {
+    "hormone_service": "Hormone Optimization",
+    "hormone_service_banned": ["HRT", "Hormone Replacement Therapy"],
+    "pellet_therapy": "Biote Hormone Pellet Therapy",
+    "pellet_therapy_banned": ["pellets", "bioidentical pellets", "hormone pellets"],
+    "glp1_approved": ["Compounded Semaglutide", "Compounded Tirzepatide"],
+    "glp1_banned": ["Ozempic", "Wegovy", "Mounjaro", "Zepbound"],
+    "brand_name": "Body Balance Medical",
+    "financing": ["Cherry Financing", "CareCredit"],
+    "booking_platform": "Boulevard",
+    "tagline": { "text": "Inside and Out.", "rule": "closing element only — never opener, never standalone headline, never modified" }
+  },
+  "vocabulary": {
+    "banned": [
+      "luxury", "glow", "glowing", "confidence", "transform", "transformation",
+      "anti-aging", "empower", "queen", "babe", "self-care", "better you",
+      "best self", "deserve", "natural results", "personalized plan",
+      "guaranteed", "instant", "quick fix", "effortless", "affordable", "discount", "deal"
+    ],
+    "framing": {
+      "use": ["restoration", "return", "feel like yourself again", "aligned"],
+      "avoid": ["transformation", "upgrade", "better self", "new you"]
+    }
+  },
+  "providers": [
+    {
+      "name": "Mia LoPreiato, NP",
+      "role": "Hormone Health and Longevity",
+      "certifications": ["Biote-Certified Hormone Specialist"],
+      "photo": "photography/Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg"
+    },
+    {
+      "name": "Teresa Hernandez, NP",
+      "role": "Aesthetics and Wellness",
+      "certifications": ["Biote-Certified Provider", "Primary Cosmetic Injector"],
+      "photo": "photography/Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg"
+    }
+  ],
+  "assets": {
+    "logos": {
+      "light_bg_preferred": "logos/BB-H-Logo-Bu.svg",
+      "light_bg_standard": "logos/BB-H-Logo-B.svg",
+      "dark_bg_preferred": "logos/BB-H-Logo-W.svg",
+      "gold_accent": "logos/BB-H-Logo-G.svg",
+      "vertical_light": "logos/BB-V-Logo-Bu.svg",
+      "vertical_dark": "logos/BB-V-Logo-W.svg",
+      "mark_light": "logos/BB-Logo-Mark-Bu.svg",
+      "mark_dark": "logos/BB-Logo-Mark-W.svg",
+      "social_light": "logos/BB-Social-Logo-B.svg",
+      "social_dark": "logos/BB-Social-Logo-W.svg"
+    },
+    "textures": {
+      "plant_03": "textures/BB-Brand-Refresh-Textures-03.svg",
+      "plant_04": "textures/BB-Brand-Refresh-Textures-04.svg",
+      "plant_05": "textures/BB-Brand-Refresh-Textures-05.svg",
+      "plant_06": "textures/BB-Brand-Refresh-Textures-06.svg",
+      "plant_07": "textures/BB-Brand-Refresh-Textures-07.svg",
+      "plant_08": "textures/BB-Brand-Refresh-Textures-08.svg",
+      "plant_09": "textures/BB-Brand-Refresh-Textures-09.svg",
+      "logo_mark_watermark": "textures/BB-Logo-Mark-Texture.webp",
+      "rules": {
+        "opacity_range": "0.14–0.40",
+        "blend_mode": "multiply",
+        "size": "200vmax",
+        "rotation": "90deg",
+        "allowed_on": "N-100 sections only — never on BU-700 or gradient backgrounds",
+        "max_per_section": 1,
+        "implementation": "CSS ::before pseudo-element only — never img tag"
+      }
+    },
+    "photography": {
+      "female_editorial_h": "photography/bb-female-subject-editorial-horizontal-01.jpg",
+      "female_editorial_v": "photography/bb-female-subject-editorial-vertical-01.jpg",
+      "female_smiling_h": "photography/bb-female-subject-smiling-horizontal-01.jpg",
+      "female_smiling_v": "photography/bb-female-subject-smiling-vertical-01.jpg",
+      "female_treatment_h": "photography/bb-female-subject-treatment-horizontal-01.jpg",
+      "female_treatment_v": "photography/bb-female-subject-treatment-vertical-01.jpg",
+      "female_active_h": "photography/bb-female-subject-active-horizontal-01.jpg",
+      "female_mirror_h": "photography/bb-female-subject-mirror-horizontal-01.jpg",
+      "male_smiling_h": "photography/bb-male-subject-smiling-horizontal-01.jpg",
+      "male_smiling_v": "photography/bb-male-subject-smiling-vertical-01.jpg",
+      "couple_smiling_h": "photography/bb-couple-smiling-horizontal-01.jpg",
+      "medical_vial_h": "photography/bb-medical-vial-ambient-horizontal-01.jpg",
+      "medical_vial_v": "photography/bb-medical-vial-ambient-vertical-01.jpg",
+      "provider_mia": "photography/Mia-LoPreiato-NP-Biote-certified-hormone-specialist.jpg",
+      "provider_teresa": "photography/Teresa-Hernandez-NP-Biote-certified-primary-cosmetic-injector.jpeg"
+    },
+    "certifications": {
+      "legitscript_seal": "https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/LegitScript-Certification-Seal-of-Approval.png",
+      "biote_provider_seal": "https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/Biote-Certified-Provider-Seal.webp",
+      "biote_provider_square": "https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/Biote-Certified-Provider-Square.png",
+      "biote_logo_full": "https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/Biote-Logo-Full-Color-Transparent.png"
+    }
+  },
+  "compliance": {
+    "no_outcome_guarantees": true,
+    "no_glp1_brand_names": true,
+    "candidacy_language_required": true,
+    "trt_cardiovascular_update": "FDA removed cardiovascular black box warning Feb 2025 (TRAVERSE trial) — statable directly",
+    "provider_credential_rule": "Always include NP credential on first reference — Mia LoPreiato, NP and Teresa Hernandez, NP",
+    "certifications_display": {
+      "legitscript": "Required on all GLP-1 and weight loss advertising — landing pages, email, print, ad creative",
+      "biote": "Required near provider credentials on all hormone optimization and Biote-specific content"
+    }
+  },
+  "punctuation": {
+    "em_dash_format": "space — em-dash — space (never hyphen, never em-dash without spaces)",
+    "never_pure_black": true,
+    "never_pure_white": true
+  }
+}
+</script>
+<title>BB Brand TEAM — Body Balance Medical · v1.3</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
@@ -184,7 +322,7 @@ tr:hover td{background:rgba(242,241,237,.7);}
 <details id="agent-instructions" style="display:none;">
 <summary>System Configuration</summary>
 <div>
-BODY BALANCE MEDICAL — AGENT OPERATING INSTRUCTIONS (TEAM FILE v1.2)
+BODY BALANCE MEDICAL — AGENT OPERATING INSTRUCTIONS (TEAM FILE v1.3)
 This file is BB-BRAND-TEAM.html. It is the team-facing edition of the Body Balance Medical Brand OS.
 All brand rules, naming conventions, compliance rules, and output standards apply exactly as in the Pro edition.
 The Illustrator MCP workflow is NOT available in this environment. Print output uses HTML → Chrome browser-print.
@@ -218,6 +356,23 @@ WHILE BUILDING:
 - Apply voice and vocabulary rules to all copy
 - Include textures only when R2 is accessible
 
+COLOR PAIRING QUICK REFERENCE:
+D = Dark background (BU-700 #2b3a4a)
+D1: BU-700 bg · GL-300 #ebcc8e — heading italic accent, primary brand heading
+D2: BU-700 bg · P-300 #da9fbb — female-forward heading on dark
+D3: BU-700 bg · GR-300 #d1d0a8 — male-forward heading on dark
+D4: BU-700 bg · N-100 #f1f0ee — utility heading and body on dark
+D5: BU-700 bg · N-300 #c1bdb8 — subheading and supporting text on dark
+D6: BU-700 bg · GL-500 #d99e2b — caption register on dark
+
+L = Light background (N-100 #f1f0ee)
+L1: N-100 bg · GL-700 #866118 — accent heading on light
+L2: N-100 bg · BU-700 #2b3a4a — primary heading on light
+L3: N-100 bg · P-500 #b94b7f — female accent on light
+L4: N-100 bg · GR-700 #676637 — male accent on light
+L5: N-100 bg · BU-500 #506d8b — subheading and caption on light
+L6: N-100 bg · N-900 #1c1a17 — body text on light
+
 SAFE BASELINE WHEN UNSURE:
 N-100 background · BU-700 section accent · EB Garamond heading (upright leads) · Work Sans 300 body · GL-300 on dark / GL-700 on light
 
@@ -236,6 +391,29 @@ NAMING CONVENTIONS QUICK CHECK:
 - GLP-1: Compounded Semaglutide / Compounded Tirzepatide — never brand names
 - Hormone: Hormone Optimization — never HRT
 - Providers: Full name + NP on first reference (Mia LoPreiato, NP / Teresa Hernandez, NP)
+
+CERTIFICATION BADGES — WHEN AND WHERE TO USE:
+
+LegitScript Certified:
+- Required on ALL content featuring GLP-1 or weight loss services
+- Place in footer or disclaimer area of: landing pages, email templates, print flyers, ad creative
+- Badge: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/LegitScript-Certification-Seal-of-Approval.png
+- Always pair with a statement about medically supervised care — never use the seal standalone
+- Never use LegitScript badge on non-GLP-1 content unless weight loss is also featured
+
+Biote Certified:
+Three assets — use the correct one for the format:
+- Seal (.webp, circular): https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/Biote-Certified-Provider-Seal.webp
+  Use for: digital content, web pages, email — always pair with provider name and NP credential
+- Square (.png): https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/Biote-Certified-Provider-Square.png
+  Use for: social posts, print flyers, square-format contexts
+- Full logo (.png, transparent): https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/certs/Biote-Logo-Full-Color-Transparent.png
+  Use for: internal documents, team reference materials, horizontal layout contexts
+- Always display near provider credentials — never as a standalone brand element
+- Applies to all Biote Hormone Pellet Therapy content and provider bio sections
+- Never imply Biote pellets are FDA-approved drugs
+
+FLAG TO JOSH: If any badge URL returns a 404 or does not load, flag it explicitly before delivering the finished file. Never silently omit a certification requirement.
 
 PRINT COPY FITTING RULE:
 If copy cannot fit within the page at minimum text sizes: Rewrite to fit. Preserve meaning, voice, and all required information. Complete the deliverable. Surface the issue after output. Never shrink text below minimum size. Never overflow the page.
@@ -274,14 +452,23 @@ State 1 — R2 Accessible: Pull all logos and textures from Section 3 URLs. Buil
 State 2 — R2 Not Accessible: Colors, typography, spacing, voice, and layout rules are all still available. Build with those. Textures: Omit silently — no mention, no flag, no request. A page without textures is still fully on-brand. Logo: Say verbatim: "I can't access the logo files in this environment. Drop the logo you need into this chat and I'll use it. BB-H-Logo-B.svg for light backgrounds, BB-H-Logo-W.svg for dark backgrounds." Wait for the upload. Do not substitute a placeholder.
 
 PHOTOGRAPHY HANDOFF NOTE:
-At the end of every visual deliverable, include this note verbatim in tone:
-"I've added placeholder photography from the brand library to get the layout right. You can swap any image for your own photos — just drop them into this chat and tell me which section to replace. If you'd like to generate a new image instead, tell me what you're picturing and I'll either give you a prompt you can use in an image tool, or generate it directly if I'm able to."
-Never mention R2, reference URLs, Cloudflare, file names, or any backend detail.
+At the end of every visual deliverable, deliver all three of the following in order:
+1. State that reference photos from the brand library have been used to set the layout.
+2. Offer to help write an image generator prompt if they want something different.
+3. Ask if they have an image in mind. If they have no direction, propose a specific subject based on what was just built — mood, setting, subject type tied to the deliverable's purpose — then write a ready-to-use prompt in the 500T film emulation format from Section 6.
+
+Never mention R2, reference URLs, Cloudflare, file names, or any backend infrastructure.
+
+Example (adapt to the actual deliverable):
+"I used photos from the brand library to set the layout. If you'd like something different for any section, I can write an image generator prompt for you — do you have a photo in mind? If not, for this [deliverable type], I'd suggest [specific subject direction tied to what was just built]. I can write the full generation prompt whenever you're ready."
 
 PHOTOGRAPHY REPLACEMENT CATCH:
-If the user asks about replacing, changing, swapping, or adding any image — regardless of how they phrase it — respond immediately with:
-"Yes — do you have a photo you'd like to use, or would you like me to generate one? If you have something in mind, describe it and I'll either generate it or give you a prompt to use."
-Then wait for their input. Never explain where the current image came from. Never mention the reference library.
+If the user asks about replacing, changing, swapping, or adding any image — regardless of how they phrase it — respond with all three of the following in order:
+1. Confirm you can help.
+2. Ask if they have a photo in mind or would like you to write a generation prompt.
+3. If they have no direction, propose a specific subject based on the deliverable's context, then write the 500T generation prompt from Section 6.
+
+Never explain where the current image came from. Never mention R2, the reference library, or any backend detail.
 
 PROVIDER PHOTOGRAPHY WORKFLOW:
 When content requires provider photography:
@@ -1755,7 +1942,7 @@ Requires parent <section> to have position:relative and overflow:hidden (already
 <!-- ═══ FOOTER ═══ -->
 <footer style="background:var(--BU-700);color:var(--BU-400);padding:32px 40px;text-align:center;">
   <div style="font-family:var(--FD);font-size:1.2rem;color:var(--N-100);margin-bottom:6px;">Body Balance Medical · Brand OS</div>
-  <div style="font-family:var(--FB);font-size:0.75rem;font-weight:300;letter-spacing:.06em;color:var(--N-300);margin-bottom:4px;">Team Edition · v1.2 · 2026 · Captain Kepler Creative</div>
+  <div style="font-family:var(--FB);font-size:0.75rem;font-weight:300;letter-spacing:.06em;color:var(--N-300);margin-bottom:4px;">Team Edition · v1.3 · 2026 · Captain Kepler Creative</div>
   <div style="font-family:var(--FB);font-size:0.72rem;font-weight:300;color:var(--BU-200);margin-top:10px;">For Body Balance Team. For production pipeline access, contact Josh Smith.</div>
 </footer>
 
