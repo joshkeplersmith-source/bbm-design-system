@@ -1,6 +1,6 @@
 # BODY BALANCE MEDICAL — Brand Operating System
 **Captain Kepler Creative · Josh Smith · 2026**
-**File:** `BB-BRAND.md` · Version 1.0
+**File:** `BRAND.md` · Version 1.1
 **Status:** Active — Single source of truth
 
 ---
@@ -177,7 +177,6 @@ Gradient tiles only. No solid P-700 tile in dark context. The section itself sit
 | Male Gradient | P-800→T-600 | P-700→T-500 | T-300 `#d1d0a8` | N-100 `#f1f0ee` |
 
 #### Light Context · N-100 Background
-5 tile types available.
 
 | Tile | Resting | Selected | Title Color | Body Color |
 |---|---|---|---|---|
@@ -220,7 +219,7 @@ Three font families. Each has a strictly defined role. Do not swap them.
 
 **The brand's core typographic move:** Pair EB Garamond upright with EB Garamond italic within the same heading. Example: *"Feel Like* Yourself Again" — italic on the emotional phrase, upright on the grounding phrase.
 
-**Ghosted background text:** Large Playfair Display text rendered at low opacity (8–12%) behind a section's content. N-100 sections only. Use sparingly — once per page maximum.
+**Ghosted background text:** Large Playfair Display text rendered at low opacity (8–12%) behind section content. N-100 sections only. Once per page maximum.
 
 #### Typography Rules
 
@@ -235,7 +234,7 @@ Three font families. Each has a strictly defined role. Do not swap them.
 - Use Work Sans for headings, subheadings, eyebrows, or UI labels
 - Use uppercase on EB Garamond
 - Mix heading fonts on a single surface
-- Use bold as a subheading substitute — use Playfair Display at the correct heading level instead
+- Use bold as a subheading substitute
 
 ---
 
@@ -284,8 +283,6 @@ All shadows use N-900 `#1c1a17` at warm opacity — never cold gray shadows.
 
 ### 1.9 — Button System
 
-Single primary button style. No secondary outlined variant — the gradient button is the system's only button.
-
 | Property | Value |
 |---|---|
 | Background resting | `linear-gradient(120deg, #131c25, #6a89a9)` |
@@ -299,28 +296,28 @@ Single primary button style. No secondary outlined variant — the gradient butt
 
 ### 1.10 — Texture System
 
-7 texture SVGs available. Textures are layout enhancements — they add depth and tactility to N-100 sections.
+7 texture SVGs available. Use as fill elements in N-100 sections only.
 
 **Texture fill color:** NV-200 `#deddd3`
-**Opacity range:** 26–40% (adjust per texture based on visual weight at review)
-**Rotation:** 90° — textures rotate to fill their container
-**Behavior:** Fill container. `preserveAspectRatio="xMidYMid slice"`. `inset:0; width:100%; height:100%`
+**Opacity range:** 26–40%
+**Rotation:** 90°
+**Behavior:** Fill container · `preserveAspectRatio="xMidYMid slice"` · `inset:0; width:100%; height:100%`
 
 **Rules:**
-- Textures on N-100 sections only — never on P-700 backgrounds
+- N-100 sections only — never on P-700 backgrounds
 - One texture per section maximum
-- Never apply a texture to two adjacent sections
-- Never apply color inversion or blend modes — opacity only
+- Never apply to two adjacent sections
+- Opacity only — no color inversion, no blend modes
 - Never stack a texture and the logo mark watermark in the same section
 
-#### Logo Mark Watermark (separate from textures)
+#### Logo Mark Watermark
 
 **File:** `BB-Logo-Mark-Texture.webp`
-**Usage:** Large centered watermark behind section content. Large sections only (full viewport height minimum).
+**URL:** `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp`
+**Usage:** Large centered watermark. Full viewport height sections only. Once per page maximum.
 **Behavior:** `object-fit: cover; inset: 0; width: 100%; height: 100%`
 **Opacity:** 100% (WebP transparency handles visual weight)
-**Blend mode:** None — do not apply any blend mode
-**Frequency:** Once per page maximum
+**Blend mode:** None
 **Context:** N-100 sections only
 
 ---
@@ -333,20 +330,20 @@ Single primary button style. No secondary outlined variant — the gradient butt
 
 | Family | Description | Variants |
 |---|---|---|
-| H (Horizontal) | Wordmark + mark side by side | B, Bu, G, W |
+| H (Horizontal) | Wordmark + mark side by side — default format | B, Bu, G, W |
 | V (Vertical) | Wordmark + mark stacked | B, Bu, G, W |
 | Mark (Icon) | Mark only, no wordmark | B, Bu, G, W |
-| Social Logo | Horizontal format, optimized for social platforms | B, W |
+| Social Logo | Horizontal, optimized for social platforms | B, W |
 | Social Mark | Mark only, optimized for social platforms | B, W |
 
 #### Color Variant Key
 
 | Suffix | Color | Use On |
 |---|---|---|
-| B | Black — N-900 `#1c1a17` | Light backgrounds (N-100, NV tiles) |
-| W | White — N-100 `#f1f0ee` | Dark backgrounds (P-700, gradients) |
-| G | Gold — Q-700 `#866118` on light / Q-300 `#ebcc8e` on dark | Accent contexts only |
-| Bu | Blue — P-700 `#2b3a4a` | Light backgrounds, brand-forward contexts |
+| B | Black N-900 `#1c1a17` | Light backgrounds |
+| W | White N-100 `#f1f0ee` | Dark backgrounds |
+| G | Gold | Accent contexts only |
+| Bu | Blue P-700 `#2b3a4a` | Light, brand-forward contexts |
 
 #### Context Guide
 
@@ -355,128 +352,58 @@ Single primary button style. No secondary outlined variant — the gradient butt
 | N-100 (light page) | H or V · B variant |
 | P-700 (dark section) | H or V · W variant |
 | Gradient tile | Mark · W variant |
-| Social profile image | Social Mark · B or W depending on platform background |
-| Social post / story | Social Logo · B or W depending on treatment |
-| Gold accent moment | H or V · G variant — use intentionally, not decoratively |
+| Social profile image | Social Mark · B or W |
+| Social post / story | Social Logo · B or W |
+| Gold accent moment | H or V · G variant |
 | Brand-blue moment | H or V · Bu variant |
 
 #### Logo Rules
 
 **DO:**
-- Always match the logo color variant to its background context (see table above)
+- Match logo color variant to background context
 - Maintain clearspace equal to the height of the "B" letterform on all sides
-- Use H (horizontal) as the default. Use V (vertical) when the layout requires a taller, narrower format. Use Mark when the logo must be very small or icon-sized.
+- Use H as default · V when layout requires taller format · Mark at small/icon sizes
 
 **DON'T:**
-- Place any logo on a mid-tone background without verifying contrast
-- Apply color, shadow, stroke, outline, or any effect not in the approved variants
-- Scale the wordmark below approximately 11px cap height
-- Crop, rotate, skew, or distort any logo in any direction
-- Place any logo on a busy photographic background without a contrast treatment (dark overlay or light field)
-- Recolor any variant — use the approved variant for that context, never alter the file
+- Place on mid-tone background without verifying contrast
+- Apply any effect not in the approved variants
+- Scale wordmark below ~11px cap height
+- Crop, rotate, skew, or distort
+- Recolor any variant
 
 ---
 
 ### 1.12 — Photography Brief
 
 #### Primary Mode — Black & White
-
-Black and white is the brand's most distinctive visual move. It signals editorial credibility, reduces distraction, and makes the subjects feel timeless rather than trend-driven.
-
-**Characteristics:**
-- Film-forward — not clinical digital black and white
-- Rich midtones, soft contrast — not crushed blacks or blown whites
-- Authentic grain acceptable — airbrushing and skin-smoothing are not
-- Subjects feel present and real — not posed or performative
+Film-forward, not clinical digital. Rich midtones, soft contrast, authentic grain. No airbrushing.
 
 #### Secondary Mode — Kodak Portra 400
-
-Used for warmth, human moments, and seasonal or campaign-specific content.
-
-**Characteristics:**
-- Warm, slightly faded color — not saturated or bright
-- Natural grain, soft highlights
-- Film emulation — not Instagram filter
-- Color palette stays within the brand's warm earth tones — nothing electric or saturated
+Warm, slightly faded color. Natural grain, soft highlights. Film emulation — not Instagram filter.
 
 #### Subject Direction
-
-**Women (primary):**
-- 30s–40s, professional, appearance-conscious, grounded
-- Unposed or minimally posed — candid energy preferred
-- Skin texture visible — no airbrushing
-- Environmental context welcome — clinic, outdoor, lifestyle — as long as the subject is primary
-- Never: jumping, arms spread, forced smile, looking at the camera with a performance smile
-
-**Men (secondary — TRT, peptides, metabolic wellness):**
-- 40s–60s, natural energy, genuine happiness
-- Active or at rest — no performance fitness poses
-- Never: shirtless fitness shots, measuring tape, before/after body-measurement content
-
-**Props to avoid in all photography:**
-- Measuring tape
-- Bathroom scale
-- Clinical white-box studio background
-- Workout equipment used as a wellness metaphor
-- Stock wellness poses of any kind
+- **Women:** 30s–40s, unposed, skin texture visible, environmental context welcome
+- **Men:** 40s–60s, natural energy — for TRT and wellness content
+- **Always avoid:** measuring tape, scale, studio white-box, stock wellness poses, airbrushed skin
 
 #### Before / After Treatment
-
-- Use the L-bracket gold frame treatment for before/after panels
-- P-700 badge labels for treatment name / result identifier
-- Never use hard-bordered BEFORE/AFTER blocks with old typography
-- Caption in Playfair Display italic, caption size, bottom of frame
+L-bracket gold frame · P-700 badge labels · Playfair Display italic caption · Never hard-bordered legacy blocks
 
 ---
 
 ### 1.13 — Layout & Design Rules
 
-#### Color
+**Color DO:** N-100 page base · P-700 section hierarchy · Q-300 on dark / Q-700 on light · S-family female-forward · T-family male-forward · NV-500/700 for all rules and dividers
 
-**DO:**
-- Anchor every page with N-100 as the base page background
-- Use P-700 for section-level hierarchy — section and tile level only, not full-page
-- Use texture SVGs (NV-200) occasionally to add depth to N-100 sections
-- Use Q-300 on dark and Q-700 on light — non-interchangeable
-- Use S-family for female-forward content, T-family for male-forward — intentionally, not decoratively
-- Use NV-500 and NV-700 for all dividers, rules, underlines, and callout lines
+**Color DON'T:** Mid-tones as backgrounds · P-700 full-page · Textures on P-700 · More than two accent families without neutral separator · Any color outside the six families · Pure black or white
 
-**DON'T:**
-- Use mid-tones (any 300–600 stop) as section or page backgrounds
-- Use P-700 as a full-page background — sections and tiles only
-- Use texture SVGs on P-700 backgrounds
-- Use more than two accent families on a single surface without a neutral separator
-- Introduce any color outside the six locked families
-- Use pure `#000000` or `#ffffff`
+**Layout DO:** Textures rotated 90° filling N-100 sections · Playfair Display ghosted text on N-100 · L-bracket gold frame for featured content · NV-700/500 callout lines for annotations
 
-#### Layout
+**Layout DON'T:** Gradient tiles as full-section backgrounds · More than two gradient tile families without neutral separator · Center-aligned body copy over two lines · Texture + logo mark watermark in same section
 
-**DO:**
-- Use texture SVGs rotated 90° filling the full section — N-100 only, one per section, not in adjacent sections
-- Use Playfair Display ghosted background text on N-100 sections (8–12% opacity)
-- Use the L-bracket gold frame for before/after and featured content panels
-- Annotate product and service features with callout lines in NV-700 or NV-500
-- Use NV-500 and NV-700 for all section dividers, rules, and underlines
+**Ad Creative DO:** B&W photography in performance ads · Full type system on all new ad production · L-bracket before/after with P-700 badge labels · Disclaimer copy in Playfair Display italic caption size
 
-**DON'T:**
-- Use gradient tiles as full-section or full-page backgrounds — component level only
-- Stack more than two different gradient tile families without a neutral tile between them
-- Center-align body copy over two lines — left-aligned only
-- Stack a texture SVG and the logo mark watermark in the same section
-
-#### Ad Creative
-
-**DO:**
-- Carry B&W photography into performance ads — the brand's most distinctive visual move
-- Apply the type system (EB Garamond + Playfair Display + Work Sans) to all ad production
-- Use the before/after L-bracket treatment with P-700 badge labels on result-based ads
-- Keep legal/disclaimer copy in Playfair Display 400 italic at caption size, bottom of frame
-- Use B&W annotated photography with NV-700/NV-500 callout lines as a primary ad layout
-
-**DON'T:**
-- Use the legacy Poppins all-caps type system in any new ad production
-- Use hard-bordered BEFORE/AFTER stock blocks with old typography
-- Use imagery that contradicts the photography brief
+**Ad Creative DON'T:** Legacy Poppins all-caps system · Hard-bordered before/after blocks · Imagery contradicting the photography brief
 
 ---
 
@@ -548,12 +475,12 @@ Used for warmth, human moments, and seasonal or campaign-specific content.
   --bb-space-20: 5rem;    --bb-space-24: 6rem;
 
   /* GRID */
-  --bb-grid-columns:       12;
-  --bb-grid-max-width:     1280px;
-  --bb-grid-gutter-desk:   24px;
-  --bb-grid-gutter-mob:    16px;
-  --bb-grid-margin-desk:   80px;
-  --bb-grid-margin-mob:    16px;
+  --bb-grid-columns:     12;
+  --bb-grid-max-width:   1280px;
+  --bb-grid-gutter-desk: 24px;
+  --bb-grid-gutter-mob:  16px;
+  --bb-grid-margin-desk: 80px;
+  --bb-grid-margin-mob:  16px;
 
   /* BORDER RADIUS */
   --bb-radius-button: 8px;
@@ -568,7 +495,7 @@ Used for warmth, human moments, and seasonal or campaign-specific content.
 
 > Body Balance helps you feel like yourself again by closing the disconnect between how you feel inside and how you look outside — through integrated hormone health and aesthetic care that actually listens.
 
-This statement is the organizing principle for every piece of content this brand produces. If a piece of creative cannot be traced back to this statement, it does not fit the brand.
+Every piece of content this brand produces must be traceable back to this statement.
 
 ---
 
@@ -576,7 +503,7 @@ This statement is the organizing principle for every piece of content this brand
 
 Body Balance Medical helps people look better and feel better — at the same time — by combining hormone health, metabolic wellness, and aesthetic treatments in a single practice that actually listens.
 
-**What makes this different:** The integration of both tracks — clinical and aesthetic — in one practice, delivered by two dedicated Nurse Practitioners whose specialties mirror each other. Teresa owns aesthetics; Mia owns hormone health and longevity medicine. Together, they are the integrated plan made real.
+Two dedicated Nurse Practitioners whose specialties mirror each other: Teresa owns aesthetics; Mia owns hormone health and longevity medicine. Together, they are the integrated plan made real.
 
 **The outcome:** The patient leaves feeling like someone finally saw the whole picture — their energy, their body, their skin — and gave them a real plan. Not just a treatment. A direction.
 
@@ -585,29 +512,23 @@ Body Balance Medical helps people look better and feel better — at the same ti
 ### 2.3 — Target Audience
 
 #### Primary Avatar
+A woman in her early-to-mid 40s — professional, high-achieving, appearance-conscious — who notices a gap between how she wants to feel and how she actually feels. Proactive. Invests in herself. Done with providers who only address half the picture.
 
-A woman in her early-to-mid 40s — professional, high-achieving, appearance-conscious — who is starting to notice a gap between how she wants to feel and how she actually feels. She is proactive, not reactive. She invests in herself, expects quality, and is done with providers who only address half the picture.
+**What she wants most:** To look like the version of herself she still feels like inside — and to actually feel that way too.
 
-**What she wants most:** To look like the version of herself she still feels like inside — and to actually feel that way too, not just look it.
+**What makes her hesitate:** Trust. She has been dismissed, oversold, and handed generic plans before. Price is a surface objection — trust is the real one.
 
-**What makes her hesitate:** Trust. She has been dismissed before, oversold before, and handed generic plans before. She needs to believe this place is different before she commits. Price is a surface objection — trust is the real one.
+**Two entry points:**
+- *Aesthetics:* Surface treatments haven't fully gotten her there.
+- *Hormones:* She feels off, can't articulate it, been told her labs look fine. She doesn't feel fine.
 
-**Two entry points, one promise:**
-- *Aesthetics entry:* She wants to look like the version of herself she has in her head. The surface-level treatments she's tried haven't fully gotten her there.
-- *Hormone entry:* She feels off in a way she can't fully articulate, and no one has connected the dots for her. She's been told her labs look fine. She doesn't feel fine.
-
-Both resolve to the same underlying truth: nobody has given her a plan that treats both as part of the same problem.
+Both resolve to the same truth: nobody has given her a plan that treats both as part of the same problem.
 
 #### Secondary Avatar
-
-Men 40s–60s seeking TRT, peptides, and metabolic wellness (approximately 20% of clientele). The brand is women-forward in voice and visual direction — but the core promise applies to anyone experiencing the disconnect between how they feel inside and how they look and perform outside. Do not alienate male patients at the brand level.
+Men 40s–60s — TRT, peptides, metabolic wellness. Brand is women-forward in voice and visual direction but the core promise applies to anyone experiencing the disconnect. Do not alienate male patients at the brand level.
 
 #### Who the Brand Is NOT For
-
-- The budget-driven one-off shopper
-- The patient who wants pure aesthetics with no relationship
-- The patient who equates clinical coldness with credibility
-- Anyone seeking trend-driven, influencer-aesthetic treatments
+Budget-driven one-off shoppers · patients wanting pure aesthetics with no relationship · patients who equate clinical coldness with credibility · trend-driven influencer-aesthetic seekers
 
 ---
 
@@ -615,11 +536,11 @@ Men 40s–60s seeking TRT, peptides, and metabolic wellness (approximately 20% o
 
 | Attribute | What It Means | What It Is Not |
 |---|---|---|
-| Grounded | Rooted in clinical reality, never hype-forward | Cold, distant, or overly academic |
-| Warm without soft | Genuinely caring, but with a confident backbone | Saccharine, sycophantic, or soft-selling |
-| Clearly intelligent | Educates without condescending | Dense, jargon-heavy, or showing off |
-| Restorative | The frame is always return and alignment, not transformation | Fixing what's broken, anti-aging, better-you |
-| Honest | Says what it means, means what it says | Salesy, inflated, or outcome-guaranteed |
+| Grounded | Rooted in clinical reality, never hype-forward | Cold, distant, academic |
+| Warm without soft | Genuinely caring, confident backbone | Saccharine, soft-selling |
+| Clearly intelligent | Educates without condescending | Dense, jargon-heavy |
+| Restorative | Return and alignment, not transformation | Fixing what's broken, anti-aging |
+| Honest | Says what it means | Salesy, inflated, outcome-guaranteed |
 
 ---
 
@@ -627,214 +548,170 @@ Men 40s–60s seeking TRT, peptides, and metabolic wellness (approximately 20% o
 
 **In three words:** Personal. Confident. Restrained.
 
-**In conversation:** Body Balance speaks like a knowledgeable friend who also happens to be a clinician. Warm enough to make you feel seen. Authoritative enough to make you feel safe. Never salesy, never clinical to the point of coldness, never performatively empathetic.
-
-**The register shifts by channel:**
+Speaks like a knowledgeable friend who is also a clinician. Warm enough to feel seen. Authoritative enough to feel safe. Never salesy, never cold, never performatively empathetic.
 
 | Channel | Register |
 |---|---|
-| Paid Ads (Meta/Google) | Lead with symptom language and feeling. "Tired but can't sleep" over "hormone optimization." Emotional recognition is the hook. |
-| Email / Nurture | Slightly more clinical language as trust builds. Explain the why. Use "hormone balance," "peptide protocols," "lab-guided care." |
-| Organic Social | Educational primary. Carousel explainers, myth-busting, honest conversations. Real patient language used directly. |
-| Website | Homepage and hero in feeling language. Service and provider pages can go clinical. |
+| Paid Ads | Symptom and feeling language. "Tired but can't sleep" over "hormone optimization." |
+| Email / Nurture | Slightly more clinical as trust builds. Explain the why. |
+| Organic Social | Educational primary. Real patient language. Myth-busting. |
+| Website | Homepage/hero in feeling language. Service/provider pages can go clinical. |
 
 ---
 
 ### 2.6 — Messaging Pillars
 
-**1. The disconnect is real — and it's connected.**
-The gap between how you feel inside and how you look and function outside is not in your head. And it's rarely just one thing. Body Balance treats both sides because they're part of the same picture.
-
-**2. Two providers, one plan.**
-Teresa and Mia aren't in separate departments. Their specialties mirror each other by design. The aesthetics conversation and the hormone conversation happen in the same practice, with providers who talk to each other.
-
-**3. We listen differently.**
-Most providers address the presenting symptom. Body Balance connects the dots — labs, aesthetics, energy, weight, skin — and builds a plan around the whole person.
-
-**4. Restoration, not transformation.**
-The goal is not to become someone new. It is to return to the version of yourself you recognize — and to feel like that person again, not just look like them.
+1. **The disconnect is real — and it's connected.** The gap between how you feel inside and how you function outside is not in your head. Body Balance treats both sides because they're part of the same picture.
+2. **Two providers, one plan.** Teresa and Mia's specialties mirror each other by design. The aesthetics and hormone conversations happen in the same practice, with providers who talk to each other.
+3. **We listen differently.** Most providers address the presenting symptom. Body Balance connects the dots and builds a plan around the whole person.
+4. **Restoration, not transformation.** The goal is to return to the version of yourself you recognize — and to feel like that person again, not just look like them.
 
 ---
 
 ### 2.7 — Vocabulary
 
 #### Own These Words
-
-- Aligned / alignment
-- Hormone balance / hormone health
-- Inside and out / interior and exterior
-- Plan / program (structured, not just "treatments")
-- Listen / heard / seen
-- Real / grounded / honest
-- Energy / clarity / vitality
-- Restore / return
+Aligned / alignment · hormone balance / hormone health · inside and out · plan / program · listen / heard / seen · real / grounded / honest · energy / clarity / vitality · restore / return
 
 #### Customer Language — Use Directly in Copy
-
-- "I finally feel like myself again"
-- "I didn't recognize myself"
-- "My hormones are all over the place"
-- "Everything is connected"
-- "Someone who actually listens"
-- "Tired but can't sleep"
-- "Weight won't move"
-- "I feel off"
-- "Nobody connected the dots for me"
-- "I want to feel young, not just look young"
+"I finally feel like myself again" · "I didn't recognize myself" · "My hormones are all over the place" · "Everything is connected" · "Someone who actually listens" · "Tired but can't sleep" · "Weight won't move" · "I feel off" · "Nobody connected the dots for me" · "I want to feel young, not just look young"
 
 #### Banned Words — Never Use
 
 | Word | Reason |
 |---|---|
-| Luxury | Saturated, table stakes — express it, never say it |
-| Glow / glowing | Every competitor says it — generic wellness language |
-| Confidence | The category default — implies the current self is lacking |
+| Luxury | Saturated — express it, never say it |
+| Glow / glowing | Generic wellness language |
+| Confidence | Implies the current self is lacking |
 | Better you / best self | Implies the current version is broken |
-| Transform / transformation | Too dramatic — implies discontinuity, not alignment |
-| Queen / babe / girl boss | Trend-driven, undermines medical credibility |
-| Deserve | Patronizing — implies she hasn't had something she should have had |
-| Empower / empowerment | Hollow, overused in wellness marketing |
-| Anti-aging | Frames the problem as age, not as disconnect |
-| Natural results | Everyone says it — means nothing |
-| Personalized plan | Only ownable when demonstrated specifically, never claimed generically |
-| Look your best | Generic — doesn't speak to the real job to be done |
-| Self-care | Diluted — doesn't capture the clinical and emotional depth here |
-| Aesthetic enhancement | Clinical jargon — use feeling language in ads |
-| Biote | Credibility with informed patients and on the website — not an ad hook for top-of-funnel |
+| Transform / transformation | Implies discontinuity, not alignment |
+| Queen / babe / girl boss | Undermines medical credibility |
+| Deserve | Patronizing |
+| Empower / empowerment | Hollow, overused |
+| Anti-aging | Frames the problem as age, not disconnect |
+| Natural results | Means nothing |
+| Personalized plan | Only ownable when demonstrated specifically |
+| Look your best | Generic |
+| Self-care | Diluted |
+| Aesthetic enhancement | Jargon — use feeling language in ads |
+| Biote | Website and informed patients only — not a top-of-funnel ad hook |
 
 ---
 
 ### 2.8 — Anti-Brief
 
-**This brand is NOT:**
-- A luxury destination — luxury is implicit in the experience, never claimed in the language
-- A clinical optimization lab — the medicine is real; the experience of it is human
-- A trend-driven med spa — no seasonal treatments, no influencer aesthetics, no gimmick hooks
-- An anti-aging brand — the frame is restoration and alignment, not reversing time
-- A beauty brand — aesthetics is the front door, not the whole house
+**This brand is NOT:** a luxury destination · a clinical optimization lab · a trend-driven med spa · an anti-aging brand · a beauty brand
 
-**Visual anti-brief:**
-- No flat studio white-box photography
-- No bright saturated color palettes
-- No measuring tape, scale, or body-measurement props
-- No stock wellness poses — jumping, arms spread, forced smiles
-- No old Poppins all-caps type system in any new production
-- No hard-bordered before/after blocks with legacy typography
+**Visual anti-brief:** No flat studio white-box photography · no bright saturated color · no measuring tape or scale · no stock wellness poses · no legacy Poppins all-caps type system · no hard-bordered before/after blocks
 
 ---
 
 ## SECTION 3 — ASSET LIBRARY
 
-All assets are hosted in the public GitHub repository:
-`https://github.com/joshkeplersmith-source/bbm-design-system`
+All assets are served from Cloudflare R2:
+**Base URL:** `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev`
 
-Base URL for raw file access:
-`https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/`
+Source repo (version control): `https://github.com/joshkeplersmith-source/bbm-design-system`
 
 ---
 
 ### 3.1 — Logo Files
 
-#### Horizontal Logos (H)
-Wordmark + mark side by side. Default logo format.
+#### Horizontal Logos — Default format
 
 | File | Color | Use On | URL |
 |---|---|---|---|
-| BB-H-Logo-B.svg | Black | Light backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-H-Logo-B.svg` |
-| BB-H-Logo-W.svg | White | Dark backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-H-Logo-W.svg` |
-| BB-H-Logo-G.svg | Gold | Accent contexts | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-H-Logo-G.svg` |
-| BB-H-Logo-Bu.svg | Blue (P-700) | Light, brand-forward contexts | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-H-Logo-Bu.svg` |
+| BB-H-Logo-B.svg | Black | Light backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-B.svg` |
+| BB-H-Logo-W.svg | White | Dark backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg` |
+| BB-H-Logo-G.svg | Gold | Accent contexts | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-G.svg` |
+| BB-H-Logo-Bu.svg | Blue P-700 | Light, brand-forward | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-Bu.svg` |
 
-#### Vertical Logos (V)
-Wordmark + mark stacked. Use when horizontal space is limited.
-
-| File | Color | Use On | URL |
-|---|---|---|---|
-| BB-V-Logo-B.svg | Black | Light backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-V-Logo-B.svg` |
-| BB-V-Logo-W.svg | White | Dark backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-V-Logo-W.svg` |
-| BB-V-Logo-G.svg | Gold | Accent contexts | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-V-Logo-G.svg` |
-| BB-V-Logo-Bu.svg | Blue (P-700) | Light, brand-forward contexts | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-V-Logo-Bu.svg` |
-
-#### Mark Only (Icon)
-No wordmark. Use at small sizes or when the context is already brand-established.
+#### Vertical Logos — When horizontal space is limited
 
 | File | Color | Use On | URL |
 |---|---|---|---|
-| BB-Logo-Mark-B.svg | Black | Light backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Logo-Mark-B.svg` |
-| BB-Logo-Mark-W.svg | White | Dark backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Logo-Mark-W.svg` |
-| BB-Logo-Mark-G.svg | Gold | Accent contexts | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Logo-Mark-G.svg` |
-| BB-Logo-Mark-Bu.svg | Blue (P-700) | Light, brand-forward contexts | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Logo-Mark-Bu.svg` |
+| BB-V-Logo-B.svg | Black | Light backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-B.svg` |
+| BB-V-Logo-W.svg | White | Dark backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-W.svg` |
+| BB-V-Logo-G.svg | Gold | Accent contexts | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-G.svg` |
+| BB-V-Logo-Bu.svg | Blue P-700 | Light, brand-forward | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-V-Logo-Bu.svg` |
+
+#### Mark Only — Icon size or brand-established contexts
+
+| File | Color | Use On | URL |
+|---|---|---|---|
+| BB-Logo-Mark-B.svg | Black | Light backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-B.svg` |
+| BB-Logo-Mark-W.svg | White | Dark backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-W.svg` |
+| BB-Logo-Mark-G.svg | Gold | Accent contexts | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-G.svg` |
+| BB-Logo-Mark-Bu.svg | Blue P-700 | Light, brand-forward | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Logo-Mark-Bu.svg` |
 
 #### Social Logos
-Optimized for social platform contexts.
 
 | File | Color | Use On | URL |
 |---|---|---|---|
-| BB-Social-Logo-B.svg | Black | Light platform backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Social-Logo-B.svg` |
-| BB-Social-Logo-W.svg | White | Dark platform backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Social-Logo-W.svg` |
-| BB-Social-Mark-B.svg | Black | Profile images, light backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Social-Mark-B.svg` |
-| BB-Social-Mark-W.svg | White | Profile images, dark backgrounds | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/logos/BB-Social-Mark-W.svg` |
+| BB-Social-Logo-B.svg | Black | Light platform backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Logo-B.svg` |
+| BB-Social-Logo-W.svg | White | Dark platform backgrounds | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Logo-W.svg` |
+| BB-Social-Mark-B.svg | Black | Profile images, light | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-B.svg` |
+| BB-Social-Mark-W.svg | White | Profile images, dark | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-Social-Mark-W.svg` |
 
 ---
 
 ### 3.2 — Texture Files
 
-7 texture SVGs. Use as fill elements in N-100 sections. Rotate 90°, fill container, opacity 26–40%.
+| File | URL |
+|---|---|
+| BB-Brand-Refresh-Textures-03.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-03.svg` |
+| BB-Brand-Refresh-Textures-04.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-04.svg` |
+| BB-Brand-Refresh-Textures-05.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-05.svg` |
+| BB-Brand-Refresh-Textures-06.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-06.svg` |
+| BB-Brand-Refresh-Textures-07.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-07.svg` |
+| BB-Brand-Refresh-Textures-08.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-08.svg` |
+| BB-Brand-Refresh-Textures-09.svg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-09.svg` |
+| BB-Logo-Mark-Texture.webp | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Logo-Mark-Texture.webp` |
+
+---
+
+### 3.3 — Photography Reference
 
 | File | URL |
 |---|---|
-| BB-Brand-Refresh-Textures-03.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-03.svg` |
-| BB-Brand-Refresh-Textures-04.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-04.svg` |
-| BB-Brand-Refresh-Textures-05.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-05.svg` |
-| BB-Brand-Refresh-Textures-06.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-06.svg` |
-| BB-Brand-Refresh-Textures-07.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-07.svg` |
-| BB-Brand-Refresh-Textures-08.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-08.svg` |
-| BB-Brand-Refresh-Textures-09.svg | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Brand-Refresh-Textures-09.svg` |
-
-#### Logo Mark Watermark
-
-| File | URL |
-|---|---|
-| BB-Logo-Mark-Texture.webp | `https://raw.githubusercontent.com/joshkeplersmith-source/bbm-design-system/main/textures/BB-Logo-Mark-Texture.webp` |
+| AdobeStock_293083555.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_293083555.jpg` |
+| AdobeStock_436559124.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_436559124.jpg` |
+| AdobeStock_448721416.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_448721416.jpg` |
+| AdobeStock_478793348.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_478793348.jpg` |
+| AdobeStock_605986661.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_605986661.jpg` |
+| AdobeStock_895842891.jpg | `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/photography/AdobeStock_895842891.jpg` |
 
 ---
 
 ## SECTION 4 — OUTPUT TYPES
 
-What this system can build, per environment, and what asset access each environment supports.
-
-| Output Type | Environment | Logo Access | Texture Access | Notes |
+| Output | Environment | Logo Access | Texture Access | Notes |
 |---|---|---|---|---|
-| HTML email templates | GHL | Full — GitHub URLs resolve | Full | Import Google Fonts via `<link>` |
-| Web pages | Webflow | Full — GitHub URLs resolve | Full | Use CSS tokens from Section 1.14 |
-| PDFs / presentations | Claude Code | Full — GitHub URLs resolve | Full | Reference URLs directly in HTML-to-PDF |
-| Word documents | Google Docs | Manual drop-in required | Not applicable | Apply rules-based: colors, fonts, spacing |
-| Canva templates | Canva | Pre-loaded by Josh | Not applicable | Templates pre-built — team uses as-is |
-| Social content | Canva | Pre-loaded by Josh | Not applicable | Templates pre-built — team uses as-is |
+| HTML email templates | GHL | Full — R2 URLs resolve | Full | Import Google Fonts via `<link>` |
+| Web pages | Webflow | Full — R2 URLs resolve | Full | Use CSS tokens from Section 1.14 |
+| PDFs / documents | Claude Code | Full — R2 URLs resolve | Full | Reference URLs in HTML-to-PDF |
+| Word documents | Google Docs | Manual drop-in | Not applicable | Rules-based: colors, fonts, spacing |
+| Canva templates | Canva | Pre-loaded by Josh | Not applicable | Templates pre-built — use as-is |
+| Social content | Canva | Pre-loaded by Josh | Not applicable | Templates pre-built — use as-is |
 
 ---
 
 ## SECTION 5 — GRACEFUL DEGRADATION
 
-This section defines how to behave when working in a closed environment where the GitHub asset URLs cannot resolve.
+### State 1 — R2 Accessible (Normal Operation)
 
-### State 1 — GitHub Accessible (Normal Operation)
+Pull all logos and textures directly from the URLs in Section 3. Full system, all assets available. Build and proceed normally.
 
-Pull all logos and textures by URL from Section 3. Full system, all assets available. No user action required. Build and proceed normally.
+### State 2 — R2 Not Accessible (Restricted Environment)
 
-### State 2 — GitHub Not Accessible (Restricted Environment)
+Everything can still be built. Colors, typography, spacing, voice, component patterns, and layout rules are all available from this file. The only thing that may require action from the user is the logo.
 
-Everything can still be built. Colors, typography, spacing, voice, component patterns, and layout rules are all available from this file — no external access required. The only thing that may require a file from the user is the logo.
+**Textures:** Omit silently. Do not mention them. Do not flag them as missing. Do not ask the user to provide them. A page without textures is still fully on-brand — textures are enhancements, not requirements.
 
-**Textures:** Omit silently. Do not mention them. Do not flag them as missing. Do not ask the user to provide them. A page or document without textures is still fully on-brand — textures are enhancements, not requirements.
+**Logo:** If a logo is needed, say:
+> *"I can't access the logo files in this environment. Josh should have shared the BBM logo files with you — drop the logo you need into this chat and I'll use it. If you're not sure which one to use, the most common ones are: BB-H-Logo-B.svg for light backgrounds, BB-H-Logo-W.svg for dark backgrounds."*
 
-**Logo:** If a logo is needed for the output being built, say exactly this (adjust wording naturally for context):
-
-> *"I can't access the logo files from the design system in this environment. Josh should have shared the BBM logo files with you — drop the logo you need into this chat and I'll use it. If you're not sure which one to use, ask Josh for the [Black horizontal / White horizontal / Black mark] version depending on your background."*
-
-Then wait for the upload and proceed. Do not build without the logo if the output requires one. Do not substitute a placeholder, a text label, or any other element in place of the logo.
-
-**After the user uploads the logo:** Confirm receipt and proceed. Do not re-explain the restriction. Build normally with the uploaded file.
+Wait for the upload. Do not build without the logo if the output requires one. Do not substitute a placeholder or text label. After upload, confirm and proceed — do not re-explain the restriction.
 
 ---
 
@@ -842,41 +719,29 @@ Then wait for the upload and proceed. Do not build without the logo if the outpu
 
 ### If You Can Generate Images
 
-Apply these style instructions directly to every image generated for this brand.
-
 **Primary style — Black & White:**
-- Film photography aesthetic — not clinical digital monochrome
-- Rich midtones, soft contrast, authentic grain
-- Natural soft lighting — never flat studio or harsh strobe
-- Subjects: real women 30s–40s, unposed, skin texture visible; men 40s–60s for wellness/TRT content
-- Environmental context welcome — clinic, outdoor, lifestyle — subject always primary
-- Mood: grounded, warm, present — never aspirational-stock or performative
+Film photography aesthetic. Rich midtones, soft contrast, authentic grain. Natural soft lighting — never flat studio. Real women 30s–40s, unposed, skin texture visible. Environmental context welcome. Mood: grounded, warm, present.
 
 **Secondary style — Portra 400 Color:**
-- Warm, slightly faded color palette — not saturated
-- Natural film grain, soft highlights, warm shadows
-- Same subject direction as B&W above
-- Color stays within the brand's warm earth tone range — nothing electric or bright
+Warm, slightly faded. Natural grain, soft highlights. Color stays within the brand's warm earth tone range — nothing electric or saturated.
 
-**Always avoid:** measuring tape, bathroom scale, studio white-box background, stock wellness poses (jumping, arms spread, forced smile), airbrushed or smoothed skin, bright saturated color.
+**Always avoid:** measuring tape · bathroom scale · studio white-box · stock wellness poses · airbrushed skin · bright saturated color
 
 ### If You Cannot Generate Images
 
-Output this ready-to-use prompt for the user to take to Midjourney, Firefly, DALL-E, or any image generation tool. All BBM brand variables are baked in — the user does not need to know the brand system to get an on-brand result.
-
-**Copy and adapt this prompt — fill in `[SUBJECT]` and `[SETTING]`:**
+Use this prompt — fill in `[SUBJECT]` and `[SETTING]`:
 
 ```
 [SUBJECT] in [SETTING], editorial portrait photography, black and white film aesthetic,
 Kodak Tri-X grain, soft natural window light, rich midtones, no blown highlights,
 unposed candid moment, authentic skin texture, no retouching, no studio lighting,
 cinematic composition, warm and grounded mood, medical wellness atmosphere,
-real person not model-perfect, 30s-40s professional woman [or: 40s-60s man for wellness content],
+real person not model-perfect, 30s–40s professional woman [or: 40s–60s man for wellness content],
 environmental context visible but subject primary. Style: film photography, not digital.
 No measuring tape. No workout equipment. No forced smiles. No aspirational stock imagery.
 ```
 
-**For Portra 400 color variant — add to the prompt:**
+**For Portra 400 color — add:**
 ```
 Color photography, Kodak Portra 400 film simulation, warm slightly faded tones,
 natural grain, soft warm shadows, no saturation boost, no Instagram filter treatment.
@@ -886,49 +751,50 @@ natural grain, soft warm shadows, no saturation boost, no Instagram filter treat
 
 ## SECTION 7 — AGENT BEHAVIOR RULES
 
-When working from this brand system, follow these rules for every session.
-
-**Before building anything:**
-1. Confirm the brand system is loaded: *"Body Balance Medical brand system active. Ready to build."*
-2. Identify the output type and environment (see Section 4).
-3. Check GitHub access state and apply the correct mode (see Section 5).
-4. If a logo is needed and GitHub is inaccessible, ask for the file before proceeding.
+**Before building:**
+1. Confirm: *"Body Balance Medical brand system active. Ready to build."*
+2. Identify the output type and environment (Section 4)
+3. Check R2 access state and apply correct mode (Section 5)
+4. If logo needed and R2 inaccessible, ask for the file before proceeding
 
 **While building:**
-- Never use a color outside the six families defined in Section 1.1.
-- Never introduce a font outside the three families defined in Section 1.5.
-- Reference color pairings by code (D1–D6, L1–L6) — never describe colors manually.
-- If generating copy, apply the voice rules from Section 2.5 and the vocabulary rules from Section 2.7.
-- If the output involves a logo, apply the logo context guide from Section 1.11.
-- Textures are enhancements — include them if GitHub is accessible and the layout benefits from them. Never force a texture where it doesn't serve the layout.
+- Never use a color outside the six families in Section 1.1
+- Never use a font outside the three families in Section 1.5
+- Reference color pairings by code (D1–D6, L1–L6)
+- Apply voice rules from Section 2.5 and vocabulary from Section 2.7 to all copy
+- Apply logo context guide from Section 1.11 whenever a logo is used
+- Include textures only when R2 is accessible and the layout benefits — never forced
 
-**If you're unsure about a design decision:**
-Default to: N-100 background, P-700 section accent, EB Garamond heading (upright + italic mix), Work Sans 300 body, Q-300 gold accent on dark / Q-700 gold accent on light. That is the brand's safe baseline.
+**Safe baseline when unsure:**
+N-100 background · P-700 section accent · EB Garamond heading (upright + italic mix) · Work Sans 300 body · Q-300 gold on dark / Q-700 gold on light
 
 **Flagging gaps:**
-If something required to complete the output is missing or unclear, flag it specifically and wait for input. Never silently produce an off-brand result. Never guess at a logo file, a brand color, or a voice rule.
+Flag specifically and wait for input. Never silently produce an off-brand result. Never guess at a brand color, logo file, or voice rule.
 
 **Updating this file:**
-If a design value changes after review, the change goes into `BB-DESIGN-SYSTEM-SPEC.md` first, then `BB-BRAND.md` is rebuilt. Do not attempt to edit this file mid-session to accommodate a one-off change. Flag the change, complete the session using the current values, and note that the spec update is needed afterward.
+Changes go into `BB-DESIGN-SYSTEM-SPEC.md` first, then `BRAND.md` is rebuilt. Do not edit mid-session. Flag the change, complete the session with current values, note the spec update needed.
 
 ---
 
 ## QUICK REFERENCE
 
-**Page background:** N-100 `#f1f0ee`
-**Section dark background:** P-700 `#2b3a4a`
-**Primary heading:** EB Garamond 400 upright + italic · 3.25rem
-**Body copy:** Work Sans 300 · 1.125rem · N-900 `#1c1a17` on light / N-100 `#f1f0ee` on dark
-**Gold on dark:** Q-300 `#ebcc8e`
-**Gold on light:** Q-700 `#866118`
-**Button:** Gradient `linear-gradient(120deg, #131c25, #6a89a9)` · Playfair Display · 8px radius
-**Default logo (light bg):** BB-H-Logo-B.svg
-**Default logo (dark bg):** BB-H-Logo-W.svg
-**Essence:** *Feel like yourself again — integrated hormone and aesthetic care that listens.*
+| | |
+|---|---|
+| Page background | N-100 `#f1f0ee` |
+| Section dark | P-700 `#2b3a4a` |
+| Primary heading | EB Garamond 400 upright + italic · 3.25rem |
+| Body copy | Work Sans 300 · 1.125rem · N-900 on light / N-100 on dark |
+| Gold on dark | Q-300 `#ebcc8e` |
+| Gold on light | Q-700 `#866118` |
+| Button | `linear-gradient(120deg, #131c25, #6a89a9)` · Playfair Display · 8px radius |
+| Default logo (light bg) | BB-H-Logo-B.svg |
+| Default logo (dark bg) | BB-H-Logo-W.svg |
+| Essence | *Feel like yourself again — integrated hormone and aesthetic care that listens.* |
 
 ---
 
 *Captain Kepler Creative · Josh Smith · 2026 · Confidential*
-*BB-BRAND.md — Body Balance Medical Brand Operating System v1.0*
+*BRAND.md — Body Balance Medical Brand Operating System v1.1*
 *Built from: BB-DESIGN-SYSTEM-SPEC.md + BB-BRAND-PYRAMID.md*
+*Assets: https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev*
 *Repo: https://github.com/joshkeplersmith-source/bbm-design-system*
