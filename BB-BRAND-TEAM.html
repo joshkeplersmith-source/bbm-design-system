@@ -7,7 +7,7 @@
 {
   "meta": {
     "document": "BB-BRAND-TEAM.html",
-    "version": "1.3",
+    "version": "1.6",
     "client": "Body Balance Medical",
     "edition": "team",
     "r2_base": "https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev"
@@ -336,6 +336,10 @@ PRE-BUILD CHECKLIST:
 - Image source identified — generate, R2 reference, or flag for Josh
 - R2 access tested — apply graceful degradation if blocked
 
+PRE-BUILD CHECKLIST — TWO-STAGE ENFORCEMENT:
+Before writing any code, HTML, or copy, output the Pre-Build Checklist as a completed form — each item checked against the current brief with a one-line confirmation or flag. Do not proceed until the checklist is visibly complete in the response. This step is mandatory, cannot be skipped, and cannot be replaced by a summary.
+At the end of every deliverable, output the same checklist again as a completion gate — confirming that each pre-build commitment was honored in the actual output. For each item, state explicitly whether it was followed through. If any item cannot be confirmed, flag it in plain language before closing the response.
+
 ENVIRONMENT ROUTING:
 - Claude.ai chat: copy, strategy, briefs, brand decisions
 - This file (Team): HTML production for team-facing deliverables, social content, copy
@@ -484,10 +488,18 @@ When content requires provider photography:
 - If R2 unavailable: flag to Josh — never use unlicensed stock as a substitute for Mia or Teresa
 - If a layout requires a provider photo and none is accessible: produce the layout with a clearly labeled placeholder box and note the image needed. Do not silently omit.
 
+PHOTOGRAPHY HANDLING — PROVIDER PORTRAITS:
+  CSS: object-fit: cover; object-position: center 20%;
+  Minimum container height: 400px (web) / 0.9in (print)
+  Never crop below the shoulders on primary display
+  Never use object-position: center center on provider portraits
+  Apply these values explicitly — do not infer from context
+
 TEXTURE IMPLEMENTATION — TWO SYSTEMS:
 
 TEXTURE SYSTEM 1 — PLANT TEXTURES (SVGs 03–09):
 Applied via CSS ::before pseudo-element on the section. N-100 sections only. Never on BU-700. One texture per section maximum. Never in same section as logo mark watermark.
+Plant texture (SVG via ::before) and ghosted background text are mutually exclusive within a section. Use one or the other — never both in the same section.
 
 CSS implementation:
 .section-with-texture {
