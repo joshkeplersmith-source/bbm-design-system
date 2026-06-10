@@ -45,11 +45,11 @@ All 16 logo variants are in `/logos/`. See `references/BB-BRAND-PRO.md` or `refe
 
 Assets are served publicly via Cloudflare R2 for use in any agent environment:
 
-**R2 Base URL:** `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev`
+**R2 Base URL:** `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev`
 
 Example URLs:
-- `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/logos/BB-H-Logo-W.svg`
-- `https://pub-3d3d32a357bf480291c4f1804a9ded88.r2.dev/textures/BB-Brand-Refresh-Textures-03.svg`
+- `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev/logos/BB-H-Logo-W.svg`
+- `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev/textures/BB-Brand-Refresh-Textures-03.svg`
 
 All R2 URLs are listed in `references/BB-BRAND-PRO.md` and `references/BB-BRAND-TEAM.md` Section 3.
 

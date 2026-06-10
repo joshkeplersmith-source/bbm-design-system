@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Build with AI — Body Balance Medical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: letter; margin: 0; }
+  body {
+    background: #f1f0ee;
+    font-family: 'Work Sans', system-ui, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    background: #f1f0ee;
+    padding: 0.7in 0.85in 0.55in;
+    position: relative;
+    overflow: hidden;
+  }
+  .page::before {
+    content: 'Build';
+    position: absolute;
+    top: -0.3in;
+    left: -0.1in;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 13rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #deddd3;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 0;
+  }
+  .content { position: relative; z-index: 2; }
+  .eyebrow {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.52rem;
+    font-weight: 400;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #506d8b;
+    margin-bottom: 10px;
+  }
+  .heading {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: #2b3a4a;
+    line-height: 1.15;
+    margin-bottom: 4px;
+  }
+  .heading em { font-style: italic; color: #866118; }
+  .rule-line {
+    width: 48px;
+    height: 1px;
+    background: #866118;
+    margin: 16px 0 20px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .step {
+    background: #ffffff;
+    border: 0.5px solid #dcd9d5;
+    border-radius: 3px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(28,26,23,.05);
+  }
+  .step-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #ebcc8e;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 20px;
+    padding-top: 1px;
+  }
+  .step-title {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: #2b3a4a;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .step-text {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 300;
+    color: #554f4a;
+    line-height: 1.6;
+  }
+  .step-text code {
+    font-family: monospace;
+    font-size: 0.64rem;
+    background: #f2f1ed;
+    color: #2b3a4a;
+    padding: 1px 5px;
+    border-radius: 2px;
+    border: 0.5px solid #dcd9d5;
+  }
+  .verify-block {
+    background: #2b3a4a;
+    border-radius: 3px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    box-shadow: 0 4px 16px rgba(28,26,23,.10);
+  }
+  .verify-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #ebcc8e;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 20px;
+    padding-top: 2px;
+  }
+  .verify-label {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.52rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #d99e2b;
+    margin-bottom: 6px;
+  }
+  .verify-prompt {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #f1f0ee;
+    line-height: 1.55;
+  }
+  .rules-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .rule-pill {
+    background: #f2f1ed;
+    border: 0.5px solid #dcd9d5;
+    border-radius: 3px;
+    padding: 10px 12px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 300;
+    color: #554f4a;
+    line-height: 1.55;
+  }
+  .rule-pill strong {
+    font-weight: 600;
+    color: #2b3a4a;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+  }
+  .note-block {
+    border-left: 2px solid #866118;
+    padding: 10px 16px;
+    margin-bottom: 18px;
+    background: #f2f1ed;
+    border-radius: 0 3px 3px 0;
+  }
+  .note-label {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.48rem;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #866118;
+    margin-bottom: 4px;
+  }
+  .note-text {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 300;
+    color: #554f4a;
+    line-height: 1.6;
+  }
+  .footer {
+    border-top: 1px solid #dcd9d5;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.52rem;
+    font-weight: 400;
+    color: #918c73;
+    letter-spacing: 0.1em;
+  }
+  .footer-note {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 300;
+    color: #a59e97;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="content">
+
+    <div class="eyebrow">Brand System · Team Guide · 2026</div>
+    <div class="heading">How to Build with <em>AI</em></div>
+    <div class="rule-line"></div>
+
+    <!-- Steps 1–4 -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Start a New AI Chat</div>
+          <div class="step-text">Open a fresh conversation every time. Never reuse an existing chat — leftover context from other sessions affects output quality.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Load the Brand File</div>
+          <div class="step-text">Upload <code>BB-BRAND-TEAM.html</code> directly to the chat, or reference it from your project files. This is the source of truth for all Body Balance brand rules.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Give Your Brief</div>
+          <div class="step-text">Describe what you need to build. Include the deliverable type, any copy or text, layout preferences, event details, or requirements. The more specific, the better the output.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Build</div>
+          <div class="step-text">Tell the AI to produce the deliverable and let it run. Review the output once it's complete before making any changes.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 5 — Verify -->
+    <div class="verify-block">
+      <div class="verify-num">5</div>
+      <div>
+        <div class="verify-label">Verify</div>
+        <div style="font-family:'Work Sans',sans-serif;font-size:0.68rem;font-weight:300;color:#c1bdb8;line-height:1.6;margin-bottom:8px;">Send this prompt after every build:</div>
+        <div class="verify-prompt">"Verify that everything in this output can be traced back to the brand design system. Flag anything that can't."</div>
+      </div>
+    </div>
+
+    <!-- Steps 6–7 -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">6</div>
+        <div>
+          <div class="step-title">Tweak</div>
+          <div class="step-text">Review the output visually. If anything looks off — overlapping text, spacing issues, anything that doesn't feel right — describe it and ask for a fix.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">7</div>
+        <div>
+          <div class="step-title">Publish</div>
+          <div class="step-text">Once the verify step passes and any tweaks are done, the deliverable is ready to use.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip note -->
+    <div class="note-block">
+      <div class="note-label">Tip</div>
+      <div class="note-text">If your AI already has Body Balance project files or context from older sessions, run a quick session to update it with the new brand design system. The HTML file supersedes any previous brand information.</div>
+    </div>
+
+    <!-- Rules -->
+    <div class="rules-row">
+      <div class="rule-pill">
+        <strong>Always fresh chat</strong>
+        Never build in a conversation that's already been used for something else.
+      </div>
+      <div class="rule-pill">
+        <strong>Always load the file</strong>
+        The brand file must be present every time you build. It is the source of truth.
+      </div>
+      <div class="rule-pill">
+        <strong>Always verify</strong>
+        Don't skip Step 5. If anything gets flagged, ask for a fix before moving on.
+      </div>
+      <div class="rule-pill">
+        <strong>Not sure?</strong>
+        If the output uses a color or font you don't recognize, ask the AI to trace it back. If it can't — it doesn't belong.
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-brand">Body Balance Medical &nbsp;·&nbsp; Captain Kepler Creative &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Confidential</div>
+      <div class="footer-note">Questions? Contact Josh.</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
