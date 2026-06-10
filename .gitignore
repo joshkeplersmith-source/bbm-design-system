@@ -1,1 +1,4 @@
 .DS_Store
+
+# Wrangler local dev cache — never track
+.wrangler/
