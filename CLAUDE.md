@@ -1,71 +1,46 @@
-# CLAUDE.md — bbm-design-system
+# CLAUDE.md — bb-design-system (Body Balance Medical)
 
-This repository is the design system for **Body Balance Medical**, a premium medical wellness and aesthetics practice in Las Vegas, NV.
+The deployable **brand design system** for **Body Balance Medical** — a premium medical wellness and aesthetics practice in Las Vegas, NV. Maintained by **Josh Smith · Captain Kepler Creative**.
 
-It is maintained by **Josh Smith · Captain Kepler Creative**.
+This repo is **component #2 of the BB brand's three-component model**:
+
+1. **Brand design markdown** (intelligence layer, agent-facing) — lives in the vault: `clients/body-balance/brand/BB-BRAND-DESIGN-SYSTEM.md`. The canonical visual spec + Josh's deploy methods.
+2. **Brand design system HTML** (this repo) — the rendered, distributable system. Canonical file: **`BB-BRAND-TEAM.html`**. Clients drop this file into their own agents to self-brand.
+3. **Brand pyramid** (voice/positioning) — lives in the vault: `clients/body-balance/brand/BB-BRAND-PYRAMID.md`.
+
+For voice, vocabulary, and positioning, see component #3. For the full agent-facing spec + deploy methods, see component #1. This repo holds the distributable HTML and the production assets.
 
 ---
 
-## What This Repo Contains
+## What this repo contains
 
 | File / Folder | Purpose |
 |---|---|
-| `references/BB-BRAND-PRO.md` | **Josh's file.** Full brand operating system — includes Illustrator MCP tool access, full asset pipeline, and production workflows. |
-| `references/BB-BRAND-TEAM.md` | **Team file (Will, Dez, social media manager).** Self-serve, web-first workflow — no local tool dependencies. |
-| `tokens.css` | All CSS custom properties. Import into any web or HTML project. |
-| `/logos/` | 16 SVG logo variants — horizontal, vertical, mark, social formats in B/W/G/Bu. |
-| `/textures/` | 7 texture SVGs + logo mark WebP. |
-| `/photography/` | 6 reference photography JPEGs — brand photography style reference only. |
-| `/references/` | `BB-DESIGN-SYSTEM-SPEC-RENDER.html` — visual design system reference document. |
-| `/archive/` | Previous brand file versions including `BB-BRAND-v1.1-ARCHIVED.md` and `BB-DESIGN-SYSTEM-SPEC.md`. Do not reference in active sessions. |
+| `BB-BRAND-TEAM.html` | **Canonical component #2** — the distributable rendered design system. The file clients drop into their agents. |
+| `references/` | Supporting docs: `BBM-TEAM-WORKFLOW-GUIDE.html`, `How to Build with AI — Body Balance Medical.pdf`. |
+| `_archive/` | Superseded sources — prior brand markdowns (`BB-BRAND-PRO.md`, `BB-BRAND-TEAM.md`), `BB-BRAND-PRO.html`, `BB-DESIGN-SYSTEM-SPEC-RENDER.html`, `BB-BRAND-TEAM-GR-PRIMARY.html`, `index.html`, and earlier versions. Do not reference in active sessions. |
+| `.wrangler/` | Cloudflare Wrangler config for R2 asset deployment. |
+| `.gitignore` | Repo ignore rules. |
 
 ---
 
-## How to Use This Repo
+## Assets
 
-**Brand system is now split into two files:**
+Production binaries (logos, textures, photography) are served from **Cloudflare R2**, client-scoped:
 
-> `references/BB-BRAND-PRO.md` is for Josh — full tool access including Illustrator MCP and the complete production pipeline. `references/BB-BRAND-TEAM.md` is for Will, Dez, and the social media manager — self-serve, web-first workflow with no local tool dependencies. The original `BRAND.md` v1.1 is archived in `/archive/`.
+**R2 base:** `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev/clients/body-balance`
 
-**For any agent session involving BBM brand work (Josh):**
-Read `references/BB-BRAND-PRO.md` first.
+Folders: `/logos/` (16 SVG variants), `/textures/` (plant SVGs + logo-mark webp), `/photography/` (~41 references + the two provider photos). The full asset index lives inside `BB-BRAND-TEAM.html`. Deploys are managed via Wrangler (`.wrangler/`).
 
-**For any agent session involving BBM brand work (team):**
-Read `references/BB-BRAND-TEAM.md` first.
-
-**For web or HTML projects:**
-Import `tokens.css` for all CSS custom properties. Import Google Fonts per the comment block at the bottom of `tokens.css`.
-
-**For logo usage:**
-All 16 logo variants are in `/logos/`. See `references/BB-BRAND-PRO.md` or `references/BB-BRAND-TEAM.md` Section 1.11 for the full context guide — which variant to use on which background.
+`*.r2.dev` and `raw.githubusercontent.com` do not resolve in claude.ai chat; they resolve in Claude Code and browser-rendered outputs.
 
 ---
 
-## Asset Delivery
+## How this system is built and maintained
 
-Assets are served publicly via Cloudflare R2 for use in any agent environment:
-
-**R2 Base URL:** `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev`
-
-Example URLs:
-- `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev/logos/BB-H-Logo-W.svg`
-- `https://pub-36b74b2497c341e69086eca6a27340e5.r2.dev/textures/BB-Brand-Refresh-Textures-03.svg`
-
-All R2 URLs are listed in `references/BB-BRAND-PRO.md` and `references/BB-BRAND-TEAM.md` Section 3.
-
-GitHub raw URLs (`raw.githubusercontent.com`) are blocked in some agent environments — use R2 URLs in `references/BB-BRAND-PRO.md` or `references/BB-BRAND-TEAM.md` for maximum compatibility.
-
----
-
-## Update Protocol
-
-1. Design changes are approved by Josh
-2. Updated values go into `BB-DESIGN-SYSTEM-SPEC.md` first
-3. `references/BB-BRAND-PRO.md`, `references/BB-BRAND-TEAM.md`, and `tokens.css` are rebuilt from the updated spec
-4. Updated files are pushed to this repo and re-uploaded to R2 if assets changed
-5. Brand files are reloaded into any Claude Projects that use them as permanent knowledge
-
-**One source of truth per audience.** `references/BB-BRAND-PRO.md` for Josh. `references/BB-BRAND-TEAM.md` for the team. Neither references the spec directly — the spec is the build input, not the working document.
+- The canonical visual spec is the vault intelligence file (component #1). Design changes are approved by Josh, reflected in component #1, and rebuilt into `BB-BRAND-TEAM.html`.
+- There is no separate design-system spec document — the old `BB-DESIGN-SYSTEM-SPEC.md` pipeline is retired (archived).
+- The repo topology (this nested repo, its remote, and the R2 distribution model) is under review — see the public-distribution idea note in the vault `builds/ideas/`.
 
 ---
 
